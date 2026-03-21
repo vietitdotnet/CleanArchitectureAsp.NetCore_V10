@@ -1,0 +1,11 @@
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\bin\Debug\net10.0\MyApp.Domain.deps.json
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\bin\Debug\net10.0\MyApp.Domain.dll
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\bin\Debug\net10.0\MyApp.Domain.pdb
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\MyApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\MyApp.Domain.AssemblyInfoInputs.cache
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\MyApp.Domain.AssemblyInfo.cs
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\MyApp.Domain.csproj.CoreCompileInputs.cache
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\MyApp.Domain.dll
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\refint\MyApp.Domain.dll
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\MyApp.Domain.pdb
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Domain\obj\Debug\net10.0\ref\MyApp.Domain.dll

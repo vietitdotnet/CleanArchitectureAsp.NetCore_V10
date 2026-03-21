@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <File Path="Commands.md" />
+    <File Path="README.md" />
+    <Project Path="src/MyApp.Application/MyApp.Application.csproj" />
+    <Project Path="src/MyApp.Domain/MyApp.Domain.csproj" />
+    <Project Path="src/MyApp.Infrastructure/MyApp.Infrastructure.csproj" />
+    <Project Path="src/MyApp.WebApi/MyApp.WebApi.csproj" />
+  </Folder>
+</Solution>
