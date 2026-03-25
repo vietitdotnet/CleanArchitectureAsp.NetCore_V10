@@ -1,5 +1,5 @@
 ﻿
-using MyApp.Application.Features.Managers.DTOs;
+using MyApp.Application.Features.Identity.DTOs;
 using MyApp.Application.Features.OrderProducts.DTOs;
 
 using MyApp.Domain.Core.Models;

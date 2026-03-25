@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyApp.Domain.Entities;
-using MyApp.Infrastructure.Models;
+using MyApp.Infrastructure.Entities.Identity;
 
 namespace MyApp.Infrastructure.Data
 {

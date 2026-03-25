@@ -15,3 +15,4 @@ D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Infrastructure\obj\Debug\net10.0\M
 D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Infrastructure\obj\Debug\net10.0\refint\MyApp.Infrastructure.dll
 D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Infrastructure\obj\Debug\net10.0\MyApp.Infrastructure.pdb
 D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Infrastructure\obj\Debug\net10.0\ref\MyApp.Infrastructure.dll
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Infrastructure\obj\Debug\net10.0\MyApp.Infrastructure.sourcelink.json

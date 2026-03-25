@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using MyApp.Application.Common.Interfaces;
+using MyApp.Application.Common.Service;
 using MyApp.Application.Features.Orders.DTOs;
 using MyApp.Application.Features.Products.DTOs;
-using MyApp.Application.Interfaces;
 using MyApp.Domain.Core.Repositories;
 using MyApp.Domain.Entities;
 using MyApp.Domain.Specifications.Orders;

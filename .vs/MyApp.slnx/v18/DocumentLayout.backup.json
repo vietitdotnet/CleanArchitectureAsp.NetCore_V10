@@ -3,200 +3,132 @@
   "WorkspaceRootPath": "D:\\CleanArchitectureAsp.NetCore_V10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webapi\\features\\manager\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|solutionrelative:src\\myapp.webapi\\features\\manager\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\abstractions\\services\\imanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\abstractions\\services\\imanagerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\role\\ceate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\role\\ceate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\services\\managerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\services\\managerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\role\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\role\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\orders\\responses\\getallordersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\orders\\responses\\getallordersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\role\\rolepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\role\\rolepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\orderproducts\\dtos\\orderproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\orderproducts\\dtos\\orderproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\role\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\role\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\mappings\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\role\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\role\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\orders\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\orders\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\role\\rolepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\role\\rolepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\responses\\confirmemailresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\responses\\confirmemailresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\requests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\requests\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\responses\\registerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\responses\\registerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\shared\\_adminmanagenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\shared\\_adminmanagenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\requests\\refreshtokenrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\requests\\refreshtokenrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\requests\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\requests\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\requests\\logoutallrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\requests\\logoutallrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\requests\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\authentications\\dtos\\authuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\authentications\\dtos\\authuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webapi\\features\\orders\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|solutionrelative:src\\myapp.webapi\\features\\orders\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\services\\auth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\services\\auth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webapi\\features\\auths\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|solutionrelative:src\\myapp.webapi\\features\\auths\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\mappings\\orderprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\mappings\\orderprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\common\\service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\common\\service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webapi\\features\\manager\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|solutionrelative:src\\myapp.webapi\\features\\manager\\managercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\services\\hashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\services\\hashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\specifications\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\specifications\\ispecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\specifications\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\specifications\\basespecification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\repositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\repositories\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\repositories\\irepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\repositories\\irepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\repositories\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\repositories\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\myapp.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\myapp.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\myapp.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\myapp.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\models\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\models\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\services\\external\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\services\\external\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\models\\isoftdeleteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\models\\isoftdeleteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\models\\ihasslug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\models\\ihasslug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\models\\iauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\models\\iauditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\paginations\\parameters\\productparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\paginations\\parameters\\productparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\paginations\\parameters\\userparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\paginations\\parameters\\userparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\orders\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\mappings\\orderprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\mappings\\orderprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\mappings\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\mappings\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\autusertoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\autusertoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\mappings\\baseprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\mappings\\baseprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\applicationassemblymarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\applicationassemblymarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\services\\requestinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\services\\requestinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\abstractions\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\abstractions\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\abstractions\\services\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\abstractions\\services\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\abstractions\\services\\irequestinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\abstractions\\services\\irequestinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\migrations\\20260319083619_v_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\migrations\\20260319083619_v_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\usertokenconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\usertokenconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\abstractions\\services\\ihashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\abstractions\\services\\ihashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{827E0CD3-B72D-47B6-A68D-7590B98EB39B}|src{827E0CD3-B72D-47B6-A68D-7590B98EB39B}|D:\\CleanArchitectureAsp.NetCore_V10\\Commands.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{827E0CD3-B72D-47B6-A68D-7590B98EB39B}|src{827E0CD3-B72D-47B6-A68D-7590B98EB39B}|solutionrelative:Commands.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\orderproductconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\orderproductconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\core\\models\\idomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\core\\models\\idomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -206,162 +138,383 @@
       "DocumentGroups": [
         {
           "DockedWidth": 268,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IManagerService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IManagerService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Abstractions\\Services\\IManagerService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IManagerService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Abstractions\\Services\\IManagerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:03:37.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserProfile.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\UserProfile.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\UserProfile.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\UserProfile.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Mappings\\UserProfile.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwAsAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:50:49.856Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T03:29:40.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ManagerService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\ManagerService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Services\\ManagerService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\ManagerService.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Services\\ManagerService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAuwB0AAAAJAAAAAAAAAA==",
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T02:55:39.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ManagerController.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
-              "RelativeToolTip": "src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:05:13.968Z",
+              "WhenOpened": "2026-03-25T03:28:24.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "OrderProductDto.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\OrderProducts\\DTOs\\OrderProductDto.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\OrderProducts\\DTOs\\OrderProductDto.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\OrderProducts\\DTOs\\OrderProductDto.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\OrderProducts\\DTOs\\OrderProductDto.cs",
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Create.cshtml.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Create.cshtml.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Create.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:14:43.264Z",
+              "WhenOpened": "2026-03-25T03:28:20.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ceate.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Ceate.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Ceate.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Ceate.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\Ceate.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T03:28:05.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\_ViewImports.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\_ViewImports.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T03:27:58.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GetAllOrdersResponse.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Orders\\Responses\\GetAllOrdersResponse.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Orders\\Responses\\GetAllOrdersResponse.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Orders\\Responses\\GetAllOrdersResponse.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Orders\\Responses\\GetAllOrdersResponse.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:03:47.918Z",
+              "Title": "RolePage.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T03:27:40.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "OrderDto.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Orders\\DTOs\\OrderDto.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Orders\\DTOs\\OrderDto.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Orders\\DTOs\\OrderDto.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Orders\\DTOs\\OrderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Title": "RolePage.cshtml.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Role\\RolePage.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:13:04.551Z",
+              "WhenOpened": "2026-03-25T03:27:37.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ConfirmEmailResponse.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Responses\\ConfirmEmailResponse.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\Responses\\ConfirmEmailResponse.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Responses\\ConfirmEmailResponse.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\Responses\\ConfirmEmailResponse.cs",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:14:15.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RegisterResponse.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Responses\\RegisterResponse.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\Responses\\RegisterResponse.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Responses\\RegisterResponse.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\Responses\\RegisterResponse.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:14:16.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RefreshTokenRequest.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\RefreshTokenRequest.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\Requests\\RefreshTokenRequest.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\RefreshTokenRequest.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\Requests\\RefreshTokenRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:14:13.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LogoutRequest.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutRequest.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutRequest.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutRequest.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:14:11.874Z",
+              "WhenOpened": "2026-03-25T03:27:23.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\Requests\\RegisterRequest.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\RegisterRequest.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\Requests\\RegisterRequest.cs",
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Services\\EmailSender.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Services\\EmailSender.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Services\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:27:00.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_AdminManageNav.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Shared\\_AdminManageNav.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Shared\\_AdminManageNav.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Shared\\_AdminManageNav.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Shared\\_AdminManageNav.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T03:24:58.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ManageNav.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T03:24:46.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ConfirmEmail.cshtml.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAMwBMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:24:36.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\Auth\\JwtService.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Services\\Auth\\JwtService.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\Auth\\JwtService.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Services\\Auth\\JwtService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAewAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:24:34.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
+              "RelativeToolTip": "src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:24:30.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrderProfile.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\OrderProfile.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\OrderProfile.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\OrderProfile.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Mappings\\OrderProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:24:23.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Common\\Service\\BaseService.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Common\\Service\\BaseService.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Common\\Service\\BaseService.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Common\\Service\\BaseService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:24:11.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ManagerController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
+              "RelativeToolTip": "src\\MyApp.WebApi\\Features\\Manager\\ManagerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:19:56.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ISpecification.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Specifications\\ISpecification.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Specifications\\ISpecification.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Specifications\\ISpecification.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Specifications\\ISpecification.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAIwCkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:14:43.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BaseSpecification.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Specifications\\BaseSpecification.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Specifications\\BaseSpecification.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Specifications\\BaseSpecification.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Specifications\\BaseSpecification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T10:43:26.418Z",
+              "WhenOpened": "2026-03-25T03:14:41.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IRepositoryFactory.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IRepositoryFactory.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Repositories\\IRepositoryFactory.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IRepositoryFactory.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Repositories\\IRepositoryFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:14:26.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Repositories\\IUnitOfWork.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IUnitOfWork.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Repositories\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:14:23.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IReadRepository.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IReadRepository.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Repositories\\IReadRepository.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IReadRepository.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Repositories\\IReadRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:14:16.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Repositories\\IBaseRepository.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Repositories\\IBaseRepository.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Repositories\\IBaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:14:15.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MyApp.Infrastructure",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-25T03:11:10.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "BaseDto.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\BaseDto.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Models\\BaseDto.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\BaseDto.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Models\\BaseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T03:09:34.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MyApp.Domain",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\MyApp.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\MyApp.Domain.csproj",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\MyApp.Domain.csproj",
+              "RelativeToolTip": "src\\MyApp.Domain\\MyApp.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-25T03:04:34.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\External\\EmailService.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Services\\External\\EmailService.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\External\\EmailService.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Services\\External\\EmailService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T02:59:40.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ISoftDeleteEntity.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\ISoftDeleteEntity.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Models\\ISoftDeleteEntity.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\ISoftDeleteEntity.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Models\\ISoftDeleteEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T02:59:09.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T02:59:07.116Z",
               "EditorCaption": ""
             },
             {
@@ -370,468 +523,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\Requests\\LoginRequest.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\LoginRequest.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\Requests\\LoginRequest.cs",
+              "DocumentIndex": 30,
+              "Title": "IAuditableEntity.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\IAuditableEntity.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Models\\IAuditableEntity.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\IAuditableEntity.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Models\\IAuditableEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T09:50:06.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LogoutAllRequest.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutAllRequest.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutAllRequest.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutAllRequest.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\Requests\\LogoutAllRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T09:54:46.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Orders\\OrderController.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.WebApi\\Features\\Orders\\OrderController.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Orders\\OrderController.cs",
-              "RelativeToolTip": "src\\MyApp.WebApi\\Features\\Orders\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:05:36.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AuthUserDto.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\DTOs\\AuthUserDto.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Authentications\\DTOs\\AuthUserDto.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Authentications\\DTOs\\AuthUserDto.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Authentications\\DTOs\\AuthUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:43:16.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Services\\JwtService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\JwtService.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Services\\JwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:01:02.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:31:09.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
-              "RelativeToolTip": "src\\MyApp.WebApi\\Features\\Auths\\AuthController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T10:59:41.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Services\\EmailService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\EmailService.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Services\\EmailService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T05:00:57.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Models\\AppUser.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Models\\AppUser.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Models\\AppUser.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Models\\AppUser.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T07:13:24.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
-              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Models\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T04:44:56.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowBEAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T04:42:16.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "HashService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\HashService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Services\\HashService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\HashService.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Services\\HashService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:30:36.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ProductParameters.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
-              "RelativeToolTip": "src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T02:59:10.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T03:57:35.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "UserParameters.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Paginations\\Parameters\\UserParameters.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Paginations\\Parameters\\UserParameters.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Paginations\\Parameters\\UserParameters.cs",
-              "RelativeToolTip": "src\\MyApp.Domain\\Paginations\\Parameters\\UserParameters.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T02:58:55.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\Category.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Category.cs",
-              "RelativeToolTip": "src\\MyApp.Domain\\Entities\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T03:18:13.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Orders\\OrderService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Orders\\OrderService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Orders\\OrderService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Orders\\OrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:03:54.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAowFYAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T02:57:44.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\Order.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Order.cs",
-              "RelativeToolTip": "src\\MyApp.Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T11:31:01.171Z",
+              "WhenOpened": "2026-03-25T02:59:05.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "ProductProfile.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Title": "IDomainEvent.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\IDomainEvent.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Models\\IDomainEvent.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\IDomainEvent.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Models\\IDomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:13:29.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "OrderProfile.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\OrderProfile.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\OrderProfile.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\OrderProfile.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Mappings\\OrderProfile.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBUAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:05:32.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "AutUserToken.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\AutUserToken.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\AutUserToken.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\AutUserToken.cs",
-              "RelativeToolTip": "src\\MyApp.Domain\\Entities\\AutUserToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T11:31:04.85Z",
+              "WhenOpened": "2026-03-25T02:59:02.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:29:02.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "BaseProfile.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\BaseProfile.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\BaseProfile.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\BaseProfile.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Mappings\\BaseProfile.cs",
+              "DocumentIndex": 28,
+              "Title": "IHasSlug.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\IHasSlug.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Core\\Models\\IHasSlug.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Core\\Models\\IHasSlug.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Core\\Models\\IHasSlug.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:13:26.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ApplicationAssemblyMarker.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\ApplicationAssemblyMarker.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\ApplicationAssemblyMarker.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\ApplicationAssemblyMarker.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\ApplicationAssemblyMarker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T11:21:26.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IJwtService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IJwtService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Abstractions\\Services\\IJwtService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IJwtService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Abstractions\\Services\\IJwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T09:45:36.819Z",
+              "WhenOpened": "2026-03-25T02:58:58.822Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IAuthService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Abstractions\\Services\\IAuthService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IAuthService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Abstractions\\Services\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T09:53:47.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "RequestInfoService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\RequestInfoService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Services\\RequestInfoService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Services\\RequestInfoService.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Services\\RequestInfoService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T09:27:24.41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IRequestInfoService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IRequestInfoService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Abstractions\\Services\\IRequestInfoService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IRequestInfoService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Abstractions\\Services\\IRequestInfoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T09:19:46.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "20260319083619_v_1.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Migrations\\20260319083619_v_1.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Migrations\\20260319083619_v_1.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Migrations\\20260319083619_v_1.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Migrations\\20260319083619_v_1.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAqwGYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:36:22.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "UserTokenConfiguration.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\UserTokenConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\UserTokenConfiguration.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\UserTokenConfiguration.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\UserTokenConfiguration.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:18:31.072Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "MyAppDbContext.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAmwB0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:31:44.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Commands.md",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\Commands.md",
-              "RelativeDocumentMoniker": "Commands.md",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\Commands.md",
-              "RelativeToolTip": "Commands.md",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAEEAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-03-19T08:22:33.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "OrderProductConfiguration.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\OrderProductConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\OrderProductConfiguration.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\OrderProductConfiguration.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\OrderProductConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:19:57.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "IHashService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IHashService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Abstractions\\Services\\IHashService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Abstractions\\Services\\IHashService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Abstractions\\Services\\IHashService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T04:25:58.838Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "CategoryConfiguration.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAACAAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T08:19:42.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "nlog.config",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\nlog.config",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\nlog.config",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\nlog.config",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\nlog.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-03-18T03:04:37.486Z"
             }
           ]
         },

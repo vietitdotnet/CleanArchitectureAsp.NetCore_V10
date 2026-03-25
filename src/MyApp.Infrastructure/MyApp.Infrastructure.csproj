@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Constants\Extentions\" />
+    <Folder Include="Common\Service\" />
   </ItemGroup>
 
   <PropertyGroup>

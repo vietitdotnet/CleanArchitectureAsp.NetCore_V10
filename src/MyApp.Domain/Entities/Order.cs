@@ -1,4 +1,4 @@
-﻿using MyApp.Domain.Abstractions.Users;
+﻿using MyApp.Domain.Abstractions;
 using MyApp.Domain.Core.Models;
 using MyApp.Domain.Enums;
 using System.ComponentModel.DataAnnotations;

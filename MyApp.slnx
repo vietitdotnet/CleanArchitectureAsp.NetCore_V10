@@ -6,5 +6,6 @@
     <Project Path="src/MyApp.Domain/MyApp.Domain.csproj" />
     <Project Path="src/MyApp.Infrastructure/MyApp.Infrastructure.csproj" />
     <Project Path="src/MyApp.WebApi/MyApp.WebApi.csproj" />
+    <Project Path="src/MyApp.WebMvc/MyApp.WebMvc.csproj" />
   </Folder>
 </Solution>

@@ -13,3 +13,4 @@ D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Application\obj\Debug\net10.0\MyAp
 D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Application\obj\Debug\net10.0\refint\MyApp.Application.dll
 D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Application\obj\Debug\net10.0\MyApp.Application.pdb
 D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Application\obj\Debug\net10.0\ref\MyApp.Application.dll
+D:\CleanArchitectureAsp.NetCore_V10\src\MyApp.Application\obj\Debug\net10.0\MyApp.Application.sourcelink.json

@@ -2,9 +2,9 @@
 using FluentValidation;
 using MediatR;
 using MMyApp.Application.Features.Products.Responses;
-using MyApp.Application.Common.Interfaces;
-using MyApp.Application.Common.Models;
-using MyApp.Application.Extentions;
+using MyApp.Application.Common.Queryable.Extentions;
+using MyApp.Application.Common.Results;
+using MyApp.Application.Common.Service;
 using MyApp.Application.Features.Products.DTOs;
 using MyApp.Application.Features.Products.Requests;
 using MyApp.Application.Features.Products.Responses;

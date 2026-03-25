@@ -1,10 +1,12 @@
 ﻿
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MyApp.Application.Abstractions.Services;
 using MyApp.Application.Features.Authentications.Requests;
 using MyApp.Application.Features.Authentications.Responses;
-using MyApp.Infrastructure.Models;
+using MyApp.Application.Interfaces.Auth;
+using MyApp.Application.Interfaces.External;
+using MyApp.Infrastructure.Entities.Identity;
+
 namespace MyApp.WebApi.Features.Auths
 {
     [Route("api/[controller]")]

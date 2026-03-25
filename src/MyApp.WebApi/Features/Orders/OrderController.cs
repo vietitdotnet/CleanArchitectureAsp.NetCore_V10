@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyApp.Application.Features.Orders;
 using MyApp.Application.Features.Orders.Responses;
 using MyApp.Application.Features.Products.Responses;
-using MyApp.Application.Interfaces;
 
 namespace MyApp.WebApi.Features.Orders
 {

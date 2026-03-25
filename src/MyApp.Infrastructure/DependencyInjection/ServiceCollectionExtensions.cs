@@ -2,12 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MyApp.Application.Abstractions.Services;
+using MyApp.Application.Interfaces.Auth;
+using MyApp.Application.Interfaces.Common;
+using MyApp.Application.Interfaces.External;
+using MyApp.Application.Interfaces.Identity;
 using MyApp.Domain.Core.Repositories;
 using MyApp.Infrastructure.Data;
-using MyApp.Infrastructure.Models;
+using MyApp.Infrastructure.Entities.Identity;
 using MyApp.Infrastructure.Repositories;
-using MyApp.Infrastructure.Services;
+using MyApp.Infrastructure.Services.Auth;
+using MyApp.Infrastructure.Services.Common;
+using MyApp.Infrastructure.Services.External;
 using MyApp.Infrastructure.Services.Identity;
 
 namespace MyApp.Infrastructure.DependencyInjection
@@ -55,7 +60,7 @@ namespace MyApp.Infrastructure.DependencyInjection
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ILoggerService, LoggerService>();
-            services.AddScoped<IManagerService, ManagerService>();
+            services.AddScoped<IIDentityService, IdentityService>();
             services.AddSingleton<IHashService, HashService>();
             services.AddSingleton<IJwtService, JwtService>();
             services.AddSingleton<IRequestInfoService, RequestInfoService>();

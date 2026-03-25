@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
-using MyApp.Application.Abstractions.Services;
-using MyApp.Application.Features.Managers.Responses;
-using MyApp.Application.Features.Orders.Responses;
+using MyApp.Application.Features.Identity.Requests;
+using MyApp.Application.Features.Identity.Responses;
+using MyApp.Application.Interfaces.Identity;
 using MyApp.Domain.Paginations.Parameters;
 
 namespace MyApp.WebApi.Features.Manager
@@ -11,11 +11,11 @@ namespace MyApp.WebApi.Features.Manager
     [ApiController]
     public class ManagerController : ControllerBase
     {
-        private readonly IManagerService _managerService;
+        private readonly IIDentityService _identityService;
 
-        public ManagerController(IManagerService managerService)
+        public ManagerController(IIDentityService dentityService)
         {
-            _managerService = managerService;
+            _identityService = dentityService;
         }
 
 
@@ -25,10 +25,22 @@ namespace MyApp.WebApi.Features.Manager
         {
             parameters.Normalize();
 
-            var result = await _managerService.GetUsers(parameters);
+            var result = await _identityService.GetUsers(parameters);
 
             return new GetUsersResponse(result);
            
+        }
+       
+
+        [HttpPost]
+        [ProducesResponseType(typeof(CreateRoleResponse), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<CreateRoleResponse>> CreateRole(
+            [FromBody] CreateRoleRequest req)
+        {
+           var result = await _identityService.CreateRoleAsync(req);
+
+           return StatusCode(201, new CreateRoleResponse(result));
         }
     }
 }

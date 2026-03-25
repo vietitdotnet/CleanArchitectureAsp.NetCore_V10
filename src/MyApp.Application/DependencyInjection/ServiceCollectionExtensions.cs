@@ -1,10 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using MyApp.Application.Abstractions.Services;
-using MyApp.Application.Common.Interfaces;
 using MyApp.Application.Features.Orders;
 using MyApp.Application.Features.Products;
-using MyApp.Application.Interfaces;
 
 namespace MyApp.Application.DependencyInjection
 {

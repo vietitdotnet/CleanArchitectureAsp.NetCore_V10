@@ -1,7 +1,6 @@
 ﻿
-using MyApp.Application.Features.Managers.DTOs;
-using MyApp.Domain.Abstractions.Users;
-
+using MyApp.Application.Features.Identity.DTOs;
+using MyApp.Domain.Abstractions;
 
 namespace MyApp.Application.Mappings
 {

@@ -2,7 +2,7 @@
 using MyApp.Application.Features.Authentications.DTOs;
 using MyApp.Application.Features.OrderProducts.DTOs;
 using MyApp.Application.Features.Orders.DTOs;
-using MyApp.Domain.Abstractions.Users;
+using MyApp.Domain.Abstractions;
 using MyApp.Domain.Entities;
 
 namespace MyApp.Application.Mappings

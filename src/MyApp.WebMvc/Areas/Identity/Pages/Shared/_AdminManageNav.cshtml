@@ -1,0 +1,11 @@
+﻿@using MyApp.Infrastructure.Entities.Identity
+@using MyApp.WebMvc.Areas.Identity.Pages.Models
+
+@inject SignInManager<AppUser> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item"><a class="nav-link @AdminManageNavPages.UserNavClass(ViewContext)" id="#" asp-area="identity" asp-page="/User/Index">User</a></li>
+    <li class="nav-item"><a class="nav-link @AdminManageNavPages.RoleNavClass(ViewContext)" id="#" asp-area="identity" asp-page="/Role/Index">Role</a></li>
+</ul>

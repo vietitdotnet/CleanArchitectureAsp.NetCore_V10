@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using MyApp.Application.Extentions;
+using MyApp.Application.Common.Validation.Extenttions;
 using MyApp.Application.Features.Products.Requests;
 using System;
 using System.Collections.Generic;

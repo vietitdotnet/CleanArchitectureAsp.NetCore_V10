@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using MyApp.Domain.Exceptions;
-using MyApp.Infrastructure.Models;
+using MyApp.Infrastructure.Entities.Identity;
 using MyApp.Infrastructure.Models.Enums;
 using System;
 using System.Collections.Generic;

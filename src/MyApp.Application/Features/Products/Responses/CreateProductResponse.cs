@@ -1,5 +1,4 @@
-﻿using MyApp.Application.Common.Models;
-using MyApp.Application.Features.Products.DTOs;
+﻿using MyApp.Application.Features.Products.DTOs;
 
 namespace MyApp.Application.Features.Products.Responses
 {
