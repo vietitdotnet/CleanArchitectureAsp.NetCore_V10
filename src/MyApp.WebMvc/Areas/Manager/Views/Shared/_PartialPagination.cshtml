@@ -1,0 +1,122 @@
+﻿@model dynamic
+
+@{
+
+    var pagedResult = Model;
+
+    var queryParams = new Dictionary<string, string>();
+
+    foreach (string key in Context.Request.Query.Keys)
+    {
+        if (key != "PageIndex")
+        {
+            var value = Context.Request.Query[key];
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                queryParams[key] = value!;
+            }
+        }
+    }
+
+    int currentPage = pagedResult.PageIndex;
+    int totalPages = pagedResult.TotalPages;
+    int countPages = Model.TotalPages;
+    string GeneratePageUrl(int page)
+    {
+        var allParams = new Dictionary<string, string>(queryParams)
+        {
+            ["PageIndex"] = page.ToString()
+        };
+
+        var query = string.Join("&", allParams.Select(kv => $"{kv.Key}={kv.Value}"));
+        return $"?{query}";
+    }
+
+    if (currentPage > countPages)
+        currentPage = countPages;
+
+    if (countPages <= 1) return;
+
+
+    int? preview = null;
+    int? next = null;
+
+    if (currentPage > 1)
+        preview = currentPage - 1;
+
+    if (currentPage < countPages)
+        next = currentPage + 1;
+
+    // Các trang hiện thị trong điều hướng
+    List<int> pagesRanges = new List<int>();
+
+
+    int delta = 3;             // Số trang mở rộng về mỗi bên trang hiện tại
+    int remain = delta * 2;     // Số trang hai bên trang hiện tại
+
+    pagesRanges.Add(currentPage);
+    // Các trang phát triển về hai bên trang hiện tại
+    for (int i = 1; i <= delta; i++)
+    {
+        if (currentPage + i <= countPages)
+        {
+            pagesRanges.Add(currentPage + i);
+            remain--;
+        }
+
+        if (currentPage - i >= 1)
+        {
+            pagesRanges.Insert(0, currentPage - i);
+            remain--;
+        }
+
+    }
+    // Xử lý thêm vào các trang cho đủ remain
+    //(xảy ra ở đầu mút của khoảng trang không đủ trang chèn  vào)
+    if (remain > 0)
+    {
+        if (pagesRanges[0] == 1)
+        {
+            for (int i = 1; i <= remain; i++)
+            {
+                if (pagesRanges.Last() + 1 <= countPages)
+                {
+                    pagesRanges.Add(pagesRanges.Last() + 1);
+                }
+            }
+        }
+        else
+        {
+            for (int i = 1; i <= remain; i++)
+            {
+                if (pagesRanges.First() - 1 > 1)
+                {
+                    pagesRanges.Insert(0, pagesRanges.First() - 1);
+                }
+            }
+        }
+    }
+}
+
+@if (pagedResult.TotalPages > 1)
+{
+    <nav aria-label="Pagination">
+        <ul class="pagination">
+            <li class="page-item @(pagedResult.HasPreviousPage ? "" : "disabled")">
+                <a class="page-link" href="@(GeneratePageUrl(currentPage - 1))">«</a>
+            </li>
+
+            @foreach (var pageitem in pagesRanges)
+            {
+                <li class="page-item @(pageitem == currentPage ? "active" : "")">
+                    <a class="page-link" href="@(GeneratePageUrl(pageitem))">@pageitem</a>
+                </li>
+            }
+
+            <li class="page-item @(pagedResult.HasNextPage ? "" : "disabled")">
+                <a class="page-link" href="@(GeneratePageUrl(currentPage + 1))">»</a>
+            </li>
+        </ul>
+    </nav>
+}
+

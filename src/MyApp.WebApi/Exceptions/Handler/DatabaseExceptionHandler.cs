@@ -21,6 +21,7 @@ namespace MyApp.WebApi.Exceptions.Handler
             switch (exception)
             {
                 case SqlException sqlEx:
+                    
                     problem.Status = StatusCodes.Status500InternalServerError;
                     problem.Title = "Database Error";
                     problem.ErrorCode = "DATABASE_ERROR";

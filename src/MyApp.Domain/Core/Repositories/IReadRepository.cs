@@ -15,8 +15,12 @@ namespace MyApp.Domain.Core.Repositories
         Task<TDto?> GetByIdProjectedAsync<TDto>(TKey id, CancellationToken ct = default) where TDto : BaseDto;
 
         Task<T?> FirstOrDefaultAsync(ISpecification<T> spec , CancellationToken ct = default);
-        
-        Task<TResult?> FirstOrDefaultAsync<TResult>(ISpecification<T> spec, Expression<Func<T, TResult>> selector, CancellationToken ct = default);
+
+        Task<TDto?> FirstOrDefaultProjectedAsync<TDto>(ISpecification<T> spec, CancellationToken ct = default) where TDto : BaseDto;
+
+        Task<TDto?> FirstOrDefaultProjectedAsync<TDto>(ISpecification<T> spec, DateTimeOffset now = default, CancellationToken ct = default) where TDto : BaseDto;
+
+        Task<TResult?> FirstOrDefaultWidthSelectorAsync<TResult>(ISpecification<T> spec, Expression<Func<T, TResult>> selector, CancellationToken ct = default);
         
         Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec, CancellationToken ct = default);
         Task<IReadOnlyList<TDto>> ListProjectedAsync<TDto>(ISpecification<T> spec, CancellationToken ct = default) where TDto : BaseDto;

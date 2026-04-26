@@ -14,5 +14,7 @@ namespace MyApp.Application.Interfaces.Identity
         Task<PagedResponse<UserDto, UserParameters>> GetUsers(UserParameters parameters);
 
         Task<OperationResult<string>> CreateRoleAsync(CreateRoleRequest request , CancellationToken ct = default);
+
+        Task<PagedResponse<RoleDto, RoleParameters>> GetRoles(RoleParameters parameters);
     }
 }

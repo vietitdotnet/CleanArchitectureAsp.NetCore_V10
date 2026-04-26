@@ -42,5 +42,17 @@ namespace MyApp.WebApi.Features.Manager
 
            return StatusCode(201, new CreateRoleResponse(result));
         }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(GetRolesResponse), StatusCodes.Status200OK)]
+        public async Task<GetRolesResponse> GetRoles([FromQuery] RoleParameters param)
+        {
+            param.Normalize();
+
+            var result = await _identityService.GetRoles(param);
+
+            return new GetRolesResponse(result);
+
+        }
     }
 }

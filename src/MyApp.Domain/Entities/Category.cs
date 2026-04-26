@@ -3,34 +3,26 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyApp.Domain.Entities
 {
-    public class Category : BaseEntity<int>, IHasSlug
+    public class Category : BaseEntity<int>
     {
         private Category() { }
+
+        public string Name { get; private set; } = null!;
+        public string Slug { get; private set; } = null!;
+        public string? Title { get; private set; }
+        public string? Description { get; private set; }
+        public int? ParentCategoryId { get; private set; }
+        public Category? ParentCategory { get; private set; }
+        public bool IsDeleted { get; private set; }
+        public ICollection<Category> CategoryChildrens { get; } = [];
+        public ICollection<Product> Products { get; } = [];
+
 
         private Category(string name, string slug)
         {
             Name = name;
             Slug = slug;
         }
-
-        public string Name { get; private set; } = null!;
-
-        public string Slug { get; private set; } = null!;
-
-        public string? Title { get; private set; }
-
-        public string? Description { get; private set; }
-
-        public int? ParentCategoryId { get; private set; }
-
-        public Category? ParentCategory { get; private set; }
-
-        public bool IsDeleted { get; private set; }
-
-        public ICollection<Category> CategoryChildrens { get; } = [];
-
-        public ICollection<Product> Products { get; } = [];
-
 
         public static Category Create(
             string name,

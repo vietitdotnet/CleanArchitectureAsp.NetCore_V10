@@ -9,52 +9,7 @@ namespace MyApp.Application.Common.Queryable.Extentions
 {
     public static class QueryableExtensions
     {
-        public static async Task<TKey> GetIdBySlugAsync<TEntity, TKey>(
-             this IBaseRepository<TEntity, TKey> repository,
-             string slug)
-             where TEntity : BaseEntity<TKey>, IHasSlug
-             where TKey : notnull
-        {
-            var spec = new BaseSpecification<TEntity>(x => x.Slug == slug);
-
-            var id = await repository.FirstOrDefaultAsync(spec, x => x.Id);
-
-            if (EqualityComparer<TKey>.Default.Equals(id, default!))
-                throw new NotFoundException(
-                    $"{typeof(TEntity).Name} with slug '{slug}' not found");
-
-            return id!;
-        }
-
-        public static async Task<TEntity> GetByIdOrThrowAsync<TEntity, TKey>(
-            this IBaseRepository<TEntity, TKey> repository,
-            TKey id)
-            where TEntity : BaseEntity<TKey>
-            where TKey : notnull
-        {
-            var entity = await repository.GetByIdAsync(id);
-
-            if (entity == null)
-                throw new NotFoundException($"{typeof(TEntity).Name} with id '{id}' not found");
-
-            return entity;
-        }
-
-        public static async Task<TEntity> GetBySlugAsync<TEntity, TKey>(
-            this IBaseRepository<TEntity, TKey> repository,
-            string slug)
-            where TEntity : BaseEntity<TKey>, IHasSlug
-            where TKey : notnull
-        {
-            var spec = new BaseSpecification<TEntity>(x => x.Slug == slug);
-
-            var entity = await repository.FirstOrDefaultAsync(spec);
-
-            if (entity == null)
-                throw new NotFoundException($"{typeof(TEntity).Name} with slug '{slug}' not found");
-
-            return entity;
-        }
+       
 
         public static async Task<bool> ExistsAsync<TEntity, TKey>(
             this IBaseRepository<TEntity, TKey> repository,

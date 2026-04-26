@@ -6,4 +6,54 @@
     ViewData["ActivePage"] = AdminManageNavPages.User;
 }
 
-<h1>User</h1>
+<h2>Danh sách User</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Họ Tên </th>
+            <th>Option</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Users?.Items != null && Model.Users.Items.Any())
+        {
+            foreach (var user in Model.Users.Items)
+            {
+                <tr>
+                    <td>@user.Email</td>
+                    <td>@user.FullName</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">Không có dữ liệu</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.Users != null)
+{
+    <nav>
+        <ul class="pagination">
+            @{
+                int totalPages = (int)Math.Ceiling((double)Model.Users.TotalCount / Model.Users.PageSize);
+            }
+
+            @for (int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item @(i == Model.Users.PageIndex ? "active" : "")">
+                    <a class="page-link" asp-page="./Index"
+                           asp-route-pageIndex="@i"
+                           >
+                        @i
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+}

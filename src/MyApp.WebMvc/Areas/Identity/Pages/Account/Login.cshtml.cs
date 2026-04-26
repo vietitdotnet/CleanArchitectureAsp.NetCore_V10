@@ -16,17 +16,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using MyApp.Infrastructure.Entities.Identity;
 
+
 namespace MyApp.WebMvc.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly UserManager<AppUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<AppUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<AppUser> signInManager, ILogger<LoginModel> logger, UserManager<AppUser> userManager)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
         }
 
         /// <summary>
@@ -65,7 +68,7 @@ namespace MyApp.WebMvc.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
             [EmailAddress]
             public string Email { get; set; }
 
@@ -73,7 +76,7 @@ namespace MyApp.WebMvc.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required(ErrorMessage="{0} không được bỏ trống")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
@@ -118,6 +121,18 @@ namespace MyApp.WebMvc.Areas.Identity.Pages.Account
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
+                var user = await _userManager.FindByEmailAsync(Input.Email);
+
+                if (user != null && !await _userManager.IsEmailConfirmedAsync(user))
+                {
+                    return RedirectToPage("./RegisterConfirmation", new
+                    {
+                        Email = Input.Email,
+                        ReturnUrl = returnUrl
+                    });
+
+                }
+
                 if (result.RequiresTwoFactor)
                 {
                     return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });

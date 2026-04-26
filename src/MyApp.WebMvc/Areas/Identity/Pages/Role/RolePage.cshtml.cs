@@ -9,12 +9,12 @@ namespace MyApp.WebMvc.Areas.Identity.Pages.Role
 
         protected readonly ILogger<RolePageModel> _logger;
 
-        protected IIDentityService _managerService;
+        protected IIDentityService _identityService;
 
-        public RolePageModel(ILogger<RolePageModel> logger, IIDentityService managerService)
+        public RolePageModel(ILogger<RolePageModel> logger, IIDentityService identityService)
         {
             _logger = logger;
-            _managerService = managerService;
+            _identityService = identityService;
         }
 
         [TempData]

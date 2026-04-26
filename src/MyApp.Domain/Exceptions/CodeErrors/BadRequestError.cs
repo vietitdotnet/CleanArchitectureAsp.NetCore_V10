@@ -4,7 +4,6 @@ namespace MyApp.Domain.Exceptions.CodeErrors
 {
     public static class BadRequestError
     {
-        public const string Default = ErrorCodeCategories.BadRequest;
 
         public const string InvalidCredentials = "INVALID_CREDENTIALS";
 

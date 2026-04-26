@@ -17,7 +17,8 @@
     <Folder Include="Common\Constants\" />
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Extentions\" />
-    <Folder Include="Features\Orders\Requests\" />
+    <Folder Include="Features\Administrative\Requests\" />
+    <Folder Include="Features\Categorys\Requests\" />
   </ItemGroup>
 
   <ItemGroup>

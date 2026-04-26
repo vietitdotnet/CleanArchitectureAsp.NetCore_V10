@@ -4,9 +4,10 @@ namespace MyApp.Domain.Exceptions
 {
     public class NotFoundException : BaseException
     {
-            public NotFoundException(
+
+        public NotFoundException(
                 string message = "Không tìm thấy tài nguyên yêu cầu.", 
-                string errorCode = NotFoundError.Default)
+                string errorCode = "Not_Found")
                 : base(message, errorCode)
             {
             }

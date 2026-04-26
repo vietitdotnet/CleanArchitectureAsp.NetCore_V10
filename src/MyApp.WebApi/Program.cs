@@ -1,8 +1,10 @@
+using Microsoft.OpenApi;
 using MyApp.Application.DependencyInjection;
 using MyApp.Infrastructure.DependencyInjection;
 using MyApp.Infrastructure.Extentions;
 using MyApp.WebApi.Exceptions.Extentions;
 using MyApp.WebApi.Extentions;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,13 +24,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    });
 }
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-};
 
 app.UseHttpsRedirection();
 

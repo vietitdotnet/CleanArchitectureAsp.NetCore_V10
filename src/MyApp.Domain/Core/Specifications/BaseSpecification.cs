@@ -27,7 +27,7 @@ namespace MyApp.Domain.Core.Specifications
         public int Take { get; private set; }
         public int Skip { get; private set; }
         public bool IsPagingEnabled { get; private set; } = false;
-        public bool AsNoTracking { get; private set; } = true;
+        public bool AsNoTracking { get; private set; } = false;
 
 
         #region Include

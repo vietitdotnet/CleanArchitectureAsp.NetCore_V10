@@ -1,0 +1,25 @@
+@using Microsoft.AspNetCore.Identity
+@using MyApp.Infrastructure.Entities.Identity
+@using MyApp.WebMvc.Areas.Manager.Comom.Contants
+
+@inject SignInManager<AppUser> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+<ul class="nav nav-pills flex-column gap-2">
+    <li class="nav-item">
+        <a class="nav-link px-3 py-2 rounded-3 @ManageNavPages.ProductNavClass(ViewContext)" id="product-nav" asp-action="index" asp-controller="product">
+            <i class="bi bi-box-seam me-2"></i> Sản phẩm
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link px-3 py-2 rounded-3 @ManageNavPages.OrderNavClass(ViewContext)" id="order-nav" asp-action="index" asp-controller="order">
+            <i class="bi bi-cart-check me-2"></i> Đơn hàng
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link px-3 py-2 rounded-3 @ManageNavPages.PromotionNavClass(ViewContext)" id="promotion-nav" asp-action="index" asp-controller="promotion">
+            <i class="bi bi-tags me-2"></i> Khuyến mãi
+        </a>
+    </li>
+</ul>

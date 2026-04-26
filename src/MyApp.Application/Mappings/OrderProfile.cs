@@ -14,17 +14,17 @@ namespace MyApp.Application.Mappings
 
             CreateMap<Order, OrderDto>()
                 .ForMember(d => d.TotalCount,
-                    o => o.MapFrom(s => s.OrderProducts.Sum(p => p.Quantity)))
+                    o => o.MapFrom(s => s.OrderItems.Sum(p => p.Quantity)))
                 .ForMember(d => d.TotalPrice,
-                    o => o.MapFrom(s => s.OrderProducts.Sum(p => p.Price * p.Quantity)))
+                    o => o.MapFrom(s => s.OrderItems.Sum(p => p.UnitPrice * p.Quantity)))
                 .ForMember(dest => dest.Products,
-                         o => o.MapFrom(s => s.OrderProducts))
+                         o => o.MapFrom(s => s.OrderItems))
                 .ForMember(dest => dest.Customer, opt => opt.MapFrom(src => src.User));
                
 
-            CreateMap<OrderProduct, OrderProductDto>()
+            CreateMap<OrderItem, OrderProductDto>()
                     .ForMember(dest => dest.ProductName,
-                        opt => opt.MapFrom(src => src.Product.Name));
+                        opt => opt.MapFrom(src => src.ProductUnit.Product.Name));
              
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyApp.Domain.Exceptions.CodeErrors;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,16 @@ using System.Threading.Tasks;
 
 namespace MyApp.Domain.Exceptions
 {
-    public class ForbiddenAccessException : Exception
+    public class ForbiddenAccessException : BaseException
     {
-        public ForbiddenAccessException(){}
-        public ForbiddenAccessException(string message) : base(message){}
+        public ForbiddenAccessException(
+               string message = "Cấm truy cập tài nguyên yêu cầu.",
+               string errorCode = "Forbidden")
+               : base(message, errorCode)
+        {
+        }
+
     }
+
 }
+

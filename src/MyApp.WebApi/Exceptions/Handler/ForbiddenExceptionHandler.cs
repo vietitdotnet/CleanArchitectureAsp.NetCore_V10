@@ -16,7 +16,7 @@ namespace MyApp.WebApi.Exceptions.Handler
             {
                 Status = StatusCodes.Status403Forbidden,
                 Title = "Forbidden",
-                ErrorCode = ErrorCodeCategories.Forbidden,
+                ErrorCode = exception.ErrorCode,
                 ErrorMessage = exception.Message,
                 TraceId = context.TraceIdentifier
             };

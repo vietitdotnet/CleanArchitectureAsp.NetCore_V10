@@ -1,34 +1,38 @@
 ﻿using AutoMapper;
-using FluentValidation;
-using MediatR;
-using MMyApp.Application.Features.Products.Responses;
 using MyApp.Application.Common.Queryable.Extentions;
 using MyApp.Application.Common.Results;
 using MyApp.Application.Common.Service;
 using MyApp.Application.Features.Products.DTOs;
+using MyApp.Application.Features.Products.DTOs.View;
+using MyApp.Application.Features.Products.MapRaws;
 using MyApp.Application.Features.Products.Requests;
-using MyApp.Application.Features.Products.Responses;
+using MyApp.Application.Features.ProductUints.DTOs;
+using MyApp.Application.Features.Promotions.DTOs;
+using MyApp.Application.Interfaces.Common;
 using MyApp.Application.Specifications.Products;
 using MyApp.Domain.Core.Repositories;
-using MyApp.Domain.Core.Specifications;
 using MyApp.Domain.Entities;
 using MyApp.Domain.Exceptions;
 using MyApp.Domain.Paginations.Core;
 using MyApp.Domain.Paginations.Parameters;
 using MyApp.Domain.Specifications;
 using MyApp.Domain.Specifications.Products;
+using MyApp.Domain.Specifications.ProductUnits;
 
 
 namespace MyApp.Application.Features.Products
 {
     public class ProductService : BaseService, IProductService
     {
+
+        private readonly ISlugService _slugService;
         public ProductService(IUnitOfWork unitOfWork, 
             IMapper mapper, 
-            IServiceProvider serviceProvider) 
+            IServiceProvider serviceProvider,
+            ISlugService slugService) 
             : base(unitOfWork, mapper, serviceProvider)
         {
-
+            _slugService = slugService;
         }
 
         public async Task<IReadOnlyList<ProductDto>> GetAllProductsAsync(CancellationToken ct = default)
@@ -39,7 +43,7 @@ namespace MyApp.Application.Features.Products
 
         public async Task<OperationResult<ProductDto>> GetProductByIdAsync(int id)
         {
-            var spec = ProductSpecifications.GetProdcutByIdSpec(id);
+            var spec = new ProductByIdSpec(id);
 
             var result = await _unitOfWork.Repository<Product, int>().FirstOrDefaultAsync(spec);
 
@@ -68,10 +72,13 @@ namespace MyApp.Application.Features.Products
         {
             await ValidateAsync(request);
 
+
+            var slug = await GenerateUniqueSlugAsync(request.Name);
+
             var product = Product.Create(
                 request.Name,
-                request.Slug,
-                request.Price,
+                slug,
+                request.Price!,
                 request.Description,
                 request.CategoryId
             );
@@ -84,10 +91,11 @@ namespace MyApp.Application.Features.Products
                 _mapper.Map<ProductDto>(product));
         }
 
-        public async Task<PagedResponse<ProductDto, ProductParameters>> GetProductsAsync(ProductParameters param, CancellationToken  ct = default)
+        public async Task<PagedResponse<ProductDto, ProductParameters>> GetProductsAsync
+            (ProductParameters param, CancellationToken  ct = default)
         {
 
-          var spec = new ProductPageFilterSpec(param);
+          var spec = new ProductParametersSpec(param);
 
             var products = await _unitOfWork.Repository<Product, int>()
                 .GetPagedAsync<ProductDto, ProductParameters>(spec, param, ct);
@@ -100,14 +108,7 @@ namespace MyApp.Application.Features.Products
             (string categorySlug, ProductParameters param , CancellationToken ct = default)
         {
 
-            var categoryId = await _unitOfWork.Repository<Product, int>().GetIdBySlugAsync(categorySlug);
-
-            var spec = new ProdcutsByIdCategoryWithPageSpec(categoryId, param);
-
-            var products = await _unitOfWork.Repository<Product, int>()
-                .GetPagedAsync<ProductDto, ProductParameters>( spec, param, ct);
-
-            return products;
+          throw new NotImplementedException();
 
         }
 
@@ -150,6 +151,37 @@ namespace MyApp.Application.Features.Products
 
             return OperationResult<bool>.Ok(true);
         }
+
+        public async Task<ProductViewDto?> GetProductBySlugAsync(string slug, CancellationToken ct = default)
+        {
+           
+            var spec = new ProductBySlugSpec(slug);
+           
+            var raw = await _unitOfWork.Repository<Product, int>()
+                .FirstOrDefaultProjectedAsync<ProductDetailRaw>(spec, DateTimeOffset.UtcNow , ct);
+            if (raw == null)
+                throw new NotFoundException($"Không tìm thấy dữ liệu với slug: {slug}");
+
+            return ProductViewDto.Create(raw);
+        }
+
+
+
+        private async Task<string> GenerateUniqueSlugAsync(string name)
+        {
+            var baseSlug = _slugService.Generate(name);
+            var slug = baseSlug;
+            var index = 1;
+
+            while (await _unitOfWork.Repository<Product, int>()
+                .AnyAsync(new ProductBySlugSpec(slug)))
+            {
+                slug = $"{baseSlug}-{index++}";
+            }
+
+            return slug;
+        }
+
 
     }
 }

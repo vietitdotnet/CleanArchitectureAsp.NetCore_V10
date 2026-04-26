@@ -9,8 +9,6 @@ namespace MyApp.Domain.Exceptions.CodeErrors
     public static class RedirectCodes
     {
 
-        public const string Default = ErrorCodeCategories.RedirectToAction;
-
         public const string EmailNotConfirmed = "EMAIL_NOT_CONFIRMED";
 
         public const string PhoneNotVerified = "PHONE_NOT_VERIFIED";

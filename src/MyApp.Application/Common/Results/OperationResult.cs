@@ -8,7 +8,7 @@
 
         public T Data { get; private set; } = default!;
 
-        public IEnumerable<string>? Errors { get; private set; }
+        public Dictionary<string, string[]>? Errors { get; private set; }
 
         private OperationResult() { }
 
@@ -24,18 +24,38 @@
 
         public static OperationResult<T> Fail(string error)
         {
-            return new OperationResult<T>
-            {
-                Success = false,
-                Errors = new[] { error }
+                return new OperationResult<T>
+                {
+                    Success = false,
+                    Message = error,
+                    Errors = new Dictionary<string, string[]>
+                {
+                    { "general", new[] { error } }
+                }
             };
         }
 
         public static OperationResult<T> Fail(IEnumerable<string> errors)
         {
+            var list = errors.ToArray();
+
             return new OperationResult<T>
             {
                 Success = false,
+                Message = list.FirstOrDefault(),
+                Errors = new Dictionary<string, string[]>
+            {
+                { "general", list }
+            }
+            };
+        }
+
+        public static OperationResult<T> Fail(Dictionary<string, string[]> errors)
+        {
+            return new OperationResult<T>
+            {
+                Success = false,
+                Message = errors.FirstOrDefault().Value?.FirstOrDefault(),
                 Errors = errors
             };
         }

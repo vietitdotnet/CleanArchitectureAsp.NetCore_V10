@@ -7,7 +7,6 @@ namespace MyApp.WebMvc.Services
     {
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            throw new NotImplementedException();
         }
     }
 }

@@ -8,9 +8,9 @@ namespace MyApp.Application.Mappings
     {
         public UserProfile()
         {
-            CreateMap<IAppUserReference, UserDto>();
-/*            .ForMember(d => d.FullName, o => o.MapFrom(s => (s.FirstName ?? "") + " " + (s.LastName ?? "")));
-*/
+            CreateMap<IAppUserReference, UserDto>()
+                   .ForMember(d => d.FullName, o => o.MapFrom(s => (s.FirstName ?? "") + " " + (s.LastName ?? "")));
+
         }
     }
 }

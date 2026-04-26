@@ -39,7 +39,11 @@ namespace MyApp.Infrastructure.DependencyInjection
 
             services.AddIdentity<AppUser, IdentityRole>(options =>
             {
-                
+
+                options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedAccount = true; // Yêu cầu xác nhận tài khoản trước khi đăng nhập
+                options.SignIn.RequireConfirmedPhoneNumber = false;
+
                 options.Password.RequireDigit = false; // Không bắt phải có số
                 options.Password.RequireLowercase = false; // Không bắt phải có chữ thường
                 options.Password.RequireNonAlphanumeric = false; // Không bắt ký tự đặc biệt
@@ -52,18 +56,25 @@ namespace MyApp.Infrastructure.DependencyInjection
                 options.Lockout.MaxFailedAccessAttempts = 5; // Thất bại 5 lầ thì khóa
                 options.Lockout.AllowedForNewUsers = true;
                 options.User.RequireUniqueEmail = true;
+                
 
             })
             .AddEntityFrameworkStores<MyAppDbContext>()
             .AddDefaultTokenProviders();
 
             services.AddScoped<IAuthService, AuthService>();
-            services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ILoggerService, LoggerService>();
             services.AddScoped<IIDentityService, IdentityService>();
             services.AddSingleton<IHashService, HashService>();
             services.AddSingleton<IJwtService, JwtService>();
             services.AddSingleton<IRequestInfoService, RequestInfoService>();
+
+            services.AddSingleton<IEmailQueue, EmailQueue>();
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddSingleton<EmailSender>();
+            services.AddHostedService<EmailBackgroundWorker>();
+
+
 
             return services;
         }

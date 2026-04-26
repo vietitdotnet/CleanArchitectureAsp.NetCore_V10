@@ -1,0 +1,9 @@
+﻿@model string
+
+@if (!string.IsNullOrEmpty(Model))
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Thông báo </strong> @Model
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}

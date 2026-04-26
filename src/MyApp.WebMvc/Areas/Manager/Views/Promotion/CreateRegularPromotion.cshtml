@@ -1,0 +1,91 @@
+@using MyApp.Application.Features.Promotions.Requests
+@model CreateRegularPromotionRequest
+@{
+    ViewData["title"] = "Create Regular Promotion";
+    ViewData["ActivePage"] = ManageNavPages.Promotion;
+}
+
+@section Breadcrumb {
+    <li class="breadcrumb-item"><a asp-area="manager" asp-controller="promotion" asp-action="index" class="text-decoration-none">Khuyến mãi</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tạo Regular Promotion</li>
+}
+
+<div class="card shadow-sm border-0 max-w-4xl mx-auto">
+    <div class="card-header bg-white border-bottom py-3">
+        <h4 class="mb-0 text-success fw-bold">Tạo Regular Promotion</h4>
+    </div>
+    <div class="card-body p-4">
+        <form asp-action="CreateRegularPromotion" asp-controller="Promotion" method="post" class="row g-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            
+            <div class="col-md-12">
+                <label asp-for="Name" class="form-label fw-medium">Tên chương trình</label>
+                <input asp-for="Name" class="form-control" placeholder="Nhập tên chương trình khuyến mãi" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="Value" class="form-label fw-medium">Giá trị giảm</label>
+                <div class="input-group">
+                    <input asp-for="Value" class="form-control" type="number" step="0.01" placeholder="Nhập giá trị giảm" />
+                    <div class="input-group-text bg-white">
+                        <div class="form-check form-switch mb-0 d-flex align-items-center">
+                            <input asp-for="IsPercentage" class="form-check-input mt-0 me-2" role="switch" />
+                            <label class="form-check-label small mb-0" for="IsPercentage">Giảm theo %</label>
+                        </div>
+                    </div>
+                </div>
+                <span asp-validation-for="Value" class="text-danger small"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="MaxDiscountAmount" class="form-label fw-medium">Giảm tối đa (VNĐ)</label>
+                <input asp-for="MaxDiscountAmount" class="form-control" type="number" step="0.01" placeholder="Số tiền giảm tối đa" />
+                <span asp-validation-for="MaxDiscountAmount" class="text-danger small"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="StartDate" class="form-label fw-medium">Ngày bắt đầu</label>
+                <input asp-for="StartDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="StartDate" class="text-danger small"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="EndDate" class="form-label fw-medium">Ngày kết thúc</label>
+                <input asp-for="EndDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="EndDate" class="text-danger small"></span>
+            </div>
+
+            <div class="col-12">
+                <div class="form-check form-switch">
+                    <input asp-for="IsOnlineOnly" class="form-check-input" role="switch" />
+                    <label asp-for="IsOnlineOnly" class="form-check-label fw-medium">Chỉ áp dụng online</label>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4 pt-3 border-top d-flex gap-2">
+                <button type="submit" class="btn btn-success px-4 fw-semibold">Tạo Khuyến mãi</button>
+                <a asp-action="Index" class="btn btn-light px-4 border fw-semibold text-dark">Hủy bỏ</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const checkbox = document.querySelector('[name="IsPercentage"]');
+        const maxDiscount = document.querySelector('[name="MaxDiscountAmount"]').closest('.col-md-6');
+
+        function toggleMaxDiscount() {
+            if (checkbox.checked) {
+                maxDiscount.style.display = 'block';
+            } else {
+                maxDiscount.style.display = 'none';
+            }
+        }
+
+        checkbox.addEventListener('change', toggleMaxDiscount);
+        toggleMaxDiscount();
+    </script>
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -242,6 +242,205 @@ namespace MyApp.Infrastructure.Migrations
                     b.ToTable("Categorys", (string)null);
                 });
 
+            modelBuilder.Entity("MyApp.Domain.Entities.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(10)");
+
+                    b.Property<string>("FlagIcon")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.HasIndex("Name");
+
+                    b.HasIndex("Name", "Code")
+                        .IsUnique();
+
+                    b.ToTable("Countries", (string)null);
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Districts.AdministrativeLevel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("AdministrativeLevels");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Districts.Commune", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AdministrativeLevelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("EnglishName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("ProvinceCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdministrativeLevelId");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.HasIndex("ProvinceCode");
+
+                    b.ToTable("Communes");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Districts.Province", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AdministrativeLevelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("EnglishName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdministrativeLevelId");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("Provinces");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Manufacturer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("ShortDescription")
+                        .HasMaxLength(38)
+                        .HasColumnType("nvarchar(38)");
+
+                    b.Property<string>("Website")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("Name");
+
+                    b.ToTable("Manufacturers", (string)null);
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Medicine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Contraindications")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Dosage")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("MedicineType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId")
+                        .IsUnique();
+
+                    b.ToTable("Medicines", (string)null);
+                });
+
             modelBuilder.Entity("MyApp.Domain.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -253,14 +452,19 @@ namespace MyApp.Infrastructure.Migrations
                     b.Property<string>("CreatedByUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Note")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<DateTime>("OrderDate")
+                    b.Property<DateTimeOffset>("OrderDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("SYSDATETIMEOFFSET()");
+
+                    b.Property<Guid>("PublicId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -269,34 +473,84 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.HasIndex("CreatedByUserId");
 
+                    b.HasIndex("OrderDate");
+
+                    b.HasIndex("PublicId")
+                        .IsUnique();
+
+                    b.HasIndex("Status");
+
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("MyApp.Domain.Entities.OrderProduct", b =>
+            modelBuilder.Entity("MyApp.Domain.Entities.OrderItem", b =>
                 {
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Price")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("DiscountAmount")
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("DiscountCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("DiscountPercentage")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("DiscountType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("ProductSku")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("ProductUnitId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Quantity")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(1);
+                        .HasColumnType("int");
 
-                    b.HasKey("OrderId", "ProductId");
+                    b.Property<decimal>("TotalPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
-                    b.HasIndex("ProductId");
+                    b.Property<string>("UnitBarcode")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
-                    b.ToTable("OrderProducts", (string)null);
+                    b.Property<string>("UnitName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("VatPercentage")
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductUnitId");
+
+                    b.ToTable("OrderItems", (string)null);
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.Product", b =>
@@ -307,43 +561,336 @@ namespace MyApp.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
+                    b.Property<string>("Barcode")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<DateTime>("DateCreate")
-                        .HasColumnType("datetime2");
+                    b.Property<decimal>("BasePrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime?>("DateUpdate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("BrandName")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<decimal>("Price")
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("CostPrice")
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<DateTimeOffset>("DateCreate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("SYSDATETIMEOFFSET()");
+
+                    b.Property<DateTimeOffset?>("DateUpdate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("DosageForm")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Ingredient")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("LowStockThreshold")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ManufacturerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .UseCollation("Vietnamese_CI_AI");
+
+                    b.Property<string>("PackingSize")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("RegistrationNumber")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("ShortDescription")
+                        .HasMaxLength(38)
+                        .HasColumnType("nvarchar(38)");
+
+                    b.Property<string>("Sku")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TaxId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Barcode")
+                        .IsUnique()
+                        .HasFilter("[Barcode] IS NOT NULL");
+
+                    b.HasIndex("BrandName");
+
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("ManufacturerId");
+
+                    b.HasIndex("Name");
+
+                    b.HasIndex("Sku")
+                        .IsUnique();
 
                     b.HasIndex("Slug")
                         .IsUnique();
 
+                    b.HasIndex("TaxId");
+
                     b.ToTable("Products", (string)null);
                 });
 
-            modelBuilder.Entity("MyApp.Infrastructure.Models.AppUser", b =>
+            modelBuilder.Entity("MyApp.Domain.Entities.ProductUnit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Barcode")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("ConversionRate")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsBaseUnit")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("PublicId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
+
+                    b.Property<decimal>("SellingPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UnitName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .UseCollation("Vietnamese_CI_AI");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Barcode")
+                        .IsUnique()
+                        .HasFilter("[Barcode] IS NOT NULL");
+
+                    b.HasIndex("ProductId")
+                        .IsUnique()
+                        .HasFilter("[IsBaseUnit] = 1");
+
+                    b.HasIndex("PublicId")
+                        .IsUnique();
+
+                    b.HasIndex("UnitName");
+
+                    b.ToTable("ProductUnits", (string)null);
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Promotion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<TimeSpan?>("DailyEndTime")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan?>("DailyStartTime")
+                        .HasColumnType("time");
+
+                    b.Property<DateTimeOffset>("EndDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsOnlineOnly")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPercentage")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("LimitQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("MaxDiscountAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid>("PublicId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
+
+                    b.Property<int>("SoldQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("StartDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EndDate");
+
+                    b.HasIndex("PublicId")
+                        .IsUnique();
+
+                    b.HasIndex("StartDate");
+
+                    b.HasIndex("Type")
+                        .HasDatabaseName("IX_Promotion_Type");
+
+                    b.ToTable("Promotions", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Promotions_DailyTime_Logic", "\r\n                        ([DailyStartTime] IS NULL AND [DailyEndTime] IS NULL)\r\n                        OR\r\n                        ([DailyStartTime] IS NOT NULL AND [DailyEndTime] IS NOT NULL AND [DailyStartTime] < [DailyEndTime])\r\n                    ");
+
+                            t.HasCheckConstraint("CK_Promotions_DateRange", "[StartDate] <= [EndDate]");
+
+                            t.HasCheckConstraint("CK_Promotions_FlashSale_Fields", "\r\n                        ([Type] = 1) -- FlashSale\r\n                        OR\r\n                        ([Type] <> 1 AND \r\n                            [LimitQuantity] IS NULL AND \r\n                            [DailyStartTime] IS NULL AND \r\n                            [DailyEndTime] IS NULL\r\n                        )\r\n                    ");
+
+                            t.HasCheckConstraint("CK_Promotions_MaxDiscountAmount_Logic", "([IsPercentage] = 1 AND ([MaxDiscountAmount] IS NULL OR [MaxDiscountAmount] >= 0)) OR ([IsPercentage] = 0 AND [MaxDiscountAmount] IS NULL)");
+
+                            t.HasCheckConstraint("CK_Promotions_Quantity_Logic", "\r\n                        ([LimitQuantity] IS NULL AND [SoldQuantity] >= 0)\r\n                        OR\r\n                        ([LimitQuantity] IS NOT NULL AND [SoldQuantity] >= 0 AND [SoldQuantity] <= [LimitQuantity])\r\n                     ");
+
+                            t.HasCheckConstraint("CK_Promotions_Value_Logic", "([IsPercentage] = 1 AND [Value] <= 100 AND [Value] >= 0) OR ([IsPercentage] = 0 AND [Value] >= 0)");
+                        });
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.PromotionItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool?>("IsPercentageOverride")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("OriginalPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("OverrideValue")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("ProductUnitId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PromotionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UnitBarcode")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("UnitName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductUnitId");
+
+                    b.HasIndex("PromotionId", "ProductUnitId")
+                        .IsUnique();
+
+                    b.ToTable("PromotionItems", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_PromotionItem_OriginalPrice", "[OriginalPrice] > 0");
+
+                            t.HasCheckConstraint("CK_PromotionItem_OverrideValue_Logic", "([OverrideValue] IS NULL) OR \r\n                  ([IsPercentageOverride] = 1 AND [OverrideValue] >= 0 AND [OverrideValue] <= 100) OR \r\n                  ([IsPercentageOverride] = 0 AND [OverrideValue] >= 0)");
+
+                            t.HasCheckConstraint("CK_PromotionItem_Override_Incomplete", "([OverrideValue] IS NULL AND [IsPercentageOverride] IS NULL) OR ([OverrideValue] IS NOT NULL AND [IsPercentageOverride] IS NOT NULL)");
+                        });
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Tax", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<decimal>("Percentage")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Taxes", (string)null);
+                });
+
+            modelBuilder.Entity("MyApp.Infrastructure.Entities.Identity.AppUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -440,7 +987,7 @@ namespace MyApp.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("MyApp.Infrastructure.Models.AppUser", null)
+                    b.HasOne("MyApp.Infrastructure.Entities.Identity.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -449,7 +996,7 @@ namespace MyApp.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("MyApp.Infrastructure.Models.AppUser", null)
+                    b.HasOne("MyApp.Infrastructure.Entities.Identity.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -464,7 +1011,7 @@ namespace MyApp.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MyApp.Infrastructure.Models.AppUser", null)
+                    b.HasOne("MyApp.Infrastructure.Entities.Identity.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -473,7 +1020,7 @@ namespace MyApp.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("MyApp.Infrastructure.Models.AppUser", null)
+                    b.HasOne("MyApp.Infrastructure.Entities.Identity.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -482,7 +1029,7 @@ namespace MyApp.Infrastructure.Migrations
 
             modelBuilder.Entity("MyApp.Domain.Entities.AutUserToken", b =>
                 {
-                    b.HasOne("MyApp.Infrastructure.Models.AppUser", "User")
+                    b.HasOne("MyApp.Infrastructure.Entities.Identity.AppUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -501,42 +1048,219 @@ namespace MyApp.Infrastructure.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("MyApp.Domain.Entities.Districts.Commune", b =>
+                {
+                    b.HasOne("MyApp.Domain.Entities.Districts.AdministrativeLevel", "AdministrativeLevel")
+                        .WithMany("Communes")
+                        .HasForeignKey("AdministrativeLevelId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MyApp.Domain.Entities.Districts.Province", "Province")
+                        .WithMany("Communes")
+                        .HasForeignKey("ProvinceCode")
+                        .HasPrincipalKey("Code")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("AdministrativeLevel");
+
+                    b.Navigation("Province");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Districts.Province", b =>
+                {
+                    b.HasOne("MyApp.Domain.Entities.Districts.AdministrativeLevel", "AdministrativeLevel")
+                        .WithMany("Provinces")
+                        .HasForeignKey("AdministrativeLevelId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("AdministrativeLevel");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Manufacturer", b =>
+                {
+                    b.HasOne("MyApp.Domain.Entities.Country", "Country")
+                        .WithMany("Manufacturers")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Medicine", b =>
+                {
+                    b.HasOne("MyApp.Domain.Entities.Product", "Product")
+                        .WithOne("Medicine")
+                        .HasForeignKey("MyApp.Domain.Entities.Medicine", "ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("MyApp.Domain.Entities.Order", b =>
                 {
-                    b.HasOne("MyApp.Infrastructure.Models.AppUser", "User")
+                    b.HasOne("MyApp.Infrastructure.Entities.Identity.AppUser", "User")
                         .WithMany()
                         .HasForeignKey("CreatedByUserId")
                         .OnDelete(DeleteBehavior.Restrict);
 
+                    b.OwnsOne("MyApp.Domain.Entities.Owns.AnonCustomer", "Customer", b1 =>
+                        {
+                            b1.Property<int>("OrderId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("CustomerName")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("CustomerName");
+
+                            b1.Property<string>("Email")
+                                .HasMaxLength(150)
+                                .HasColumnType("nvarchar(150)")
+                                .HasColumnName("CustomerEmail");
+
+                            b1.Property<string>("PhoneNumber")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("PhoneNumber");
+
+                            b1.HasKey("OrderId");
+
+                            b1.ToTable("Orders");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrderId");
+                        });
+
+                    b.OwnsOne("MyApp.Domain.Entities.Owns.ShippingAddress", "Address", b1 =>
+                        {
+                            b1.Property<int>("OrderId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("CommuneCode")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("CommuneCode");
+
+                            b1.Property<string>("CommuneName")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("CommuneName");
+
+                            b1.Property<string>("Detail")
+                                .IsRequired()
+                                .HasMaxLength(255)
+                                .HasColumnType("nvarchar(255)")
+                                .HasColumnName("AddressDetail");
+
+                            b1.Property<string>("ProvinceCode")
+                                .IsRequired()
+                                .HasMaxLength(20)
+                                .HasColumnType("nvarchar(20)")
+                                .HasColumnName("ProvinceCode");
+
+                            b1.Property<string>("ProvinceName")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("ProvinceName");
+
+                            b1.HasKey("OrderId");
+
+                            b1.ToTable("Orders");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OrderId");
+                        });
+
+                    b.Navigation("Address")
+                        .IsRequired();
+
+                    b.Navigation("Customer")
+                        .IsRequired();
+
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("MyApp.Domain.Entities.OrderProduct", b =>
+            modelBuilder.Entity("MyApp.Domain.Entities.OrderItem", b =>
                 {
                     b.HasOne("MyApp.Domain.Entities.Order", "Order")
-                        .WithMany("OrderProducts")
+                        .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MyApp.Domain.Entities.Product", "Product")
-                        .WithMany("OrderProducts")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("MyApp.Domain.Entities.ProductUnit", "ProductUnit")
+                        .WithMany()
+                        .HasForeignKey("ProductUnitId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Order");
 
-                    b.Navigation("Product");
+                    b.Navigation("ProductUnit");
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.Product", b =>
                 {
                     b.HasOne("MyApp.Domain.Entities.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("MyApp.Domain.Entities.Manufacturer", "Manufacturer")
+                        .WithMany("Products")
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("MyApp.Domain.Entities.Tax", "Tax")
+                        .WithMany("Products")
+                        .HasForeignKey("TaxId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Category");
+
+                    b.Navigation("Manufacturer");
+
+                    b.Navigation("Tax");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.ProductUnit", b =>
+                {
+                    b.HasOne("MyApp.Domain.Entities.Product", "Product")
+                        .WithMany("ProductUnits")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.PromotionItem", b =>
+                {
+                    b.HasOne("MyApp.Domain.Entities.ProductUnit", "ProductUnit")
+                        .WithMany("PromotionItems")
+                        .HasForeignKey("ProductUnitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyApp.Domain.Entities.Promotion", "Promotion")
+                        .WithMany("PromotionItems")
+                        .HasForeignKey("PromotionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductUnit");
+
+                    b.Navigation("Promotion");
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.Category", b =>
@@ -546,14 +1270,53 @@ namespace MyApp.Infrastructure.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("MyApp.Domain.Entities.Country", b =>
+                {
+                    b.Navigation("Manufacturers");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Districts.AdministrativeLevel", b =>
+                {
+                    b.Navigation("Communes");
+
+                    b.Navigation("Provinces");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Districts.Province", b =>
+                {
+                    b.Navigation("Communes");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Manufacturer", b =>
+                {
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("MyApp.Domain.Entities.Order", b =>
                 {
-                    b.Navigation("OrderProducts");
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.Product", b =>
                 {
-                    b.Navigation("OrderProducts");
+                    b.Navigation("Medicine");
+
+                    b.Navigation("ProductUnits");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.ProductUnit", b =>
+                {
+                    b.Navigation("PromotionItems");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Promotion", b =>
+                {
+                    b.Navigation("PromotionItems");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Tax", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

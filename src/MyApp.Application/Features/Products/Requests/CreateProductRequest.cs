@@ -7,10 +7,8 @@ namespace MyApp.Application.Features.Products.Requests
 {
     public class CreateProductRequest
     {
-        
+        [Required(ErrorMessage = "{0} không được bỏ trống...")]
         public string Name { get; set; } = null!;
-
-        public string Slug { get; set; } = null!;
 
         public string? Description { get; set; }
 

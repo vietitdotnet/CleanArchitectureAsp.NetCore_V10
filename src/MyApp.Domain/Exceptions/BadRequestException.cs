@@ -6,7 +6,7 @@ namespace MyApp.Domain.Exceptions
     {
        public BadRequestException(
            string message = "Yêu cầu Không hợp lệ", 
-           string errorCode = BadRequestError.Default) :
+           string errorCode = "Bad_Request") :
            base(message, errorCode)
         {
 

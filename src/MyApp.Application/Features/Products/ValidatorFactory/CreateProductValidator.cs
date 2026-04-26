@@ -12,32 +12,23 @@ namespace MyApp.Application.Features.Products.ValidatorFactory
     {
         public CreateProductValidator()
         {
-
             RuleFor(x => x.Name)
-                .NotEmpty()
-                    .WithMessage("Tên sản phẩm bắt buộc nhập")
-                .MaximumLength(50)
-                    .WithMessage("Tên sản phẩm không được vượt quá 50 ký tự");
-
-            RuleFor(x => x.Slug)
-                .NotEmpty()
-                    .WithMessage("Slug bắt buộc nhập")
-                .MaximumLength(50)
-                    .WithMessage("Slug không được vượt quá 50  ký tự")
-                .MustBeValidSlug();
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("Tên không được để trống.")
+                .MinimumLength(3).WithMessage("Tên sản phẩm phải có ít nhất 3 ký tự.")
+                .MaximumLength(100).WithMessage("Tên sản phẩm không được vượt quá 150 ký tự.");
 
             RuleFor(x => x.Description)
+                .Cascade(CascadeMode.Stop)
                 .MaximumLength(380)
-                    .WithMessage("Mô tả không được vượt quá 2000 ký tự");
+                    .WithMessage("Mô tả không được vượt quá 380 ký tự.");
 
             RuleFor(x => x.Price)
-                .GreaterThan(0)
-                    .WithMessage("Giá sản phẩm phải lớn hơn 0");
-
-            RuleFor(x => x.CategoryId)
-                .GreaterThan(0)
-                    .When(x => x.CategoryId.HasValue)
-                    .WithMessage("CategoryId phải lớn hơn 0");
+                .Cascade(CascadeMode.Stop)
+                  .NotEmpty().WithMessage("Giá nhập không được để trống.")
+                      .Must(x => x > 0).WithMessage("Giá nhập phải lớn hơn 0.")
+                    .LessThanOrEqualTo(10000000000)
+                        .WithMessage("Giá trị nhập không đúng.");
 
         }
     }

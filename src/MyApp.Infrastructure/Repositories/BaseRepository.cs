@@ -10,7 +10,7 @@ using MyApp.Domain.Paginations.Core;
 using MyApp.Domain.Paginations.Parameters;
 using MyApp.Infrastructure.Data;
 using System.Linq.Expressions;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+
 
 namespace MyApp.Infrastructure.Repositories
 {
@@ -48,13 +48,41 @@ namespace MyApp.Infrastructure.Repositories
                    .FirstOrDefaultAsync(ct);
         }
 
+        public async Task<bool> AnyAsync(ISpecification<T> spec, CancellationToken ct = default)
+        {
+                    var query = ApplySpecification(spec);
+                    return await query.AnyAsync(ct);
+        }
+
         public async Task<T?> FirstOrDefaultAsync(ISpecification<T> spec, CancellationToken ct = default)
         {
             return await ApplySpecification(spec)
                          .FirstOrDefaultAsync(ct);
         }
 
-        public async Task<TResult?> FirstOrDefaultAsync<TResult>(ISpecification<T> spec,Expression<Func<T, TResult>> selector, CancellationToken ct = default)
+        public async Task<TDto?> FirstOrDefaultProjectedAsync<TDto>(ISpecification<T> spec, CancellationToken ct = default)
+            where TDto : BaseDto
+        {
+            var query = ApplySpecification(spec).AsNoTracking();
+            return await query
+                .ProjectTo<TDto>(_mapperConfig)
+                .FirstOrDefaultAsync(ct);
+        }
+
+        public async Task<TDto?> FirstOrDefaultProjectedAsync<TDto>(ISpecification<T> spec, 
+            DateTimeOffset now = default,
+            CancellationToken ct = default)
+             where TDto : BaseDto
+        {
+
+            var query = ApplySpecification(spec).AsNoTracking();
+            return await query.AsNoTracking()
+                .ProjectTo<TDto>(_mapperConfig, new { Now = now })
+                .FirstOrDefaultAsync(ct);
+        }
+
+
+        public async Task<TResult?> FirstOrDefaultWidthSelectorAsync<TResult>(ISpecification<T> spec,Expression<Func<T, TResult>> selector, CancellationToken ct = default)
         {
             return await ApplySpecification(spec)
                 .Select(selector)
@@ -87,13 +115,19 @@ namespace MyApp.Infrastructure.Repositories
             where TDto : BaseDto
             where TQuery : PagingParameters
         {
-            var query = ApplySpecification(spec);
+           
+            var query = ApplySpecification(spec).AsNoTracking();
+
+            if (spec.IsPagingEnabled)
+                throw new InvalidOperationException("Specification should not contain paging.");
+
             var totalCount = await query.CountAsync(ct);
 
             var items = await query
-                .ProjectTo<TDto>(_mapperConfig)
-                .ToListAsync();
-
+                .Skip((pagingParams.PageIndex - 1) * pagingParams.PageSize) 
+                .Take(pagingParams.PageSize)                              
+                .ProjectTo<TDto>(_mapperConfig)                          
+                .ToListAsync(ct);
             return new PagedResponse<TDto, TQuery>(items, totalCount, pagingParams.PageIndex, pagingParams.PageSize)
             {
                 Query = pagingParams
@@ -105,6 +139,12 @@ namespace MyApp.Infrastructure.Repositories
             await _dbSet.AddAsync(entity, ct);
             return entity;
         }
+        public async Task AddRangeAsync(IEnumerable<T> entities, CancellationToken ct = default)
+        {
+            await _dbSet.AddRangeAsync(entities, ct);
+        }
+
+
         public void Update(T entity)
         {
             _dbSet.Update(entity);
@@ -124,6 +164,8 @@ namespace MyApp.Infrastructure.Repositories
         {
             return SpecificationEvaluator<T>.GetQuery(_dbSet.AsQueryable(), spec);
         }
+
+     
 
     }
 

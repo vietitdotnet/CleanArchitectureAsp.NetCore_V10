@@ -29,25 +29,32 @@ namespace MyApp.WebMvc.Areas.Identity.Pages.Role
 
         public async Task<IActionResult> OnPost()
         {
-            if (ModelState.IsValid)
+         
+            var role = new IdentityRole(Input.Name);
+
+            var result = await _identityService.CreateRoleAsync(Input);
+
+            if (result.Success)
             {
-                var role = new IdentityRole(Input.Name);
+                StatusMessage = $"Thêm vai trò {role.Name} thành công.";
 
-                var result = await _managerService.CreateRoleAsync(Input);
+                return RedirectToPage("./Index");
+            }
 
-                if (result.Success)
+            foreach (var kvp in result.Errors!)
+            {
+                var field = kvp.Key;
+                var messages = kvp.Value;
+
+                foreach (var message in messages)
                 {
-                    StatusMessage = $"Thêm vai trò {role.Name} thành công.";
-
-                    return RedirectToPage("./Index");
-                }
-
-                foreach (var error in result.Errors!)
-                {
-                    ModelState.AddModelError(string.Empty, error);
-
+                    ModelState.AddModelError(
+                        field == "general" ? string.Empty : field,
+                        message
+                    );
                 }
             }
+
             return Page();
         }
     }

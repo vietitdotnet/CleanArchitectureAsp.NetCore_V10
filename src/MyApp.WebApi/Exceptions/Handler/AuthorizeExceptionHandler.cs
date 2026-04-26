@@ -13,9 +13,9 @@ namespace MyApp.WebApi.Exceptions.Handler
         {
             return new ApiProblemDetails
             {
-                Status = StatusCodes.Status401Unauthorized,
                 Title = "Unauthorized",
-                ErrorCode = ErrorCodeCategories.Unauthorized,
+                Status = StatusCodes.Status401Unauthorized,
+                ErrorCode = "Unauthorized",
                 ErrorMessage = exception.Message,
                 TraceId = context.TraceIdentifier
             };

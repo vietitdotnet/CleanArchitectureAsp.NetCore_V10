@@ -4,6 +4,7 @@ using MyApp.Application.Features.Products;
 using MyApp.Application.Features.Products.Requests;
 using MyApp.Application.Features.Products.Responses;
 using MyApp.Domain.Paginations.Parameters;
+using System.Reflection.Metadata.Ecma335;
 
 
 namespace MyApp.WebApi.Features.Products
@@ -30,13 +31,13 @@ namespace MyApp.WebApi.Features.Products
 
         [HttpGet]
         [ProducesResponseType(typeof(GetProductsResponse) ,StatusCodes.Status200OK)]
-        public async Task<GetProductsResponse> GetProducts([FromQuery] ProductParameters praram, CancellationToken ct)
+        public async Task<ActionResult<GetProductsResponse>> GetProducts([FromQuery] ProductParameters praram, CancellationToken ct)
         {
            var result =  await _productService.GetProductsAsync(praram ,ct);
 
-            return new GetProductsResponse(result);
+            return Ok(new GetProductsResponse(result));
         }
-           
+
 
         [HttpGet("{id:int}")]
         [ProducesResponseType(typeof(GetProductResponse) ,StatusCodes.Status200OK)]
@@ -46,6 +47,16 @@ namespace MyApp.WebApi.Features.Products
             var product = await _productService.GetProductByIdAsync(id, ct);
 
             return Ok(new GetProductResponse(product));
+        }
+
+        [HttpGet("{slug}")]
+        [ProducesResponseType(typeof(GetProductDetailResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<GetProductDetailResponse>> GetProductDetail([FromRoute] string slug, CancellationToken ct)
+        {
+            var product = await _productService.GetProductBySlugAsync(slug, ct);
+
+            return Ok(new GetProductDetailResponse(product));
         }
 
         [HttpPost]

@@ -10,7 +10,7 @@ namespace MyApp.Domain.Exceptions
 
         protected BaseException(
             string message = "Đã xảy ra lỗi không xác định.",
-            string errorCode = ErrorCodeCategories.Unknown)
+            string errorCode = "Unknown")
             : base(message)
         {
             ErrorCode = errorCode;

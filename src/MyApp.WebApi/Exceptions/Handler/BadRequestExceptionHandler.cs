@@ -15,10 +15,10 @@ namespace MyApp.WebApi.Exceptions.Handler
         {
             return new ApiProblemDetails
             {
-                Title = "Bad Request Error",
-                ErrorMessage = exception.Message,
+                Title = "Bad Request",
                 Status = StatusCodes.Status400BadRequest,
                 ErrorCode = exception.ErrorCode,
+                ErrorMessage = exception.Message,
                 TraceId = context.TraceIdentifier
             };
         }

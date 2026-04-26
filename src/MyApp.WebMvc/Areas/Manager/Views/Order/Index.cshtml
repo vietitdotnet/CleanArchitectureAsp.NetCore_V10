@@ -1,0 +1,81 @@
+﻿@using MyApp.Application.Features.Orders.DTOs
+@using MyApp.Domain.Paginations.Core
+@using MyApp.Domain.Paginations.Parameters
+@model PagedResponse<OrderDto, OrderParameters>
+
+@{
+    ViewData["title"] = "Order";
+    ViewData["ActivePage"] = ManageNavPages.Order;
+}
+<h2>Order Management</h2>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Ngày đặt</th>
+            <th>Tổng tiền </th>
+            <th>Số Lượng</th>
+            
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item?.Customer.Email</td>
+                <td>@item?.OrderDate</td>
+                <td>@item?.TotalPrice</td>
+                <td>@item?.TotalCount</td>
+                
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Pagination -->
+<nav>
+    <ul class="pagination">
+
+        <!-- Previous -->
+        <li class="page-item @(Model.PageIndex == 1 ? "disabled" : "")">
+            <a class="page-link"
+                   asp-action="Index"
+                   asp-route-pageIndex="@(Model.PageIndex - 1)"
+                   asp-route-PageIndex="@Model.PageSize"
+                  >
+                Previous
+            </a>
+        </li>
+
+        <!-- Page Numbers -->
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                <a class="page-link"
+                       asp-action="Index"
+                       asp-route-pageIndex="@i"
+                       >
+                    @i
+                </a>
+            </li>
+        }
+
+        <!-- Next -->
+        <li class="page-item @(Model.PageIndex == Model.TotalCount ? "disabled" : "")">
+            <a class="page-link"
+                   asp-action="Index"
+                   asp-route-PageIndex="@(Model.PageIndex + 1)"
+                   asp-route-PageSize="@Model.PageSize"
+                  >
+                Next
+            </a>
+        </li>
+
+    </ul>
+</nav>

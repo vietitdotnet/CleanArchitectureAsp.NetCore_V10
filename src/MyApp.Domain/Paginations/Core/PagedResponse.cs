@@ -23,6 +23,7 @@ namespace MyApp.Domain.Paginations.Core
                 int pageSize)
             : base(values, totalCount, pageIndex, pageSize)
         {
+
         }
 
         public PagedResponse
@@ -32,6 +33,7 @@ namespace MyApp.Domain.Paginations.Core
          int pageSize)
              : base(values, totalCount, pageIndex, pageSize)
         {
+
         }
 
        

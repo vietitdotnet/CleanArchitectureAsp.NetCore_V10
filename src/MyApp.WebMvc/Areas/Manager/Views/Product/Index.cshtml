@@ -1,0 +1,43 @@
+﻿
+@model PagedResponse<ProductDto, ProductParameters>
+
+@{
+    ViewData["title"] = "Prodcuts";
+    ViewData["ActivePage"] = ManageNavPages.Product;
+}
+<h2>Product Management</h2>
+@if (TempData["StatusMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["StatusMessage"]
+    </div>
+}
+<a asp-action="CreateProduct" asp-controller="Product" class="btn btn-primary mb-3">+Tạo sản phẩm</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>URL</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Slug</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Pagination -->
+<div style="margin: 0px auto;">
+    @await Html.PartialAsync("_PartialPagination", Model)
+</div>

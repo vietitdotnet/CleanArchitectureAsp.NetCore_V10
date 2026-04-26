@@ -1,5 +1,6 @@
 
 using MyApp.Domain.Core.Models;
+using MyApp.Domain.Core.Specifications;
 
 namespace MyApp.Domain.Core.Repositories
 {
@@ -7,6 +8,9 @@ namespace MyApp.Domain.Core.Repositories
         where TKey : notnull
         where T : BaseEntity<TKey> 
     {
+
+        Task AddRangeAsync(IEnumerable<T> entities, CancellationToken ct = default);
+        Task<bool> AnyAsync(ISpecification<T> spec, CancellationToken ct = default);
         Task<T> AddAsync(T entity, CancellationToken ct = default);
         void Update(T entity);
         void Delete(T entity);

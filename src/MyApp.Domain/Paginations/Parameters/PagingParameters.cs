@@ -1,11 +1,22 @@
-﻿namespace MyApp.Domain.Paginations.Parameters
+﻿using MyApp.Domain.Paginations.Interfaces;
+
+namespace MyApp.Domain.Paginations.Parameters
 {
-    public class PagingParameters
+    public abstract class PagingParameters : INormalizable
     {
         private const int MaxPageSize = 1000;
-        private int _pageIndex = 1;
-        private int _pageSize = 12;
 
+        private int _pageIndex = 1;
+        private int _pageSize;
+
+
+        protected virtual int DefaultPageSize => 12;
+
+        public PagingParameters()
+        {
+            _pageSize = DefaultPageSize;
+        }
+        
         public int PageIndex
         {
             get => _pageIndex;
@@ -17,12 +28,13 @@
             get => _pageSize;
             set => _pageSize = value switch
             {
-                <= 0 => 0,
+                <= 0 => DefaultPageSize,
                 > MaxPageSize => MaxPageSize,
                 _ => value
             };
         }
 
-        public virtual void Normalize() { }
+        public virtual void Normalize(){}
     }
+
 }

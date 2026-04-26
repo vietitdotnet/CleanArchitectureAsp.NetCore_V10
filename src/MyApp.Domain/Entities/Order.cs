@@ -1,8 +1,7 @@
 ﻿using MyApp.Domain.Abstractions;
 using MyApp.Domain.Core.Models;
+using MyApp.Domain.Entities.Owns;
 using MyApp.Domain.Enums;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyApp.Domain.Entities
 {
@@ -10,40 +9,106 @@ namespace MyApp.Domain.Entities
     {
         private Order() { }
 
-        public Order(string createdByUserId)
-        {
-            CreatedByUserId = createdByUserId;
-            OrderDate = DateTime.UtcNow;
-            Status = OrderStatus.Pending;
-        }
+        public Guid PublicId { get; private set; }
+        public string? Note { get; private set; }
 
-        public string? Description { get; set; }
-
-        public DateTime OrderDate { get; private set; }
+        public DateTimeOffset OrderDate { get; private set; }
 
         public OrderStatus Status { get; private set; }
 
-        public string CreatedByUserId { get; private set; } = null!;
+        public string? CreatedByUserId { get; private set; }
 
-        // Navigation
-        public IAppUserReference User { get; private set; } = null!;
+        public IAppUserReference? User { get; private set; }
 
-        public ICollection<OrderProduct> OrderProducts { get; } = [];
+        public ShippingAddress Address { get; private set; } = null!;
 
+        public AnonCustomer Customer { get; private set; } = null!;
+
+        public ICollection<OrderItem> OrderItems { get; } = [];
+
+        private Order(string? createdByUserId)
+        {
+            CreatedByUserId = createdByUserId;
+            Status = OrderStatus.Pending;
+        }
+
+        public static Order Create(string? userId)
+        {
+            return new Order(userId);
+        }
+
+        public void SetNote(string? note)
+        {
+            Note = string.IsNullOrWhiteSpace(note) ? null : note.Trim();
+        }
+
+        public void SetCustomer(AnonCustomer customer)
+        {
+            Customer = customer ?? throw new ArgumentNullException(nameof(customer));
+        }
+
+        public void SetShippingAddress(ShippingAddress address)
+        {
+            Address = address ?? throw new ArgumentNullException(nameof(address));
+        }
+
+        public void AddProduct(ProductUnit unit, int quantity)
+        {
+            
+
+            if (unit == null)
+                throw new ArgumentNullException(nameof(unit));
+
+            if (quantity <= 0)
+                throw new ArgumentException("Số lượng phải lớn hơn 0");
+
+            var existing = OrderItems
+                .FirstOrDefault(x => x.ProductUnitId == unit.Id && x.UnitName == unit.UnitName);
+
+            if (existing != null)
+            {
+                existing.UpdateQuantity(existing.Quantity + quantity);
+                return;
+            }
+
+            OrderItems.Add(new OrderItem(
+                unit.Id,
+                unit.UnitName,
+                unit.SellingPrice,
+                quantity,
+                unit.Product.Tax?.Percentage ?? 0
+            ));
+        }
+
+        public void UpdateStatus(OrderStatus newStatus)
+        {
+            // Có thể thêm rule chuyển trạng thái sau
+            Status = newStatus;
+        }
 
         public decimal GetTotalPrice()
         {
-            return OrderProducts.Sum(op => op.Product.Price * op.Quantity);
+            return OrderItems.Sum(op => op.TotalPrice);
         }
-         public int GetTotalCount()
+
+        public int GetTotalCount()
         {
-            return OrderProducts.Sum(op => op.Quantity);
+            return OrderItems.Sum(op => op.Quantity);
         }
-         public void UpdateStatus(OrderStatus newStatus)
+
+        // Validation trước khi save
+        public void Validate()
         {
-            // Validate status transition if needed
-            Status = newStatus;
+            if (!OrderItems.Any())
+                throw new InvalidOperationException("Đơn hàng phải có ít nhất một sản phẩm.");
+
+            if (Address == null)
+                throw new InvalidOperationException("Địa chỉ giao hàng là bắt buộc");
+
+            if (Customer == null)
+                throw new InvalidOperationException("Thông tin khách hàng là bắt buộc");
         }
     }
+
 
 }

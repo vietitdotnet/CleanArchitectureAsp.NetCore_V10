@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyApp.Domain.Entities;
+using MyApp.Domain.Entities.Districts;
 using MyApp.Infrastructure.Entities.Identity;
 
 namespace MyApp.Infrastructure.Data
@@ -25,9 +26,18 @@ namespace MyApp.Infrastructure.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<OrderProduct> OrderProducts { get; set; }
-
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<AutUserToken> AutUserUserTokens { get; set; }
+        public DbSet<Province> Provinces { get; set; }      
+        public DbSet<Commune> Communes { get; set; }
+        public DbSet<ProductUnit> ProductUnits { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Medicine> Medicines { get; set; }
+        public DbSet<Tax> Taxes { get; set; }
+        public DbSet<Manufacturer> Manufacturers { get; set; }
+        public DbSet<Promotion> Promotions { get; set; } 
+        public DbSet<PromotionItem> PromotionItems { get; set; }
+        public DbSet<AdministrativeLevel> AdministrativeLevels { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
