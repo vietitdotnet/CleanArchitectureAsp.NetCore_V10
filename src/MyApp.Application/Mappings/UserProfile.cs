@@ -10,7 +10,6 @@ namespace MyApp.Application.Mappings
         {
             CreateMap<IAppUserReference, UserDto>()
                    .ForMember(d => d.FullName, o => o.MapFrom(s => (s.FirstName ?? "") + " " + (s.LastName ?? "")));
-
         }
     }
 }

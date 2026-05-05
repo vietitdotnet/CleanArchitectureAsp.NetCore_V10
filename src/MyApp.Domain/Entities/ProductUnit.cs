@@ -23,7 +23,8 @@ namespace MyApp.Domain.Entities
         // Mặc định không phải đơn vị gốc ,
         // nếu là đơn vị gốc thì conversion rate = 1 ,
         // chỉ có 1 đơn vị gốc duy nhất cho mỗi sản phẩm
-        public bool IsBaseUnit { get; private set; } = false;
+        // Derived (không lưu DB)
+        public bool IsBaseUnit => ConversionRate == 1;
 
         // Khi tạo mới sẽ không active ngay, phải đợi admin duyệt
         public bool IsActive { get; private set; } = false;
@@ -32,7 +33,6 @@ namespace MyApp.Domain.Entities
 
         private readonly List<PromotionItem> _promotionItems = new();
         public IReadOnlyCollection<PromotionItem> PromotionItems => _promotionItems.AsReadOnly();
-
 
         private ProductUnit(
           int productId,
@@ -46,12 +46,12 @@ namespace MyApp.Domain.Entities
             UnitName = unitName;
             ConversionRate = conversionRate;
             SellingPrice = sellingPrice;
-            IsBaseUnit = isBaseUnit;
             Barcode = barcode;
         }
 
         // ===== Factory =====
 
+        // ===== Domain methods =====
         public static ProductUnit Create(
             int productId,
             string unitName,
@@ -60,7 +60,7 @@ namespace MyApp.Domain.Entities
             bool isBaseUnit = false,
             string? barcode = null)
         {
-            if (productId <= 0)
+            if (productId < 0)
                 throw new ArgumentException("ProductId must be valid");
 
             if (string.IsNullOrWhiteSpace(unitName))
@@ -150,12 +150,7 @@ namespace MyApp.Domain.Entities
                 : barcode.Trim();
         }
 
-        public void SetAsBaseUnit()
-        {
-            IsBaseUnit = true;
-            ConversionRate = 1;
-        }
-
+   
         public void UpdateConversionRate(int conversionRate)
         {
             if (conversionRate <= 0)

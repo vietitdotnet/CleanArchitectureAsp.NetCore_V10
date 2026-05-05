@@ -5,6 +5,7 @@ using MyApp.Application.Common.Results;
 using MyApp.Application.Interfaces.Common;
 using MyApp.Domain.Core.Repositories;
 using MyApp.Domain.Entities;
+using MyApp.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,28 +28,29 @@ namespace MyApp.Application.Common.Service
             _serviceProvider = serviceProvider;
         }
 
+
         protected async Task<OperationResult<T>> ValidateAsync<T>(
              T request,
              CancellationToken ct = default)
-                {
-                    var validator = _serviceProvider.GetService<IValidator<T>>();
+        {
+            var validator = _serviceProvider.GetService<IValidator<T>>();
 
-                    if (validator == null)
-                        return OperationResult<T>.Ok(default!);
+            if (validator == null)
+                return OperationResult<T>.Ok(default!);
 
-                    var result = await validator.ValidateAsync(request, ct);
+            var result = await validator.ValidateAsync(request, ct);
 
-                    if (!result.IsValid)
-                    {
-                        var errors = result.Errors
-                            .GroupBy(e => ToCamelCase(e.PropertyName))
-                            .ToDictionary(
-                                g => NormalizeKey(g.Key),
-                                g => g.Select(x => x.ErrorMessage).ToArray()
-                            );
+            if (!result.IsValid)
+            {
+                var errors = result.Errors
+                    .GroupBy(e => ToCamelCase(e.PropertyName))
+                    .ToDictionary(
+                        g => NormalizeKey(g.Key),
+                        g => g.Select(x => x.ErrorMessage).ToArray()
+                    );
 
-                        return OperationResult<T>.Fail(errors);
-                    }
+                return OperationResult<T>.Fails(errors);
+            }
 
             return OperationResult<T>.Ok(default!);
         }
@@ -64,15 +66,6 @@ namespace MyApp.Application.Common.Service
         {
             if (string.IsNullOrWhiteSpace(key))
                 return "general";
-
-            key = key.Replace("$.", "");
-
-
-            if (key.StartsWith("req.", StringComparison.OrdinalIgnoreCase))
-                key = key.Substring(4);
-
-            if (key.EndsWith(".Value"))
-                key = key.Replace(".Value", "");
 
             return char.ToLowerInvariant(key[0]) + key.Substring(1);
         }

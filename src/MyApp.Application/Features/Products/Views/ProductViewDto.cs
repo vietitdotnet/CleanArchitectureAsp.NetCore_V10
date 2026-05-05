@@ -1,6 +1,6 @@
 ﻿using MyApp.Application.Features.Products.MapRaws;
-using MyApp.Application.Features.ProductUints.DTOs.View;
 using MyApp.Application.Features.ProductUints.MapRaws;
+using MyApp.Application.Features.ProductUints.Views;
 using MyApp.Application.Features.Promotions.DTOs;
 using MyApp.Application.Features.Promotions.DTOs.View;
 using MyApp.Application.Features.Promotions.LogicFeatures;
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
-namespace MyApp.Application.Features.Products.DTOs.View
+namespace MyApp.Application.Features.Products.Views
 {
     public class ProductViewDto
     {

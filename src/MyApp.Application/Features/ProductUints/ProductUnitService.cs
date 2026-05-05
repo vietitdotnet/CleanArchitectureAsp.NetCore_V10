@@ -32,7 +32,7 @@ namespace MyApp.Application.Features.ProductUints
 
         public async Task<IReadOnlyList<ProductUnitLookupDto>> GetProductUnitLookupsAsync(ProductUnitParameters param, CancellationToken ct = default)
         {
-            var spec = new ProductUnitFilterSpec(param);
+            var spec = new ProductUnitLookupSpec(param);
 
             var productLookupDtos = await _unitOfWork.Repository<ProductUnit, int>()
                 .GetPagedAsync<ProductUnitLookupDto, ProductUnitParameters>(spec, param, ct);

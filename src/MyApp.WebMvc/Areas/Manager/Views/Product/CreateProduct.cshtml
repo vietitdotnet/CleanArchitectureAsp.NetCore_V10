@@ -4,34 +4,162 @@
     ViewData["title"] = "Create Product";
     ViewData["ActivePage"] = ManageNavPages.Product;
 }
-<h2>Tạo sản phẩm</h2>
 
-<form asp-action="CreateProduct" asp-controller="Product" method="post">
-    
-    <div class="mb-3">
-        <label asp-for="Name" class="form-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+
+@section Breadcrumb {
+    <li class="breadcrumb-item"><a asp-area="manager" asp-controller="product" asp-action="index" class="text-decoration-none">Sản phẩm</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tạo sản phẩm</li>
+}
+
+@section CSS {
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        .select2-container .select2-selection--single {
+            height: 38px;
+            border: 1px solid #ced4da;
+            border-radius: 0.375rem;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            line-height: 36px;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 36px;
+        }
+    </style>
+}
+<div class="card shadow-sm border-0 max-w-4xl mx-auto">
+    <div class="card-header bg-white border-bottom py-3">
+        <h4 class="mb-0 text-primary fw-bold">Tạo sản phẩm</h4>
     </div>
+    <div class="card-body p-4">
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+       
+        <form asp-action="CreateProduct" method="post" class="row g-3">
 
-    <div class="mb-3">
-        <label asp-for="Description" class="form-label"></label>
-        <textarea asp-for="Description" class="form-control"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
+            <div class="col-md-6">
+                <label asp-for="Name" class="form-label">Tên</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3">
+                <label asp-for="Sku" class="form-label">Mã</label>
+                <input asp-for="Sku" class="form-control" />
+                <span asp-validation-for="Sku" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3">
+                <label asp-for="Barcode" class="form-label">Mã vạch</label>
+                <input asp-for="Barcode" class="form-control" />
+                <span asp-validation-for="Barcode" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="BrandName" class="form-label">Thương hiệu</label>
+                <input asp-for="BrandName" class="form-control" />
+                <span asp-validation-for="BrandName" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3">
+                <label asp-for="CostPrice" class="form-label">Giá nhập</label>
+                <input asp-for="CostPrice" class="form-control" />
+                <span asp-validation-for="CostPrice" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3">
+                <label asp-for="BasePrice" class="form-label">Giá bán niêm yết</label>
+                <input asp-for="BasePrice" class="form-control" />
+                <span asp-validation-for="BasePrice" class="text-danger"></span>
+            </div>
+
+            <!-- Category -->
+            <div class="col-md-4">
+                <label class="form-label">Danh mục</label>
+                <select id="categorySelect" name="CategoryId" class="form-control"></select>
+            </div>
+
+            <!-- Manufacturer -->
+            <div class="col-md-4">
+                <label class="form-label">Nhà sản xuất</label>
+                <select id="manufacturerSelect" name="ManufacturerId" class="form-control"></select>
+            </div>
+
+            <!-- Tax -->
+            <div class="col-md-4">
+                <label class="form-label">Thuế</label>
+                <select id="taxSelect" name="TaxId" class="form-control"></select>
+            </div>
+
+            <hr />
+
+            <h5>Đơn vị cơ bản</h5>
+
+            <div class="col-md-6">
+                <label asp-for="UnitName" class="form-label">Tên đơn vị</label>
+                <input asp-for="UnitName" class="form-control" />
+                <span asp-validation-for="UnitName" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="UnitBarcode" class="form-label">Mã vạch của đơn vị</label>
+                <input asp-for="UnitBarcode" class="form-control" />
+                <span asp-validation-for="UnitBarcode" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="SellingPrice" class="form-label">Giá bán ra</label>
+                <input asp-for="SellingPrice" class="form-control" />
+                <span asp-validation-for="SellingPrice" class="text-danger"></span>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Tạo sản phẩm</button>
+            </div>
+        </form>
     </div>
+</div>
 
-    <div class="mb-3">
-        <label asp-for="Price" class="form-label"></label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <button type="submit" class="btn btn-success">Lưu</button>
-    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
-</form>
 
 
 @section Scripts {
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        function initSelect2(selector, url, placeholder) {
+            $(selector).select2({
+                placeholder: placeholder,
+                allowClear: true,
+                ajax: {
+                    url: url,
+                    dataType: 'json',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            term: params.term // gửi lên controller
+                        };
+                    },
+                    processResults: function (data) {
+                        return {
+                            results: data.map(item => ({
+                                id: item.id,
+                                text: item.name
+                            }))
+                        };
+                    },
+                    cache: true
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            initSelect2('#categorySelect', '/manager/category/searchCategorys', 'Chọn danh mục');
+            initSelect2('#manufacturerSelect', '/manager/manufacturer/searchManufacturers', 'Chọn nhà sản xuất');
+            initSelect2('#taxSelect', '/manager/tax/SearchTaxs', 'Chọn thuế');
+
+        });
+    </script>
     <partial name="_ValidationScriptsPartial" />
 }

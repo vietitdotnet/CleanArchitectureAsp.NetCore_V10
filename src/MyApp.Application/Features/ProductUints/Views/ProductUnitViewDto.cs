@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace MyApp.Application.Features.ProductUints.DTOs.View
+namespace MyApp.Application.Features.ProductUints.Views
 {
     public class ProductUnitViewDto : BaseDto
     {

@@ -1,4 +1,4 @@
-﻿using MyApp.Application.Features.Products.DTOs.View;
+﻿using MyApp.Application.Features.Products.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;

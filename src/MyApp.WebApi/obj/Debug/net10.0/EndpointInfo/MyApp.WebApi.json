@@ -326,8 +326,6 @@
             "name": "KeySearch",
             "in": "query",
             "schema": {
-              "maxLength": 20,
-              "minLength": 0,
               "type": "string"
             }
           },
@@ -447,6 +445,13 @@
         ],
         "parameters": [
           {
+            "name": "KeySearch",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "PageIndex",
             "in": "query",
             "schema": {
@@ -522,6 +527,13 @@
           "Order"
         ],
         "parameters": [
+          {
+            "name": "KeySearch",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "PageIndex",
             "in": "query",
@@ -667,13 +679,6 @@
         ],
         "parameters": [
           {
-            "name": "KeySearch",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "Origin",
             "in": "query",
             "schema": {
@@ -708,6 +713,13 @@
             "in": "query",
             "schema": {
               "$ref": "#/components/schemas/ProductSort"
+            }
+          },
+          {
+            "name": "KeySearch",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -1052,13 +1064,6 @@
             }
           },
           {
-            "name": "KeySearch",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "Origin",
             "in": "query",
             "schema": {
@@ -1093,6 +1098,13 @@
             "in": "query",
             "schema": {
               "$ref": "#/components/schemas/ProductSort"
+            }
+          },
+          {
+            "name": "KeySearch",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           },
           {
@@ -1254,6 +1266,13 @@
             }
           },
           {
+            "name": "KeySearch",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "PageIndex",
             "in": "query",
             "schema": {
@@ -1392,10 +1411,181 @@
           }
         }
       }
+    },
+    "/api/PromotionItem/DeletePromotionItem/{id}": {
+      "delete": {
+        "tags": [
+          "PromotionItem"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PromotionItem/SetActive/{id}/active": {
+      "patch": {
+        "tags": [
+          "PromotionItem"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetActiveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetActiveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetActiveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PromotionItem/UpdatePromotionItem/{id}": {
+      "put": {
+        "tags": [
+          "PromotionItem"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePromotionItemRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePromotionItemRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePromotionItemRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePromotionItemRespone"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePromotionItemRespone"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePromotionItemRespone"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "ApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AuthUserDto": {
         "type": "object",
         "properties": {
@@ -1551,27 +1741,82 @@
         "additionalProperties": false
       },
       "CreateProductRequest": {
-        "required": [
-          "name"
-        ],
         "type": "object",
         "properties": {
+          "sku": {
+            "type": "string",
+            "nullable": true
+          },
+          "barcode": {
+            "type": "string",
+            "nullable": true
+          },
           "name": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
+          },
+          "brandName": {
+            "type": "string",
+            "nullable": true
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "basePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "shortDescription": {
+            "type": "string",
+            "nullable": true
           },
           "description": {
             "type": "string",
             "nullable": true
           },
-          "price": {
-            "type": "number",
-            "format": "double"
+          "packingSize": {
+            "type": "string",
+            "nullable": true
+          },
+          "registrationNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "dosageForm": {
+            "type": "string",
+            "nullable": true
+          },
+          "ingredient": {
+            "type": "string",
+            "nullable": true
           },
           "categoryId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "manufacturerId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "taxId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unitName": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitBarcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "sellingPrice": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1898,6 +2143,10 @@
       "OrderParameters": {
         "type": "object",
         "properties": {
+          "keySearch": {
+            "type": "string",
+            "nullable": true
+          },
           "pageIndex": {
             "type": "integer",
             "format": "int32"
@@ -2075,6 +2324,10 @@
       "ProductParameters": {
         "type": "object",
         "properties": {
+          "keySearch": {
+            "type": "string",
+            "nullable": true
+          },
           "pageIndex": {
             "type": "integer",
             "format": "int32"
@@ -2082,10 +2335,6 @@
           "pageSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "keySearch": {
-            "type": "string",
-            "nullable": true
           },
           "origin": {
             "type": "string",
@@ -2494,6 +2743,10 @@
       "PromotionParameters": {
         "type": "object",
         "properties": {
+          "keySearch": {
+            "type": "string",
+            "nullable": true
+          },
           "pageIndex": {
             "type": "integer",
             "format": "int32"
@@ -2707,6 +2960,10 @@
       "RoleParameters": {
         "type": "object",
         "properties": {
+          "keySearch": {
+            "type": "string",
+            "nullable": true
+          },
           "pageIndex": {
             "type": "integer",
             "format": "int32"
@@ -2714,6 +2971,15 @@
           "pageSize": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetActiveRequest": {
+        "type": "object",
+        "properties": {
+          "isActive": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2781,6 +3047,34 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/ProductDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePromotionItemRequest": {
+        "type": "object",
+        "properties": {
+          "originalPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "overrideValue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isPercentageOverride": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePromotionItemRespone": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/PromotionItemDto"
           }
         },
         "additionalProperties": false
@@ -2855,6 +3149,10 @@
       "UserParameters": {
         "type": "object",
         "properties": {
+          "keySearch": {
+            "type": "string",
+            "nullable": true
+          },
           "pageIndex": {
             "type": "integer",
             "format": "int32"
@@ -2862,12 +3160,6 @@
           "pageSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "keySearch": {
-            "maxLength": 20,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2898,6 +3190,9 @@
     },
     {
       "name": "Promotion"
+    },
+    {
+      "name": "PromotionItem"
     }
   ]
 }

@@ -1,0 +1,109 @@
+/* Layout */
+.layout {
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    top: 0px;
+    width: 250px;
+    background: #0f172a;
+    color: #cbd5f5;
+    padding: 16px;
+    position: fixed;
+    height: 100vh;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+
+/* Phần scroll */
+.sidebar-body {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px; /* tránh che content khi có scrollbar */
+}
+
+    /* Scroll đẹp hơn (optional) */
+    .sidebar-body::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-body::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 10px;
+    }
+
+        .sidebar-body::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+/* Header */
+.sidebar-header {
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+}
+
+/* Nav */
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5f5;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+    .sidebar .nav-link:hover {
+        background: #1e293b;
+        color: #fff;
+    }
+
+    .sidebar .nav-link.active {
+        background: #3b82f6;
+        color: white;
+    }
+
+    /* Icon */
+    .sidebar .nav-link i {
+        font-size: 18px;
+    }
+
+/* Content */
+.content {
+    margin-left: 250px;
+    width: 100%;
+    background: #f1f5f9;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+  
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 999;
+}
+
+    #overlay.active {
+        display: block;
+    }
+
+/* Mobile */
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+    .content {
+        margin-left: 0;
+    }
+}

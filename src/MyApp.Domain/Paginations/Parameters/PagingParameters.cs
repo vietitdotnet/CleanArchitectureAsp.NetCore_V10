@@ -5,12 +5,14 @@ namespace MyApp.Domain.Paginations.Parameters
     public abstract class PagingParameters : INormalizable
     {
         private const int MaxPageSize = 1000;
+        protected virtual int MaxKeywordLength => 20;
 
         private int _pageIndex = 1;
         private int _pageSize;
 
-
         protected virtual int DefaultPageSize => 12;
+
+        public string? KeySearch { get; set; }
 
         public PagingParameters()
         {
@@ -34,7 +36,18 @@ namespace MyApp.Domain.Paginations.Parameters
             };
         }
 
-        public virtual void Normalize(){}
+        public virtual void Normalize()
+        {
+            if (!string.IsNullOrWhiteSpace(KeySearch))
+            {
+                KeySearch = KeySearch.Trim();
+
+                if (KeySearch.Length > MaxKeywordLength)
+                {
+                    KeySearch = KeySearch.Substring(0, MaxKeywordLength);
+                }
+            }
+        }
     }
 
 }

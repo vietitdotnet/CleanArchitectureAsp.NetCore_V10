@@ -3,11 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using MyApp.Application.Common.Service;
 using MyApp.Application.Features.Administrative;
 using MyApp.Application.Features.Categorys;
+using MyApp.Application.Features.Manufacturers;
 using MyApp.Application.Features.Orders;
 using MyApp.Application.Features.Products;
 using MyApp.Application.Features.ProductUints;
 using MyApp.Application.Features.PromotionItems;
 using MyApp.Application.Features.Promotions;
+using MyApp.Application.Features.Taxs;
 using MyApp.Application.Interfaces.Common;
 
 namespace MyApp.Application.DependencyInjection
@@ -42,6 +44,10 @@ namespace MyApp.Application.DependencyInjection
             services.AddScoped<IProductUnitService, ProductUnitService>();
 
             services.AddScoped<IPromotionItemService, PromotionItemService>();
+
+            services.AddScoped<ITaxService, TaxService>();
+
+            services.AddScoped<IManufacturerService, ManufacturerService>();
 
             return services;
         }

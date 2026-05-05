@@ -229,6 +229,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "KeySearch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "PageIndex",
         "Type": "System.Int32",
         "IsRequired": false
@@ -350,6 +355,11 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "KeySearch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "PageIndex",
         "Type": "System.Int32",
@@ -538,11 +548,6 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "KeySearch",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "Origin",
         "Type": "System.String",
         "IsRequired": false
@@ -564,6 +569,11 @@
       },
       {
         "Name": "SortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "KeySearch",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -604,11 +614,6 @@
         "IsRequired": true
       },
       {
-        "Name": "KeySearch",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "Origin",
         "Type": "System.String",
         "IsRequired": false
@@ -630,6 +635,11 @@
       },
       {
         "Name": "SortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "KeySearch",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -817,6 +827,11 @@
         "IsRequired": false
       },
       {
+        "Name": "KeySearch",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "PageIndex",
         "Type": "System.Int32",
         "IsRequired": false
@@ -830,6 +845,94 @@
     "ReturnTypes": [
       {
         "Type": "MyApp.Application.Features.Promotions.Responses.GetPromotionsResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyApp.WebApi.Features.PromotionItems.PromotionItemController",
+    "Method": "DeletePromotionItem",
+    "RelativePath": "api/PromotionItem/DeletePromotionItem/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MyApp.Application.Common.Reponses.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyApp.WebApi.Features.PromotionItems.PromotionItemController",
+    "Method": "SetActive",
+    "RelativePath": "api/PromotionItem/SetActive/{id}/active",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "MyApp.Application.Features.PromotionItems.Requests.SetActiveRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MyApp.Application.Common.Reponses.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyApp.WebApi.Features.PromotionItems.PromotionItemController",
+    "Method": "UpdatePromotionItem",
+    "RelativePath": "api/PromotionItem/UpdatePromotionItem/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "req",
+        "Type": "MyApp.Application.Features.PromotionItems.Requests.UpdatePromotionItemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MyApp.Application.Features.PromotionItems.Respones.UpdatePromotionItemRespone",
         "MediaTypes": [
           "text/plain",
           "application/json",

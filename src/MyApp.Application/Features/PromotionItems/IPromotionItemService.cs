@@ -17,16 +17,21 @@ namespace MyApp.Application.Features.PromotionItems
 
         Task<PromotionItemDto> GetPromotionItemByIdAsync(int id, CancellationToken ct = default);
 
+        Task<PromotionItemDto> GetPromotionItemByPromoAndUnitAsync(int idPromotion, int productUnitId, CancellationToken ct = default);
+
         Task<OperationResult<PromotionItemDto>> CreatePromotionItemAsync(int promotionId, CreatePromotionItemRequest request, CancellationToken ct = default);
-        
+
         Task<PagedResponse<PromotionItemDto, PromotionItemParameters>> GetPromotionItemsAsync(PromotionItemParameters param, CancellationToken ct = default);
 
         Task<PagedResponse<PromotionItemDto, PromotionItemParameters>> GetPromotionItemsByPromotionIdAsync(int promotionId, PromotionItemParameters param, CancellationToken ct = default);
 
 
-        Task<OperationResult<bool>> SetActiveAsync(int id, bool isActive, CancellationToken ct = default);      
+        Task<OperationResult<bool>> SetActiveAsync(int id, bool isActive, CancellationToken ct = default);
 
         Task<OperationResult<bool>> DeletePromotionItemAsync(int id, CancellationToken ct = default);
 
+        Task<OperationResult<bool>> ValidateDuplicateAsync(int promotionId, int productUnitId, CancellationToken ct);
     }
+
 }
+

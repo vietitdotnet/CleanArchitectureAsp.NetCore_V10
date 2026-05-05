@@ -40,13 +40,22 @@ namespace MyApp.Infrastructure.Data.Configurations
                 .OnDelete(DeleteBehavior.Restrict);
 
 
+            builder.ToTable("ProductUnits", t =>
+            {
+                t.HasCheckConstraint(
+                   "CK_ProductUnit_ConversionRate",
+                   "[ConversionRate] > 0 AND [ConversionRate] <= 100000000"
+               );
+                t.HasCheckConstraint(
+                   "CK_ProductUnit_SellingPrice",
+                   "[SellingPrice] > 0 AND [SellingPrice] <= 10000000000"
+               );
+            });
 
-
-            //Với mỗi ProductIdchỉ cho phép 1 dòng có IsBaseUnit = 1
-            builder.HasIndex(x => x.ProductId)
-                .HasFilter("[IsBaseUnit] = 1")
-                .IsUnique();
-
+            builder
+               .HasIndex(x => x.ProductId)
+               .HasFilter("[ConversionRate] = 1") // Lọc những dòng có tỉ lệ là 1
+               .IsUnique();
 
 
             //index

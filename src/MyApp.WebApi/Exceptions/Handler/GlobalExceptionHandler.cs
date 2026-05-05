@@ -1,4 +1,7 @@
-﻿using MyApp.WebApi.Exceptions.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using MyApp.WebApi.Exceptions.Models;
+using System.Diagnostics;
+using System.Net.NetworkInformation;
 
 namespace MyApp.WebApi.Exceptions.Handler
 {
@@ -13,8 +16,8 @@ namespace MyApp.WebApi.Exceptions.Handler
         {
             return new ApiProblemDetails
             {
-                Status = StatusCodes.Status500InternalServerError,
                 Title = "Server Error",
+                Status = StatusCodes.Status500InternalServerError,     
                 ErrorCode = "INTERNAL_SERVER_ERROR",
                 ErrorMessage = "Lỗi hệ thống, vui lòng thử lại sau.",
                 TraceId = context.TraceIdentifier
@@ -23,5 +26,3 @@ namespace MyApp.WebApi.Exceptions.Handler
     }
 
 }
-
-

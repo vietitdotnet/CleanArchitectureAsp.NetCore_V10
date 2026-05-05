@@ -37,8 +37,6 @@ namespace MyApp.Domain.Entities
         public bool IsActive { get; private set; } = true;
 
 
-
-
         public static PromotionItem Create(
             int promotionId,
             int productUnitId,
@@ -61,8 +59,6 @@ namespace MyApp.Domain.Entities
                 throw new ArgumentException("Original price must be >= 0");
             if (overrideValue.HasValue && overrideValue.Value < 0)
                 throw new ArgumentException("Override value must be >= 0");
-
-
             return new PromotionItem
             {
                 PromotionId = promotionId,
@@ -91,7 +87,7 @@ namespace MyApp.Domain.Entities
         public void UpdateOriginalPrice(decimal newOriginalPrice)
         {
             if (newOriginalPrice < 0)
-                throw new ArgumentException("Original price must be >= 0");
+                throw new InvalidOperationException("Original price must be >= 0");
             OriginalPrice = newOriginalPrice;
         }
 
@@ -106,13 +102,13 @@ namespace MyApp.Domain.Entities
             }
 
             if (!isPercentageOverride.HasValue)
-                throw new ArgumentException("Override phải có loại");
+                throw new InvalidOperationException("Override phải có loại");
 
             if (overrideValue < 0)
-                throw new ArgumentException("Override value must be >= 0");
+                throw new InvalidOperationException("Override value must be >= 0");
 
             if (isPercentageOverride.Value && overrideValue > 100)
-                throw new ArgumentException("Percentage override không được > 100%");
+                throw new InvalidOperationException("Percentage override không được > 100%");
 
             OverrideValue = overrideValue;
             IsPercentageOverride = isPercentageOverride;

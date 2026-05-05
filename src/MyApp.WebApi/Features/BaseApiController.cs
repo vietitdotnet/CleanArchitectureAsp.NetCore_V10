@@ -19,9 +19,7 @@ namespace MyApp.WebApi.Features
                 Title = "Bad Request",
                 Status = StatusCodes.Status400BadRequest,
                 ErrorCode = "Bad_Request",
-                ErrorMessage = result.Message
-                    ?? result.Errors?.SelectMany(x => x.Value).FirstOrDefault()
-                    ?? "Đã có lỗi xảy ra",
+                ErrorMessage = result.Message ?? "One or more errors occurred.",
                 Errors = result.Errors,
                 TraceId = HttpContext.TraceIdentifier
             };

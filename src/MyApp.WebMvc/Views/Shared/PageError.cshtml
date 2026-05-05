@@ -1,12 +1,20 @@
-﻿@model string?
+﻿@model ErrorViewModel
 
 @{
     var area = ViewContext.RouteData.Values["area"]?.ToString();
+    
+    if (!string.IsNullOrEmpty(area))
+    {
+        Layout = $"~/Areas/{area}/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.ErrorCode ?? "Lỗi hệ thống";
 
-    ViewData["Title"] = "Không tìm thấy";
-    var message = Model ?? "Không tìm thấy dữ liệu phù hợp.";
+ 
 }
 @section CSS {
     <style>
@@ -73,14 +81,17 @@
 }
 <div class="notfound-container">
     <div class="notfound-box">
-        <h1 class="code">404</h1>
-        <h2>Oops! Không tìm thấy nội dung</h2>
-        <p class="message">@message</p>
+        <h1 class="code">@Model.StatusCode</h1>
+        <h2>Oops! @ViewData["Title"]</h2>
+        <p class="message">@Model.Message</p>
 
         <div class="actions">
             <a href="/" class="btn btn-primary">Về trang chủ</a>
-            <button onclick="history.back()" class="btn btn-secondary">Quay lại</button>
+            <a href="javascript:history.back()" class="btn btn-outline-secondary me-2">
+                ← Quay lại
+            </a>
         </div>
+
     </div>
 </div>
 

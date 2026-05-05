@@ -27,5 +27,9 @@ namespace MyApp.Domain.Extentions
 
             return new Guid(guidBytes);
         }
+
+
+
+
     }
 }

@@ -23,8 +23,8 @@ namespace MyApp.Application.Mappings
             CreateMap<ProductUnit, ProductUnitLookupDto>()
                 .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name));
 
-            CreateMap<ProductUnit, ProductUnitDto>()
-               .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name));
+            CreateMap<ProductUnit, ProductUnitDto>();
+               
 
             CreateMap<ProductUnit,PromotionItemPrefillDto>()
                 .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))

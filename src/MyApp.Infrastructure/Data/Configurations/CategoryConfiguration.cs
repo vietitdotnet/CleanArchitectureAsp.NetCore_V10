@@ -27,9 +27,13 @@ namespace MyApp.Infrastructure.Data.Configurations
                 .HasMaxLength(500);
 
             builder.Property(p => p.Name)
-                .IsRequired()
-                .HasMaxLength(150);
+                            .IsRequired()
+                            .HasMaxLength(100)
+                            .UseCollation("Vietnamese_CI_AI");
 
+
+            // Tạo index cho trường Name để tăng hiệu suất tìm kiếm
+            builder.HasIndex(x => x.Name);
             builder.HasIndex(p => p.Slug).IsUnique();
 
         }

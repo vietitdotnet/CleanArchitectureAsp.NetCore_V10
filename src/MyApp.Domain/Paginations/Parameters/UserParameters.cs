@@ -7,13 +7,11 @@ namespace MyApp.Domain.Paginations.Parameters
     {
         protected override int DefaultPageSize => 10;
 
-        [StringLength(20)]
-        public string? KeySearch { get; set; }
 
         public override void Normalize()
         {
             base.Normalize();
-            KeySearch = string.IsNullOrWhiteSpace(KeySearch) ? null : KeySearch.Trim();
+          
         }
     }
 

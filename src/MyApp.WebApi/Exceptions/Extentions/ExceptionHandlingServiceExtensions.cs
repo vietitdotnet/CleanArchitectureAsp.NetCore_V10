@@ -9,7 +9,7 @@ namespace MyApp.WebApi.Exceptions.Extentions
     {
         public static IServiceCollection AddUnifiedExceptionHandling(this IServiceCollection services)
         {
-            // Bật ProblemDetails (chuẩn RFC 7807)
+
             services.AddProblemDetails();
 
             // Cấu hình response cho validation tự động
@@ -22,10 +22,9 @@ namespace MyApp.WebApi.Exceptions.Extentions
             services.AddExceptionHandler<InvalidOperationExceptionHandler>();
             services.AddExceptionHandler<BadRequestExceptionHandler>();
             services.AddExceptionHandler<NotFoundExceptionHandler>();
-            services.AddExceptionHandler<IdentityResultExceptionHandler>();
             services.AddExceptionHandler<DatabaseExceptionHandler>();
             services.AddExceptionHandler<GlobalExceptionHandler>();
-
+            
             return services;
         }
     }

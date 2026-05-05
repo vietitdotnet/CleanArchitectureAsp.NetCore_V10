@@ -1,28 +1,32 @@
 ﻿using MyApp.Domain.Core.Models;
 using MyApp.Domain.Enums;
+using MyApp.Domain.Extentions;
 
 namespace MyApp.Domain.Entities
 {
     public class Product : BaseEntity<int>
-    {
-       
+    {      
         private Product() { }
+        public Guid PublicId { get; private set; }
         public string Sku { get; private set; } = null!; // mã sản phẩm
         public string? Barcode { get; private set; } // mã vạch, nếu có
         public string Slug { get; private set; } = null!; // slug dùng để tạo URL thân thiện, có thể dùng để hiển thị trong danh sách sản phẩm
-        public string Name { get; private set; } = null!; // tên sản phẩm, có thể dùng để hiển thị trong danh sách sản phẩm
-        public string BrandName { get; private set; } = null!; // tên thương hiệu, có thể dùng để hiển thị trong danh sách sản phẩm
+        public string ShortName { get; private set; } = null!; // tên ngắn gọn của sản phẩm, có thể dùng để hiển thị trong danh sách sản phẩm hoặc trên giao diện bán hàng khi cần hiển thị tên ngắn hơn
+        public string Name { get; private set; } = null!; // tên đầy đủ của sản phẩm, dùng để hiển thị chi tiết sản phẩm và trong các báo cáo
         public decimal CostPrice { get; private set; }  // giá nhập (giá vốn) - giá mà nhà thuốc mua vào    
         public decimal BasePrice { get; private set; }  //giá gốc (giá niêm yết)       
         public ProductStatus Status { get; private set; } // trạng thái sản phẩm (Active, Inactive, Discontinued)
+
+        public string PackingSize { get; private set; } = null!; // quy cách đóng gói
+        public string? BrandName { get; private set; } // tên thương hiệu;
         public string? ShortDescription { get; private set; }// mô tả ngắn gọn về sản phẩm, có thể dùng để hiển thị trong danh sách sản phẩm
         public string? Description { get; private set; }// mô tả chi tiết về sản phẩm
-        public string? PackingSize { get; private set; }// quy cách đóng gói
+
         public string? RegistrationNumber { get; private set; }// số đăng ký, nếu có
         public string? DosageForm { get; private set; } // dạng bào chế 
-        public string? Ingredient { get; private set; } // thành phần hoạt chất chính
-        public int StockQuantity { get; set; } // số lượng tồn kho hiện tại
-        public int LowStockThreshold { get; set; } // ngưỡng cảnh báo tồn kho thấp
+        public string? Ingredient { get; private set; } // thành phần chính của sản phẩm, có thể dùng để hiển thị trong chi tiết sản phẩm
+
+        public string? Benefit { get; private set; } // công dụng chính của sản phẩm, có thể dùng để hiển thị trong chi tiết sản phẩm
 
         public DateTimeOffset DateCreate { get; private set; }
         public DateTimeOffset? DateUpdate { get; private set; }
@@ -38,64 +42,107 @@ namespace MyApp.Domain.Entities
 
         public Medicine? Medicine { get; private set; } // thông tin chuyên biệt cho sản phẩm là thuốc, nếu có
 
-        public ICollection<ProductUnit> ProductUnits { get; set; } = [];
-        
 
+        private readonly List<ProductUnit> _productUnits = new();
+        public IReadOnlyCollection<ProductUnit> ProductUnits => _productUnits.AsReadOnly();
 
-        private Product(string name, string slug, decimal costPrice)
+        private Product(
+            string sku,    
+            string slug, 
+            string name, 
+            decimal costPrice, 
+            decimal basePrice,
+            string packingSize,
+            string? benefit,
+            string? brandName,
+            string? barcode, 
+            string? shortDescription, 
+            string? description,
+            string? registrationNumber, 
+            string? dosageForm, 
+            string? ingredient,
+            int? categoryId,
+            int? manufacturerId,
+            int? taxId
+
+            )
         {
-            Name = name.Trim();
-            Slug = slug.Trim().ToLowerInvariant();
+            Sku = sku;
+            Barcode = barcode;
+            Slug = slug;
+            Name = name;
             CostPrice = costPrice;
-            
+            BasePrice = basePrice;
+            PackingSize = packingSize;
+            BrandName = brandName;
+            Status = ProductStatus.Pending;
+            ShortDescription = shortDescription;
+            Description = description;        
+            RegistrationNumber = registrationNumber;
+            DosageForm = dosageForm;
+            Ingredient = ingredient;
+            CategoryId = categoryId;
+            ManufacturerId = manufacturerId;
+            TaxId = taxId;
+            Benefit = benefit;
+
         }
 
         public static Product Create(
-            
-            string name,
             string slug,
-            decimal codePrice,
-   
-            string? description = null,
-            int? categoryId = null)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Product name is required.");
-
-            if (string.IsNullOrWhiteSpace(slug))
-                throw new ArgumentException("Slug is required.");
-
-            if (codePrice < 0)
-                throw new ArgumentException("Price cannot be negative.");
-
-            return new Product(name, slug, codePrice)
-            {
-                Description = description?.Trim(),
-                CategoryId = categoryId
-            };
-        }
-
-        public void Update(
-            string name,
-            string slug,
+            string name,     
             decimal costPrice,
-            string? description,
-            int? categoryId)
+            decimal basePrice,
+            string packingSize,
+            string? benefit = null,
+            string? brandName = null,
+            string? sku = null,
+            string? barcode = null,
+            string? shortDescription = null,
+            string? description = null, 
+            string? registrationNumber = null,
+            string? dosageForm = null,
+            string? ingredient = null,
+            int? categoryId = null,
+            int? manufacturerId = null,
+            int? taxId = null
+            )
         {
-
+            // 1. Validation (Nên giữ lại như bạn đã viết)
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Name is required.");
-
+            if(string.IsNullOrWhiteSpace(packingSize))
+                throw new ArgumentException("Packing size is required.");
             if (costPrice < 0)
-                throw new ArgumentException("Price cannot be negative.");
+                throw new ArgumentException("Cost price cannot be negative.");
+            if (basePrice < 0)
+                throw new ArgumentException("Base price cannot be negative.");
 
-            Name = name.Trim();
-            Slug = slug.Trim().ToLowerInvariant();
-            CostPrice = costPrice;
-            Description = description?.Trim();
-            CategoryId = categoryId;
-            DateUpdate = DateTimeOffset.UtcNow;
+            // 2. Xử lý logic SKU trước khi gọi Constructor
+            var finalSku = string.IsNullOrWhiteSpace(sku)
+                ? GenerateUnique.GenerateUniqueSku("PRD")
+                : sku.Trim().ToUpper();
 
+            // 3. Khởi tạo đối tượng
+            return new Product(
+                finalSku, // Truyền biến đã xử lý
+                slug.Trim().ToLowerInvariant(),
+                name.Trim(),
+                costPrice,
+                basePrice,
+                packingSize.Trim(),
+                benefit?.Trim(),
+                brandName?.Trim(),
+                barcode?.Trim(),
+                shortDescription?.Trim(),
+                description?.Trim(),
+                registrationNumber?.Trim(),
+                dosageForm?.Trim(),
+                ingredient?.Trim(),
+                categoryId,
+                manufacturerId,
+                taxId
+            );
         }
 
         // Một sản phẩm có thể có nhiều đơn vị tính khác nhau,
@@ -119,7 +166,7 @@ namespace MyApp.Domain.Entities
                 isBaseUnit,
                 barcode);
 
-            ProductUnits.Add(unit);
+            _productUnits.Add(unit);
 
             return unit;
         }
@@ -131,7 +178,7 @@ namespace MyApp.Domain.Entities
             if (unit == null)
                 throw new InvalidOperationException("Unit not found");
 
-            ProductUnits.Remove(unit);
+            _productUnits.Remove(unit);
         }
 
         public void SetCodePrice(decimal newPrice)
@@ -186,36 +233,6 @@ namespace MyApp.Domain.Entities
         public void Discontinue()
         {
             Status = ProductStatus.Discontinued;
-        }
-
-
-        // Khi nhập hàng, cần tăng số lượng tồn kho.
-        // Nếu số lượng nhập vào là âm hoặc bằng 0, có thể ném lỗi.
-        public void IncreaseStock(int quantity)
-        {
-            if (quantity <= 0)
-                throw new ArgumentException("Quantity must be greater than 0");
-
-            StockQuantity += quantity;
-        }
-
-        // Khi bán hàng, cần giảm số lượng tồn kho. Nếu số lượng bán ra lớn hơn số lượng tồn kho hiện tại,
-        // có thể ném lỗi hoặc cho phép âm tồn kho tùy theo chính sách của nhà thuốc.
-        public void DecreaseStock(int quantity)
-        {
-            if (quantity <= 0)
-                throw new ArgumentException("Quantity must be greater than 0");
-
-            if (StockQuantity < quantity)
-                throw new InvalidOperationException("Không đủ hàng trong kho");
-
-            StockQuantity -= quantity;
-        }
-
-        // Kiểm tra xem sản phẩm có đang ở trạng thái tồn kho thấp hay không, dựa trên StockQuantity và LowStockThreshold
-        public bool IsLowStock()
-        {
-            return StockQuantity <= LowStockThreshold;
         }
 
     }

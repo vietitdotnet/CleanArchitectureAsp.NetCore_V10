@@ -9,14 +9,18 @@ namespace MyApp.WebMvc.Extentions
         this ModelStateDictionary modelState,
         OperationResult<T> result)
         {
-            if (result.Errors == null) return;
+            if (result.Errors == null)
+                modelState.AddModelError(string.Empty, result.Message!);
 
+            if (result.Errors != null)
             foreach (var (field, messages) in result.Errors)
                 foreach (var message in messages)
                     modelState.AddModelError(
                         field == "general" ? string.Empty : field,
                         message
                     );
+
+            return;
         }
     }
 }

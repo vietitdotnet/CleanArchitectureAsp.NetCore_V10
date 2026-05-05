@@ -29,12 +29,7 @@ namespace MyApp.Application.Features.Promotions
 
         public async Task<OperationResult<FlashSalePromotionDto>> CreateFlashSalePromotionAsync(CreateFlashSaleRequest req, CancellationToken ct = default)
         {
-            var validationResult = await ValidateAsync(req, ct);
-           
-            if (!validationResult.Success)
-            {
-                return OperationResult<FlashSalePromotionDto>.Fail(validationResult.Errors!);
-            }
+            await ValidateAsync(req, ct);
 
             var flashSale = Promotion.CreateFlashSale(
                                      req.Name, req.Value, req.IsPercentage, req.MaxDiscountAmount,
@@ -51,12 +46,7 @@ namespace MyApp.Application.Features.Promotions
 
         public async Task<OperationResult<RegularPromotionDto>> CreateRegularPromotionAsync(CreateRegularPromotionRequest request, CancellationToken ct = default)
         {
-            var validationResult = await ValidateAsync(request, ct);
-
-            if (!validationResult.Success)
-            {
-                return OperationResult<RegularPromotionDto>.Fail(validationResult.Errors!);
-            }
+          await ValidateAsync(request, ct);
 
             var regular = Promotion.CreatePromotion(request.Name,
                 request.Value,
@@ -105,15 +95,13 @@ namespace MyApp.Application.Features.Promotions
             return result;
         }
 
-
-
         public async Task<PromotionDto?> GetPromotionByIdAsync(int id, CancellationToken ct = default)
         {
             var spec = new PromotionByIdSpec(id);
 
             var result = await _unitOfWork.Repository<Promotion, int>().FirstOrDefaultProjectedAsync<PromotionDto>(spec, ct);
 
-            if (result == null) throw new NotFoundException("Không tìm thấy khuyến mãi.");
+            if (result == null) throw new  BadRequestException($"Không tìm thấy khuyến mãi với ID {id}.");
             
             return result;
         }

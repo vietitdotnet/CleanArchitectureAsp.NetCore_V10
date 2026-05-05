@@ -1,8 +1,8 @@
 ﻿using MMyApp.Application.Features.Products.Responses;
 using MyApp.Application.Common.Results;
 using MyApp.Application.Features.Products.DTOs;
-using MyApp.Application.Features.Products.DTOs.View;
 using MyApp.Application.Features.Products.Requests;
+using MyApp.Application.Features.Products.Views;
 using MyApp.Application.Features.ProductUints.DTOs;
 using MyApp.Domain.Paginations.Core;
 using MyApp.Domain.Paginations.Parameters;
@@ -18,7 +18,7 @@ namespace MyApp.Application.Features.Products
 
         Task<ProductDto> GetProductByIdAsync(int id, CancellationToken ct = default);
 
-        Task<ProductViewDto?> GetProductBySlugAsync(string slug, CancellationToken ct = default);
+        Task<ProductViewDto> GetProductBySlugAsync(string slug, CancellationToken ct = default);
 
         Task<PagedResponse<ProductDto, ProductParameters>> GetProductsAsync(ProductParameters param ,CancellationToken ct = default);
         
@@ -34,6 +34,6 @@ namespace MyApp.Application.Features.Products
             string categorySlug, 
             ProductParameters param, CancellationToken ct = default);
 
-       
+        Task<IReadOnlyList<ProductLookupDto>> GetProductLookupsAsync(ProductParameters param ,CancellationToken ct = default);
     }
 }

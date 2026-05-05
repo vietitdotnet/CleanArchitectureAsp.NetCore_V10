@@ -14,10 +14,10 @@ namespace MyApp.Infrastructure.Data.Configurations
             builder.ToTable("Manufacturers");
 
             builder.HasKey(x => x.Id);
-
-            builder.Property(x => x.Name)
-                .IsRequired()
-                .HasMaxLength(150);
+            builder.Property(p => p.Name)
+                            .IsRequired()
+                            .HasMaxLength(100)
+                            .UseCollation("Vietnamese_CI_AI");
 
             builder.Property(x => x.ShortDescription)
                 .HasMaxLength(38)
@@ -34,6 +34,7 @@ namespace MyApp.Infrastructure.Data.Configurations
                 .HasForeignKey(x => x.CountryId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            
 
             // ===== Index =====
             builder.HasIndex(x => x.Name);

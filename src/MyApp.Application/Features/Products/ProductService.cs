@@ -3,9 +3,9 @@ using MyApp.Application.Common.Queryable.Extentions;
 using MyApp.Application.Common.Results;
 using MyApp.Application.Common.Service;
 using MyApp.Application.Features.Products.DTOs;
-using MyApp.Application.Features.Products.DTOs.View;
 using MyApp.Application.Features.Products.MapRaws;
 using MyApp.Application.Features.Products.Requests;
+using MyApp.Application.Features.Products.Views;
 using MyApp.Application.Features.ProductUints.DTOs;
 using MyApp.Application.Features.Promotions.DTOs;
 using MyApp.Application.Interfaces.Common;
@@ -70,25 +70,46 @@ namespace MyApp.Application.Features.Products
             (CreateProductRequest request,
             CancellationToken ct = default)
         {
-            await ValidateAsync(request);
+            var validationResult = await ValidateAsync(request);
+
+            if (!validationResult.Success)
+            {
+                return OperationResult<ProductDto>.Fails(validationResult.Errors!, "Dữ liệu không hợp lệ");
+            }
 
 
             var slug = await GenerateUniqueSlugAsync(request.Name);
 
-            var product = Product.Create(
-                request.Name,
-                slug,
-                request.Price!,
-                request.Description,
-                request.CategoryId
-            );
+            var product = Product.Create(slug, 
+                request.Name, 
+                request.CostPrice, 
+                request.BasePrice,
+                request.PackingSize,
+                request.Benefit,
+                request.BrandName,
+                request.Sku, 
+                request.Barcode, 
+                request.ShortDescription, 
+                request.Description,              
+                request.RegistrationNumber, 
+                request.DosageForm, 
+                request.Ingredient, 
+                request.CategoryId, 
+                request.ManufacturerId,
+                request.TaxId);
+
+            product.AddUnit(request.UnitName, 1, request.SellingPrice, true, request.Barcode);
+            
 
             await _unitOfWork.Repository<Product, int>().AddAsync(product, ct);
-            
-            await _unitOfWork.SaveChangesAsync();
+
+            await _unitOfWork.SaveChangesAsync(ct);
+
 
             return OperationResult<ProductDto>.Ok(
-                _mapper.Map<ProductDto>(product));
+                _mapper.Map<ProductDto>(product),
+                "Tạo sản phẩm thành công");
+
         }
 
         public async Task<PagedResponse<ProductDto, ProductParameters>> GetProductsAsync
@@ -114,26 +135,8 @@ namespace MyApp.Application.Features.Products
 
         public async Task<OperationResult<ProductDto>> UpdateProductAsync(int id , UpdateProductRequest request, CancellationToken ct)
         {
-            await ValidateAsync(request);
+            throw new NotImplementedException();
 
-            var product = await _unitOfWork.Repository<Product, int>().GetByIdAsync(id, ct);
-
-            if(product == null)
-                throw new NotFoundException($"Không tìm thấy ID");
-
-            product.Update(
-                request.Name,
-                request.Slug,
-                request.Price,
-                request.Description,
-                request.CategoryId);
-
-             _unitOfWork.Repository<Product, int>().Update(product);
-
-            await _unitOfWork.SaveChangesAsync(ct);
-
-            return OperationResult<ProductDto>.Ok(
-                _mapper.Map<ProductDto>(product));
 
         }
 
@@ -152,7 +155,7 @@ namespace MyApp.Application.Features.Products
             return OperationResult<bool>.Ok(true);
         }
 
-        public async Task<ProductViewDto?> GetProductBySlugAsync(string slug, CancellationToken ct = default)
+        public async Task<ProductViewDto> GetProductBySlugAsync(string slug, CancellationToken ct = default)
         {
            
             var spec = new ProductBySlugSpec(slug);
@@ -182,6 +185,16 @@ namespace MyApp.Application.Features.Products
             return slug;
         }
 
+        public async Task<IReadOnlyList<ProductLookupDto>> GetProductLookupsAsync(ProductParameters param, CancellationToken ct = default)
+        {
+            var spec = new ProductLookupSpec(param);
 
+            var products = await _unitOfWork.Repository<Product, int>()
+                 .GetPagedAsync<ProductLookupDto, ProductParameters>(spec, param, ct);
+
+            return products.Items;
+        }
+
+        
     }
 }

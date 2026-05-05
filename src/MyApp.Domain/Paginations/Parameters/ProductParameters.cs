@@ -6,13 +6,13 @@ namespace MyApp.Domain.Paginations.Parameters
     public class ProductParameters : PagingParameters
     {
 
-        private const int MaxKeywordLength = 30;
+       
 
         private const decimal MinPrice = 0;
 
         private const decimal MaxPrice = 9999999999;
 
-        public string? KeySearch { get; set; }
+    
 
         public string? Origin { get; set; }
 
@@ -33,16 +33,8 @@ namespace MyApp.Domain.Paginations.Parameters
 
         public override void Normalize()
         {
-            // Chuẩn hóa KeySearch: loại bỏ khoảng trắng thừa và giới hạn độ dài
-            if (!string.IsNullOrWhiteSpace(KeySearch))
-            {
-                KeySearch = KeySearch.Trim();
-
-                if (KeySearch.Length > MaxKeywordLength)
-                {
-                    KeySearch = KeySearch.Substring(0, MaxKeywordLength);
-                }
-            }
+          
+            base.Normalize();
 
             // Nếu PriceFrom có giá trị, đảm bảo nó nằm trong khoảng hợp lệ
             if (PriceFrom.HasValue)

@@ -1,37 +1,86 @@
 @{
-   Layout = "~/Views/Shared/_Layout.cshtml";
-   var statusMessage = TempData["StatusMessage"] as string;
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+    var statusMessage = TempData["StatusMessage"] as string;
 }
 
 @section CSS {
+    <link href="~/css/sidebar.css" rel="stylesheet" />
     @RenderSection("CSS", required: false)
 }
 
-<div class="container-fluid py-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0 text-primary fw-bold">Quản lý cửa hàng</h2>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0 shadow-sm px-3 py-2 bg-white rounded">      
-                @RenderSection("Breadcrumb", required: false)  
-            </ol>
-        </nav>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-3 col-xl-2 mb-4">
-            <div class="card shadow-sm border-0">
-                <div class="card-body p-2">
-                    <partial name="_ManageNav"/>
-                </div>
-            </div>
+<div class="layout d-flex">
+    <nav id="sidebar" class="sidebar d-flex flex-column">
+    
+        <!-- Header -->
+        <div class="sidebar-header d-flex justify-content-between align-items-center">
+            <span class="fw-bold fs-5">Manager</span>
+            <button class="btn btn-sm text-white d-lg-none" id="closeSidebar">✕</button>
         </div>
-        <div class="col-lg-9 col-xl-10">
+
+        <!-- Scrollable menu -->
+        <div class="sidebar-body">
+            <partial name="_ManageNav.cshtml" />
+        </div>
+
+        <!-- Footer -->
+        <div class="sidebar-footer mt-auto pt-3 small text-secondary">
+            <hr class="border-secondary" />
+            <div>© 2026 MyApp</div>
+        </div>
+
+    </nav>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Main -->
+    <div class="content flex-grow-1">
+
+        <!-- Page content -->
+        <div class="container-fluid py-2">
+            <!-- Breadcrumb -->
+            <div class="mb-1">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 bg-white px-3 py-2 rounded shadow-sm">
+                        @RenderSection("Breadcrumb", required: false)
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- Alert -->
             <partial name="_AlertMessage" model="@statusMessage" />
-            @RenderBody()
+
+            <!-- Body -->
+            <div class="mt-2">
+                @RenderBody()
+            </div>
         </div>
     </div>
 </div>
 
+
 @section Scripts {
+    
     @RenderSection("Scripts", required: false)
+    
+      <script>
+          const sidebar = document.getElementById('sidebar');
+          const overlay = document.getElementById('overlay');
+
+          document.getElementById('openSidebar').onclick = () => {
+              sidebar.classList.add('active');
+              overlay.classList.add('active');
+          };
+
+          document.getElementById('closeSidebar').onclick = () => {
+              sidebar.classList.remove('active');
+              overlay.classList.remove('active');
+          };
+
+          overlay.onclick = () => {
+              sidebar.classList.remove('active');
+              overlay.classList.remove('active');
+          };
+    </script>
+
 }

@@ -57,7 +57,7 @@ namespace MyApp.Domain.Entities
         public void AddPromotionItem(PromotionItem item)
         {
             if (!IsActive)
-                throw new("Khuyến mãi không hoạt động");
+                throw new InvalidOperationException("Khuyến mãi không hoạt động");
 
             if (StartDate > DateTimeOffset.UtcNow || EndDate < DateTimeOffset.UtcNow)
                 throw new InvalidOperationException("Khuyến mãi không nằm trong thời gian áp dụng");
@@ -155,7 +155,7 @@ namespace MyApp.Domain.Entities
         public void UpdateSchedule(DateTimeOffset startDate, DateTimeOffset endDate)
         {
             if (endDate <= startDate)
-                throw new Exception("EndDate phải lớn hơn StartDate");
+                throw new InvalidOperationException("EndDate phải lớn hơn StartDate");
 
             StartDate = startDate;
             EndDate = endDate;

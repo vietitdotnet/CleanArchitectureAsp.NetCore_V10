@@ -18,12 +18,13 @@ namespace MyApp.Infrastructure.Data.Configurations
             builder.Property(p => p.Percentage)
              .HasPrecision(18, 2);
 
-            builder.Property(t => t.Name)
-                .IsRequired()
-                .HasMaxLength(100);
-            
-         
+            builder.Property(p => p.Name)
+                            .IsRequired()
+                            .HasMaxLength(100)
+                            .UseCollation("Vietnamese_CI_AI");
 
+
+            builder.HasIndex(x => x.Name);
         }
     }
 }

@@ -3,6 +3,7 @@ using MyApp.Application.Common.Service;
 using MyApp.Application.Features.Categorys.DTOs;
 using MyApp.Domain.Core.Repositories;
 using MyApp.Domain.Entities;
+using MyApp.Domain.Paginations.Parameters;
 using MyApp.Domain.Specifications.Categorys;
 
 
@@ -16,6 +17,17 @@ namespace MyApp.Application.Features.Categorys
             : base(unitOfWork, mapper, serviceProvider)
         {
 
+        }
+
+        public async Task<IReadOnlyList<CategoryLookupDto>> GetCategoryLookupsAsync(CategoryParameters param, CancellationToken ct = default)
+        {
+            var spec = new CategoryLookupSpec(param);
+
+            var categoryLookups = await _unitOfWork
+                .Repository<Category, int>()
+                .GetPagedAsync<CategoryLookupDto, CategoryParameters>(spec, param, ct);
+
+            return categoryLookups.Items;
         }
 
         public async Task<IReadOnlyList<CategoryDto>> GetCategorysAsync(CancellationToken ct = default)

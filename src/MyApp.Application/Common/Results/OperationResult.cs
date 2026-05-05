@@ -24,38 +24,34 @@
 
         public static OperationResult<T> Fail(string error)
         {
+            return new OperationResult<T>
+            {
+                Success = false,
+                Message = error,  
+            };
+        }
+
+        public static OperationResult<T> Fails(IEnumerable<string> errors , string? message = null)
+        {
+            var list = errors.ToArray();
+
                 return new OperationResult<T>
                 {
                     Success = false,
-                    Message = error,
+                    Message = message ?? "One or more errors occurred.",
                     Errors = new Dictionary<string, string[]>
                 {
-                    { "general", new[] { error } }
+                    { "general", list }
                 }
             };
         }
 
-        public static OperationResult<T> Fail(IEnumerable<string> errors)
-        {
-            var list = errors.ToArray();
-
-            return new OperationResult<T>
-            {
-                Success = false,
-                Message = list.FirstOrDefault(),
-                Errors = new Dictionary<string, string[]>
-            {
-                { "general", list }
-            }
-            };
-        }
-
-        public static OperationResult<T> Fail(Dictionary<string, string[]> errors)
+        public static OperationResult<T> Fails(Dictionary<string, string[]> errors, string? message = null)
         {
             return new OperationResult<T>
             {
                 Success = false,
-                Message = errors.FirstOrDefault().Value?.FirstOrDefault(),
+                Message = message ?? "One or more errors occurred.",
                 Errors = errors
             };
         }

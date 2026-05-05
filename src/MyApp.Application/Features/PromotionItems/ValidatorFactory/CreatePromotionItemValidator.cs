@@ -14,7 +14,9 @@ namespace MyApp.Application.Features.PromotionItems.ValidatorFactory
             // ===== 1. OriginalPrice > 0 =====
             RuleFor(x => x.OriginalPrice)
                 .GreaterThan(0)
-                .WithMessage("Giá gốc phải lớn hơn 0");
+                .WithMessage("Giá gốc phải lớn hơn 0")
+                .LessThanOrEqualTo(10000000000)
+                                 .WithMessage("Giá gốc không được vượt quá 10 tỷ.");
 
             // ===== 2. OverrideValue logic =====
 

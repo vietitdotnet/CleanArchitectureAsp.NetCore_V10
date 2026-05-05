@@ -219,8 +219,9 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .UseCollation("Vietnamese_CI_AI");
 
                     b.Property<int?>("ParentCategoryId")
                         .HasColumnType("int");
@@ -233,6 +234,8 @@ namespace MyApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name");
 
                     b.HasIndex("ParentCategoryId");
 
@@ -391,8 +394,9 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .UseCollation("Vietnamese_CI_AI");
 
                     b.Property<string>("ShortDescription")
                         .HasMaxLength(38)
@@ -569,10 +573,13 @@ namespace MyApp.Infrastructure.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Benefit")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("BrandName")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
@@ -601,21 +608,24 @@ namespace MyApp.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("LowStockThreshold")
-                        .HasColumnType("int");
-
                     b.Property<int?>("ManufacturerId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
                         .UseCollation("Vietnamese_CI_AI");
 
                     b.Property<string>("PackingSize")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<Guid>("PublicId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("NEWSEQUENTIALID()");
 
                     b.Property<string>("RegistrationNumber")
                         .HasMaxLength(20)
@@ -625,6 +635,12 @@ namespace MyApp.Infrastructure.Migrations
                         .HasMaxLength(38)
                         .HasColumnType("nvarchar(38)");
 
+                    b.Property<string>("ShortName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .UseCollation("Vietnamese_CI_AI");
+
                     b.Property<string>("Sku")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -632,13 +648,10 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StockQuantity")
                         .HasColumnType("int");
 
                     b.Property<int?>("TaxId")
@@ -666,7 +679,12 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.HasIndex("TaxId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_Product_BasePrice", "[BasePrice] > 0 AND [BasePrice] <= 10000000000");
+
+                            t.HasCheckConstraint("CK_Product_CostPrice", "[CostPrice] > 0 AND [CostPrice] <= 100000000");
+                        });
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.ProductUnit", b =>
@@ -685,9 +703,6 @@ namespace MyApp.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsBaseUnit")
                         .HasColumnType("bit");
 
                     b.Property<int>("ProductId")
@@ -716,14 +731,19 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.HasIndex("ProductId")
                         .IsUnique()
-                        .HasFilter("[IsBaseUnit] = 1");
+                        .HasFilter("[ConversionRate] = 1");
 
                     b.HasIndex("PublicId")
                         .IsUnique();
 
                     b.HasIndex("UnitName");
 
-                    b.ToTable("ProductUnits", (string)null);
+                    b.ToTable("ProductUnits", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_ProductUnit_ConversionRate", "[ConversionRate] > 0 AND [ConversionRate] <= 100000000");
+
+                            t.HasCheckConstraint("CK_ProductUnit_SellingPrice", "[SellingPrice] > 0 AND [SellingPrice] <= 10000000000");
+                        });
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.Promotion", b =>
@@ -879,13 +899,16 @@ namespace MyApp.Infrastructure.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(100)")
+                        .UseCollation("Vietnamese_CI_AI");
 
                     b.Property<decimal>("Percentage")
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name");
 
                     b.ToTable("Taxes", (string)null);
                 });

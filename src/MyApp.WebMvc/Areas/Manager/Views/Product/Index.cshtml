@@ -1,43 +1,218 @@
-﻿
+﻿@using MyApp.Domain.Enums
 @model PagedResponse<ProductDto, ProductParameters>
 
 @{
     ViewData["title"] = "Prodcuts";
     ViewData["ActivePage"] = ManageNavPages.Product;
 }
-<h2>Product Management</h2>
+@section CSS {
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        .select2-container .select2-selection--single {
+            height: 38px;
+            border: 1px solid #ced4da;
+            border-radius: 0.375rem;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            line-height: 36px;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 36px;
+        }
+    </style>
+}
+
+@section Breadcrumb {
+
+    <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
+}
+
 @if (TempData["StatusMessage"] != null)
 {
     <div class="alert alert-success">
         @TempData["StatusMessage"]
     </div>
 }
-<a asp-action="CreateProduct" asp-controller="Product" class="btn btn-primary mb-3">+Tạo sản phẩm</a>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Tên</th>
-            <th>Giá</th>
-            <th>URL</th>
-            <th>Options</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Items)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Name</td>
-                <td>@item.Price</td>
-                <td>@item.Slug</td>
-                <td></td>
-            </tr>
-        }
-    </tbody>
-</table>
 
-<!-- Pagination -->
-<div style="margin: 0px auto;">
-    @await Html.PartialAsync("_PartialPagination", Model)
+<div class="mb-4 row">
+    <div class="col-md-6">
+        <select id="product-select" class="form-select" style="width:100%"></select>
+    </div>
+    <div class="col-md-6">
+        <a asp-action="CreateProduct" asp-controller="Product" class="btn btn-primary mb-3">+Tạo sản phẩm</a>
+    </div>
 </div>
+
+<div class="table-responsive">
+    <table class="table table-hover align-middle border shadow-sm">
+        <thead class="table-light">
+            <tr>
+                <th class="ps-3">Sản phẩm</th>
+                <th>Mã vạch</th>
+                <th>Thương hiệu / Danh mục</th>
+                <th>Đơn vị & Giá bán</th>
+                <th class="text-center">Trạng thái</th>
+                <th class="text-end pe-3">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Items != null && Model.Items.Any())
+            {
+                foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <!-- Cột Sản phẩm: Tên + Description -->
+                        <td class="ps-3">
+                            <div class="fw-bold text-primary">@item.Name</div>
+                            <div class="mb-1">
+                                <span class="badge bg-light text-dark border">@item.Sku</span>
+                            </div>
+                        </td>
+
+                      
+                        <td>
+                          
+                            @if (!string.IsNullOrEmpty(item.Barcode))
+                            {
+                                <div class="small text-muted"><i class="bi bi-upc-scan"></i> @item.Barcode</div>
+                            }
+                        </td>
+
+                        <!-- Cột Phân loại -->
+                        <td>
+                            <div class="fw-medium">@item?.BrandName</div>
+                            <div class="badge bg-info text-dark fw-normal">@item?.CategoryName</div>
+                        </td>
+                            
+                        <!-- Cột Đơn vị & Giá: Quan trọng nhất -->
+                        <td>
+                            @if (item?.Units != null && item.Units.Any())
+                            {
+                                <div class="d-flex flex-column gap-1">
+                                    @foreach (var unit in item.Units.OrderByDescending(u => u.IsBaseUnit))
+                                    {
+                                        <div class="d-flex justify-content-between align-items-center bg-light rounded px-2 py-1" style="min-width: 150px;">
+                                            <span class="small fw-bold">
+                                                <a href="#">@unit.UnitName</a>
+                                                @if (unit.IsBaseUnit)
+                                                {
+                                                    <i class="bi bi-star-fill text-warning small" title="Đơn vị gốc"></i>
+                                                }
+                                            </span>
+                                            <span class="text-success fw-semibold">@unit.SellingPrice.ToString("N0")đ</span>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <span class="text-danger small italic">Chưa thiết lập giá</span>
+                            }
+                        </td>
+
+                        <!-- Cột Trạng thái -->
+                        <td class="text-center">
+                            @{
+                                var statusClass = item!.Status switch
+                                {
+                                    (int)ProductStatus.Active => "bg-success",
+                                    (int)ProductStatus.Pending => "bg-warning text-dark",
+                                    (int)ProductStatus.Draft => "bg-secondary",
+                                    (int)ProductStatus.Inactive => "bg-dark",
+                                    (int)ProductStatus.OutOfStock => "bg-danger",
+                                    (int)ProductStatus.Discontinued => "bg-secondary",
+                                    _ => "bg-light text-dark"
+                                };
+                            }
+
+                            <span class="badge rounded-pill @statusClass">
+                                @item.TextStatus
+                            </span>
+                        </td>
+
+                        <!-- Cột Thao tác -->
+                        <td class="text-end">
+                            <div class="btn-group btn-group-sm">
+                                <a asp-action="UpdatePromotionItem" asp-controller="promotion" asp-route-promotionId="" asp-route-id="@item.Id" class="btn btn-outline-primary btn-edit" title="Sửa">
+                                    Sửa
+                                </a>
+                                <button class="btn btn-outline-danger btn-delete"
+                                        data-id="@item.Id"
+                                        data-name="">
+                                    Xóa
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center py-5 text-muted">
+                        <i class="bi bi-box-seam d-block mb-2 fs-2"></i>
+                        Không tìm thấy sản phẩm nào
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<div class="card-footer bg-white py-3">
+    <div class="d-flex justify-content-center">
+        @await Html.PartialAsync("_PartialPagination", Model)
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+
+        let index = 0;
+        let selectedIds = new Set();
+
+        $('#product-select').select2({
+            placeholder: 'Tìm sản phẩm...',
+            minimumInputLength: 2,
+                ajax: {
+                // Sử dụng Url.Action để tránh sai sót đường dẫn
+                url: '@Url.Action("SearchProducts", "Product", new { area = "Manager" })',
+                delay: 300, // debounce
+                data: function (params) {
+                return {
+                term: params.term
+                };
+            },
+                processResults: function (data) {
+                 return {
+                    results: data.map(x => ({
+                    id: x.id,
+                    text: x.text,
+                    sku: x.sku,
+                    barcode: x.barcode
+                    }))
+                 };
+            }
+            }
+        });
+
+        $('#product-select').on('select2:select', function (e) {
+            const item = e.params.data;
+
+            if (selectedIds.has(item.id)) return;
+
+            selectedIds.add(item.id);
+
+            const baseUrl = '@Url.Action("DetailProduct", "Product", new { area = "Manager", id = "__id__" })';
+            const url = baseUrl.replace('__id__', item.id);
+
+        window.location.href = url;
+        });
+
+    </script>
+}

@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using MyApp.WebApi.Exceptions.Models;
 using System.Data.Common;
+using System.Diagnostics;
+using System.Net.NetworkInformation;
 
 namespace MyApp.WebApi.Exceptions.Handler
 {
@@ -20,8 +22,16 @@ namespace MyApp.WebApi.Exceptions.Handler
 
             switch (exception)
             {
+
+                case ArgumentNullException argEx:
+                    problem.Status = StatusCodes.Status500InternalServerError;
+                    problem.Title = "Argument Error";
+                    problem.ErrorCode = "ARGUMENT_ERROR";
+                    problem.ErrorMessage = argEx.Message;
+                    break;
+
                 case SqlException sqlEx:
-                    
+
                     problem.Status = StatusCodes.Status500InternalServerError;
                     problem.Title = "Database Error";
                     problem.ErrorCode = "DATABASE_ERROR";
@@ -57,7 +67,11 @@ namespace MyApp.WebApi.Exceptions.Handler
                     problem.ErrorMessage = dbEx.Message;
                     break;
 
-                default:          
+                default:
+                    problem.Status = StatusCodes.Status500InternalServerError;
+                    problem.Title = "Invalid Operation";
+                    problem.ErrorCode = "Invalid_Operation";
+                    problem.ErrorMessage = "Lỗi hệ thống, vui lòng thử lại sau.";
                     break;
             }
 

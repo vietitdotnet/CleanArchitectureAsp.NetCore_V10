@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MyApp.Application.Common.Results;
 using MyApp.Application.Features.ProductUints;
 using MyApp.Application.Features.PromotionItems;
+using MyApp.Application.Features.PromotionItems.DTOs;
 using MyApp.Application.Features.PromotionItems.Requests;
 using MyApp.Application.Features.Promotions;
 using MyApp.Application.Features.Promotions.Requests;
@@ -83,7 +85,8 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
             var result = await _promotionService.CreateRegularPromotionAsync(request, ct);
             if (result.Success)
             {
-                TempData["SuccessMessage"] = "Tạo promotion thành công!";
+                 StatusMessage = "Tạo promotion thành công!";
+
                 return RedirectToAction(nameof(Index));
             }
  
@@ -133,6 +136,11 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
 
             if (productunit == null) return NotFound();
 
+            // 3. (Optional) Check xem Item này đã tồn tại trong Promo chưa để tránh duplicate
+            var validateResult = await _promotionItemService.ValidateDuplicateAsync(id, productunit.Id, ct);
+            if (!validateResult.Success)
+                  return RedirectToAction(nameof(AddPromotionItems), new { id = id });
+
             return View(new CreatePromotionItemRequest()
             {
                 ProductUnitId = productunit.Id,
@@ -143,6 +151,7 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
         [HttpPost]
         public async Task<ActionResult> CreatePromotionItem([FromRoute] int id, CreatePromotionItemRequest request, string? returnUrl, CancellationToken ct)
         {
+
             var result = await _promotionItemService.CreatePromotionItemAsync(id, request, ct);
 
             if (result.Success)

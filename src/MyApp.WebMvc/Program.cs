@@ -18,7 +18,7 @@ builder.Services.AddFluentValidationClientsideAdapters();
 
 builder.Services.AddControllersWithViews(options =>
 {
-    options.Filters.Add<AppExceptionFilter>();
+    options.Filters.Add<GlobalExceptionFilter>();
     options.Filters.Add<NormalizeFilter>();
 })
 .AddMvcOptions(options =>

@@ -4,7 +4,6 @@ using MyApp.Application.Common.Service;
 using MyApp.Application.Features.ProductUints.DTOs;
 using MyApp.Application.Features.PromotionItems.DTOs;
 using MyApp.Application.Features.PromotionItems.Requests;
-using MyApp.Application.Features.Promotions.DTOs;
 using MyApp.Domain.Core.Repositories;
 using MyApp.Domain.Entities;
 using MyApp.Domain.Exceptions;
@@ -66,20 +65,21 @@ namespace MyApp.Application.Features.PromotionItems
             if (productUnit == null)
                 throw new NotFoundException($"Không tìm thấy đơn vị sản phẩm {request.ProductUnitId}.");
 
+            var validateResult = await ValidateAsync(request, ct);
+            if (!validateResult.Success)
+                return OperationResult<PromotionItemDto>.Fails(validateResult.Errors!);
+
             // 3. (Optional) Check xem Item này đã tồn tại trong Promo chưa để tránh duplicate
-            var isExisted = await _unitOfWork.Repository<PromotionItem, int>().AnyAsync(new PromotionItemByPromoAndUnitSpec(promotionId, productUnit.Id));
+            var validateDuplicate = await ValidateDuplicateAsync(promotionId, productUnit.Id, ct);
+            if (!validateDuplicate.Success)
+                return OperationResult<PromotionItemDto>.Fail(validateDuplicate.Message!);
 
-            if (isExisted)
-            {
-                return OperationResult<PromotionItemDto>.Fail($"Sản phẩm {productUnit.Id} đã tồn tại trong khuyến mãi này.");
-            }
+            var checkOriginalPrice = ValidateFinalPrice(request.OriginalPrice, request.OverrideValue, request.IsPercentageOverride);
 
+            if (!checkOriginalPrice.Success)
+                return OperationResult<PromotionItemDto>.Fail(checkOriginalPrice.Message!);
 
-            var validationResult = await ValidateAsync(request, ct);
-
-            if (!validationResult.Success)
-                return OperationResult<PromotionItemDto>.Fail(validationResult.Errors!);
-
+           
             // 4. Tạo Item - Lấy OriginalPrice từ hệ thống thay vì Request để an toàn hơn
             var promotionItem = PromotionItem.Create(
                 promoId,
@@ -97,6 +97,7 @@ namespace MyApp.Application.Features.PromotionItems
 
             return OperationResult<PromotionItemDto>.Ok(_mapper.Map<PromotionItemDto>(promotionItem));
         }
+
 
 
         public async Task<PromotionItemDto> GetPromotionItemByIdAsync(int id, CancellationToken ct)
@@ -135,10 +136,16 @@ namespace MyApp.Application.Features.PromotionItems
 
         public async Task<OperationResult<PromotionItemDto>> UpdatePromotionItemAsync(int id, UpdatePromotionItemRequest request, CancellationToken ct)
         {
-            var validationResult = await ValidateAsync(request, ct);
+            var validateResult = await ValidateAsync(request, ct);
 
-            if (!validationResult.Success)
-                return OperationResult<PromotionItemDto>.Fail(validationResult.Errors!);
+            if (!validateResult.Success)
+                return OperationResult<PromotionItemDto>.Fails(validateResult.Errors!);
+
+            var checkOriginalPrice = ValidateFinalPrice(request.OriginalPrice, request.OverrideValue, request.IsPercentageOverride);
+
+            if (!checkOriginalPrice.Success)
+                    return OperationResult<PromotionItemDto>.Fail(checkOriginalPrice.Message!);
+            
 
             var promotionItem = await _unitOfWork.Repository<PromotionItem, int>()
                 .FirstOrDefaultAsync(new PromotionItemByIdSpec(id), ct);
@@ -158,7 +165,7 @@ namespace MyApp.Application.Features.PromotionItems
         {
             var promotionItem = await _unitOfWork.Repository<PromotionItem, int>()
                  .FirstOrDefaultAsync(new PromotionItemByIdSpec(id), ct);
-            
+
             if (promotionItem == null) throw new NotFoundException("Không tìm thấy mục khuyến mãi.");
 
             if (isActive)
@@ -173,14 +180,86 @@ namespace MyApp.Application.Features.PromotionItems
 
         public async Task<OperationResult<bool>> DeletePromotionItemAsync(int id, CancellationToken ct = default)
         {
-           var promotionItem = await _unitOfWork.Repository<PromotionItem, int>()
-                .FirstOrDefaultAsync(new PromotionItemByIdSpec(id), ct);
-            if (promotionItem == null) throw new NotFoundException("Không tìm thấy mục khuyến mãi.");
+            var promotionItem = await _unitOfWork.Repository<PromotionItem, int>()
+                 .FirstOrDefaultAsync(new PromotionItemByIdSpec(id), ct);
+            if (promotionItem == null) throw new NotFoundException($"Không tìm thấy mục khuyến mãi với ID {id}.");
 
             _unitOfWork.Repository<PromotionItem, int>().Delete(promotionItem);
 
             await _unitOfWork.SaveChangesAsync(ct);
-            return OperationResult<bool>.Ok(true, "Xóa mục khuyến mãi thành công.");
+            return OperationResult<bool>.Ok(true, $"Xóa mục khuyến mãi với ID {id} thành công.");
         }
+
+        public async Task<OperationResult<bool>> ValidateDuplicateAsync(
+       int promotionId,
+       int productUnitId,
+       CancellationToken ct)
+        {
+            var isExisted = await _unitOfWork
+                .Repository<PromotionItem, int>()
+                .AnyAsync(new PromotionItemByPromoAndUnitSpec(promotionId, productUnitId));
+
+            if (isExisted)
+            {
+                return OperationResult<bool>.Fail(
+                    $"Sản phẩm {productUnitId} đã tồn tại trong khuyến mãi này.");
+            }
+
+            return OperationResult<bool>.Ok(true);
+        }
+
+        public Task<PromotionItemDto> GetPromotionItemByPromoAndUnitAsync(int idPromotion, int productUnitId, CancellationToken ct = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        private OperationResult<bool> ValidateFinalPrice(
+                decimal originalPrice,
+                decimal? overrideValue,
+                bool? isPercentageOverride)
+        {
+            // Không có override → luôn hợp lệ
+            if (overrideValue == null && isPercentageOverride == null)
+                return OperationResult<bool>.Ok(true);
+
+            // Validate input cơ bản
+            if (originalPrice < 0)
+                return OperationResult<bool>.Fail("OriginalPrice không hợp lệ");
+
+            if (overrideValue.HasValue && overrideValue.Value < 0)
+                return OperationResult<bool>.Fail("OverrideValue không hợp lệ");
+
+            // Nếu có overrideValue mà không rõ kiểu → coi như invalid
+            if (overrideValue.HasValue && isPercentageOverride == null)
+                return OperationResult<bool>.Fail("Thiếu thông tin loại giảm giá");
+
+            // Nếu không có overrideValue → không cần tính
+            if (!overrideValue.HasValue || overrideValue.Value <= 0)
+                return OperationResult<bool>.Ok(true);
+
+            // Tính giá cuối
+            var finalPrice = CalculateFinalPrice(
+                originalPrice,
+                overrideValue,
+                isPercentageOverride!.Value);
+
+            // Rule chính
+            if (finalPrice <= 0)
+                return OperationResult<bool>.Fail("Giá sau giảm (dự kiến ) phải lớn hơn 0.");
+
+            return OperationResult<bool>.Ok(true);
+        }
+
+        private decimal CalculateFinalPrice(decimal originalPrice, decimal? overrideValue, bool isPercentageOverride)
+        {
+            if (!overrideValue.HasValue || overrideValue <= 0)
+                return originalPrice;
+
+            return isPercentageOverride
+                ? originalPrice * (1 - overrideValue.Value / 100)
+                : originalPrice - overrideValue.Value;
+        }
+
     }
 }
+
