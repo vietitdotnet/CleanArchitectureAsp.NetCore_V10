@@ -10,8 +10,8 @@ namespace MyApp.Application.Features.Products.Requests
     {
         public string? Sku { get; set; }
         public string? Barcode { get; set; }
-        public string Name { get; set; } = null!;
 
+        public string Name { get; set; } = null!;
         public string ShortName { get; set; } = null!;
         public decimal CostPrice { get; set; }
         public decimal BasePrice { get; set; }
@@ -30,6 +30,7 @@ namespace MyApp.Application.Features.Products.Requests
         public int? ManufacturerId { get; set; }
         public int? TaxId { get; set; }
 
+        public int? BrandId { get; set; }
         public string UnitName { get; set; } = null!;
 
         public string? UnitBarcode { get; set; }

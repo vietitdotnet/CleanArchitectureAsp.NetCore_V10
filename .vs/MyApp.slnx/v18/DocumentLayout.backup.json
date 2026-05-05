@@ -3,52 +3,176 @@
   "WorkspaceRootPath": "D:\\CleanArchitectureAsp.NetCore_V10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\product\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\product\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\validatorfactory\\createproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\validatorfactory\\createproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\validatorfactory\\updateproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\validatorfactory\\updateproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\views\\shared\\_layoutmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\views\\shared\\_layoutmanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webapi\\features\\products\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|solutionrelative:src\\myapp.webapi\\features\\products\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\product\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\product\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\product\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\product\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\product\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\product\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\controllers\\promotioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\controllers\\manufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\controllers\\manufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\specifications\\taxs\\taxlookupspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\specifications\\taxs\\taxlookupspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\brands\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\brands\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\brands\\dtos\\brandlookupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\brands\\dtos\\brandlookupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\medicine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\myappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\countryconfigruration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\countryconfigruration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\manufacturerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\manufacturerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\validatorfactory\\updateproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\validatorfactory\\updateproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\promotionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\promotionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\communeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\communeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.infrastructure\\data\\configurations\\productunitconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E8B12F0-42D9-2F96-AB19-EA7745C57FAC}|src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj|solutionrelative:src\\myapp.infrastructure\\data\\configurations\\productunitconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\promotion\\createflashsale.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\promotion\\createflashsale.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\paginations\\parameters\\productparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\paginations\\parameters\\productparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\common\\service\\slugservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\common\\service\\slugservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\common\\service\\productidentitygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\common\\service\\productidentitygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\interfaces\\common\\iproductidentitygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\interfaces\\common\\iproductidentitygenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.domain\\entities\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{115F6F84-1337-B5C0-F803-3C3786C411CD}|src\\MyApp.Domain\\MyApp.Domain.csproj|solutionrelative:src\\myapp.domain\\entities\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webapi\\features\\products\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7532BB0-B3D7-C847-098A-0C765B128827}|src\\MyApp.WebApi\\MyApp.WebApi.csproj|solutionrelative:src\\myapp.webapi\\features\\products\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\promotion\\createflashsale.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|solutionrelative:src\\myapp.webmvc\\areas\\manager\\views\\promotion\\createflashsale.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67888E02-B7DD-3937-F93C-F044DA195452}|src\\MyApp.WebMvc\\MyApp.WebMvc.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.webmvc\\areas\\manager\\views\\promotion\\addpromotionitems.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -61,14 +185,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\promotionitems\\promotionitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\promotionitems\\promotionitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\products\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\features\\products\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\mappings\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|solutionrelative:src\\myapp.application\\mappings\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08FE7900-CFE4-F11E-2418-893D7C1116DF}|src\\MyApp.Application\\MyApp.Application.csproj|d:\\cleanarchitectureasp.netcore_v10\\src\\myapp.application\\features\\manufacturers\\manufacturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -130,24 +246,390 @@
       "DocumentGroups": [
         {
           "DockedHeight": 1100,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T11:55:23.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-04T10:34:15.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewStart.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewStart.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T11:55:14.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateProductValidator.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T02:13:27.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_LayoutManager.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Views\\Shared\\_LayoutManager.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Views\\Shared\\_LayoutManager.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Views\\Shared\\_LayoutManager.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Views\\Shared\\_LayoutManager.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T11:55:53.069Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CreateProduct.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\CreateProduct.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\CreateProduct.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\CreateProduct.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\CreateProduct.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T10:44:44.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T11:55:25.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T11:55:32.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-05T11:56:00.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewImports.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewImports.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T11:55:13.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_Layout.cshtml",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_Layout.cshtml",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T11:55:11.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:54:44.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PromotionController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\PromotionController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\PromotionController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\PromotionController.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\PromotionController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswFEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:54:19.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\Product.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAqwIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:45:53.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\DependencyInjection\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:29:31.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:23:42.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\Category.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Category.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Entities\\Category.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAmwCIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T09:54:40.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\CategoryController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:25:59.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\BrandController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\BrandController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:24:15.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TaxLookupSpec.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Specifications\\Taxs\\TaxLookupSpec.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Specifications\\Taxs\\TaxLookupSpec.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Specifications\\Taxs\\TaxLookupSpec.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Specifications\\Taxs\\TaxLookupSpec.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:17:52.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ProductService.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\ProductService.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ProductService.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\ProductService.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAUwL4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:12:02.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IBrandService.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Brands\\IBrandService.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Brands\\IBrandService.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Brands\\IBrandService.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Features\\Brands\\IBrandService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:11:48.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\IProductService.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\IProductService.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\IProductService.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwCQAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T02:12:30.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ManufacturerController.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ManufacturerController.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ManufacturerController.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ManufacturerController.cs",
+              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ManufacturerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T10:44:39.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BrandLookupDto.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Brands\\DTOs\\BrandLookupDto.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Brands\\DTOs\\BrandLookupDto.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Brands\\DTOs\\BrandLookupDto.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Features\\Brands\\DTOs\\BrandLookupDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:10:25.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Medicine.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Medicine.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\Medicine.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Medicine.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Entities\\Medicine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T11:05:17.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CategoryConfiguration.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\CategoryConfiguration.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwCYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T10:53:02.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CountryConfigruration.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CountryConfigruration.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\CountryConfigruration.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CountryConfigruration.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\CountryConfigruration.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwC4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T10:52:11.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "MyAppDbContext.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
               "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
               "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\MyAppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwDgAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T03:33:35.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T10:47:49.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 30,
+              "Title": "ManufacturerConfiguration.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ManufacturerConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\ManufacturerConfiguration.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ManufacturerConfiguration.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\ManufacturerConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T10:37:22.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProductConfiguration.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T08:58:50.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "UpdateProductValidator.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\UpdateProductValidator.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\UpdateProductValidator.cs",
@@ -155,12 +637,107 @@
               "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\UpdateProductValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T03:21:38.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T03:21:38.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 32,
+              "Title": "PromotionConfiguration.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\PromotionConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\PromotionConfiguration.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\PromotionConfiguration.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\PromotionConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T10:14:10.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CommuneConfiguration.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CommuneConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\CommuneConfiguration.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\CommuneConfiguration.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\CommuneConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T09:45:58.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProductParameters.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Paginations\\Parameters\\ProductParameters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T08:28:27.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProductUnitConfiguration.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
+              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T02:02:12.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SlugService.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Common\\Service\\SlugService.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Common\\Service\\SlugService.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Common\\Service\\SlugService.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Common\\Service\\SlugService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T06:30:05.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Promotion.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Promotion.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\Promotion.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\Promotion.cs",
+              "RelativeToolTip": "src\\MyApp.Domain\\Entities\\Promotion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T03:54:55.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IProductIdentityGenerator.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Interfaces\\Common\\IProductIdentityGenerator.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Interfaces\\Common\\IProductIdentityGenerator.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Interfaces\\Common\\IProductIdentityGenerator.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Interfaces\\Common\\IProductIdentityGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T04:51:09.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ProductIdentityGenerator.cs",
+              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Common\\Service\\ProductIdentityGenerator.cs",
+              "RelativeDocumentMoniker": "src\\MyApp.Application\\Common\\Service\\ProductIdentityGenerator.cs",
+              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Common\\Service\\ProductIdentityGenerator.cs",
+              "RelativeToolTip": "src\\MyApp.Application\\Common\\Service\\ProductIdentityGenerator.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwD0AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T04:51:19.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\OrderItem.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\OrderItem.cs",
@@ -168,38 +745,11 @@
               "RelativeToolTip": "src\\MyApp.Domain\\Entities\\OrderItem.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T02:27:03.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T02:27:03.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateProductValidator.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\ValidatorFactory\\CreateProductValidator.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T02:13:27.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\IProductService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\IProductService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\IProductService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\IProductService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowBQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T02:12:30.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 41,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\Features\\Products\\ProductController.cs",
               "RelativeDocumentMoniker": "src\\MyApp.WebApi\\Features\\Products\\ProductController.cs",
@@ -207,38 +757,11 @@
               "RelativeToolTip": "src\\MyApp.WebApi\\Features\\Products\\ProductController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAADwvzgAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T02:11:55.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T02:11:55.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductConfiguration.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductConfiguration.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T02:02:17.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductUnitConfiguration.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
-              "RelativeToolTip": "src\\MyApp.Infrastructure\\Data\\Configurations\\ProductUnitConfiguration.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T02:02:12.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 42,
               "Title": "CreateFlashSale.cshtml",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\CreateFlashSale.cshtml",
               "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\CreateFlashSale.cshtml",
@@ -246,28 +769,11 @@
               "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\CreateFlashSale.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-05T02:01:39.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+              "WhenOpened": "2026-05-05T02:01:39.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProductDto.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\DTOs\\ProductDto.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\DTOs\\ProductDto.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\DTOs\\ProductDto.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\DTOs\\ProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T12:49:30.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 46,
               "Title": "ManufacturerService.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Manufacturers\\ManufacturerService.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Manufacturers\\ManufacturerService.cs",
@@ -279,7 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 49,
               "Title": "ProductUnitByIdsSpec.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Specifications\\ProductUnits\\ProductUnitByIdsSpec.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Specifications\\ProductUnits\\ProductUnitByIdsSpec.cs",
@@ -291,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 50,
               "Title": "ProductUnitByIdSpec.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Specifications\\ProductUnits\\ProductUnitByIdSpec.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Specifications\\ProductUnits\\ProductUnitByIdSpec.cs",
@@ -303,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 48,
               "Title": "ProductUnitLookupSpec.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Specifications\\ProductUnits\\ProductUnitLookupSpec.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Specifications\\ProductUnits\\ProductUnitLookupSpec.cs",
@@ -315,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 51,
               "Title": "ProductPageSpec.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Specifications\\Products\\ProductPageSpec.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Specifications\\Products\\ProductPageSpec.cs",
@@ -327,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 47,
               "Title": "ProductLookupSpec.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Specifications\\Products\\ProductLookupSpec.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Specifications\\Products\\ProductLookupSpec.cs",
@@ -339,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 52,
               "Title": "index.cshtml",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\index.cshtml",
               "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\index.cshtml",
@@ -351,20 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T12:00:09.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 53,
               "Title": "CreatePromotionItem.cshtml",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\CreatePromotionItem.cshtml",
               "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\CreatePromotionItem.cshtml",
@@ -376,7 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 43,
               "Title": "AddPromotionItems.cshtml",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\AddPromotionItems.cshtml",
               "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Promotion\\AddPromotionItems.cshtml",
@@ -388,20 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Features\\Products\\ProductService.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAqwJwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:42:21.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 54,
               "Title": "ProductUnitDto.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\ProductUints\\DTOs\\ProductUnitDto.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\ProductUints\\DTOs\\ProductUnitDto.cs",
@@ -413,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 45,
               "Title": "PromotionItemService.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Features\\PromotionItems\\PromotionItemService.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Application\\Features\\PromotionItems\\PromotionItemService.cs",
@@ -425,19 +905,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ProductProfile.cs",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "RelativeToolTip": "src\\MyApp.Application\\Mappings\\ProductProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:40:24.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 44,
               "Title": "PromotionProfile.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\PromotionProfile.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\PromotionProfile.cs",
@@ -449,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 55,
               "Title": "ProductUnitProfile.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\ProductUnitProfile.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\ProductUnitProfile.cs",
@@ -461,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 56,
               "Title": "TaxProfile.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Application\\Mappings\\TaxProfile.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Application\\Mappings\\TaxProfile.cs",
@@ -473,19 +941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
-              "ToolTip": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "src\\MyApp.WebMvc\\Areas\\Manager\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAAALcAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-04T10:34:15.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 57,
               "Title": "ProductUnit.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\ProductUnit.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\ProductUnit.cs",
@@ -497,7 +953,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 58,
               "Title": "PromotionItem.cs",
               "DocumentMoniker": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Domain\\Entities\\PromotionItem.cs",
               "RelativeDocumentMoniker": "src\\MyApp.Domain\\Entities\\PromotionItem.cs",

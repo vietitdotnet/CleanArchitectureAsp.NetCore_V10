@@ -1,4 +1,4 @@
-﻿@using MyApp.Domain.Enums
+@using MyApp.Domain.Enums
 @model PagedResponse<ProductDto, ProductParameters>
 
 @{
@@ -29,142 +29,149 @@
     <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
 }
 
-@if (TempData["StatusMessage"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["StatusMessage"]
-    </div>
-}
 
-<div class="mb-4 row">
-    <div class="col-md-6">
-        <select id="product-select" class="form-select" style="width:100%"></select>
+<div class="card shadow-sm border-0">
+    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+        <h5 class="mb-0 fw-bold text-primary">Danh sách sản phẩm</h5>
+        <a asp-action="CreateProduct" asp-controller="Product" class="btn btn-primary">
+            <i class="bi bi-plus-lg me-1"></i> Tạo sản phẩm
+        </a>
     </div>
-    <div class="col-md-6">
-        <a asp-action="CreateProduct" asp-controller="Product" class="btn btn-primary mb-3">+Tạo sản phẩm</a>
+    <div class="card-body bg-light border-bottom py-3">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <select id="product-select" class="form-select" style="width:100%"></select>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th class="ps-4">Sản phẩm</th>
+                    <th>Mã vạch</th>
+                    <th>Thương hiệu / Danh mục</th>
+                    <th>Đơn vị & Giá bán</th>
+                    <th>Quy cách</th>
+                    <th class="text-center">Trạng thái</th>
+                    <th class="text-end pe-4">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Items != null && Model.Items.Any())
+                {
+                    foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <!-- Cột Sản phẩm: Tên + Description -->
+                            <td class="ps-4">
+                                <div class="fw-bold text-primary">@item.Name</div>
+                                <div class="mb-1">
+                                    <span class="badge bg-light text-dark border">@item.Sku</span>
+                                </div>
+                            </td>
 
-<div class="table-responsive">
-    <table class="table table-hover align-middle border shadow-sm">
-        <thead class="table-light">
-            <tr>
-                <th class="ps-3">Sản phẩm</th>
-                <th>Mã vạch</th>
-                <th>Thương hiệu / Danh mục</th>
-                <th>Đơn vị & Giá bán</th>
-                <th class="text-center">Trạng thái</th>
-                <th class="text-end pe-3">Thao tác</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model.Items != null && Model.Items.Any())
-            {
-                foreach (var item in Model.Items)
+                          
+                            <td>
+                              
+                                @if (!string.IsNullOrEmpty(item.Barcode))
+                                {
+                                    <div class="small text-muted"><i class="bi bi-upc-scan"></i> @item.Barcode</div>
+                                }
+                            </td>
+
+                            <!-- Cột Phân loại -->
+                            <td>
+                                <div class="fw-medium">@item?.BrandName</div>
+                                <div class="badge bg-info text-dark fw-normal">@item?.CategoryName</div>
+                            </td>
+                                
+                            <!-- Cột Đơn vị & Giá: Quan trọng nhất -->
+                            <td>
+                                @if (item?.Units != null && item.Units.Any())
+                                {
+                                    <div class="d-flex flex-column gap-1">
+                                        @foreach (var unit in item.Units.OrderByDescending(u => u.IsBaseUnit))
+                                        {
+                                            <div class="d-flex justify-content-between align-items-center bg-light rounded px-2 py-1" style="min-width: 150px;">
+                                                <span class="small fw-bold">
+                                                    <a href="#" class="text-decoration-none">@unit.UnitName</a>
+                                                    @if (unit.IsBaseUnit)
+                                                    {
+                                                        <i class="bi bi-star-fill text-warning small ms-1" title="Đơn vị gốc"></i>
+                                                    }
+                                                </span>
+                                                <span class="text-success fw-semibold">@unit.SellingPrice.ToString("N0")đ</span>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <span class="text-danger small fst-italic">Chưa thiết lập giá</span>
+                                }
+                            </td>
+                            
+                            <td>
+                                @if (!string.IsNullOrEmpty(item?.PackingSize))
+                                {
+                                    <div class="small text-muted">@item.PackingSize</div>
+                                }
+                            </td>
+
+                            <!-- Cột Trạng thái -->
+                            <td class="text-center">
+                                @{
+                                    var statusClass = item!.Status switch
+                                    {
+                                        (int)ProductStatus.Active => "bg-success",
+                                        (int)ProductStatus.Pending => "bg-warning text-dark",
+                                        (int)ProductStatus.Draft => "bg-secondary",
+                                        (int)ProductStatus.Inactive => "bg-dark",
+                                        (int)ProductStatus.OutOfStock => "bg-danger",
+                                        (int)ProductStatus.Discontinued => "bg-secondary",
+                                        _ => "bg-light text-dark"
+                                    };
+                                }
+
+                                <span class="badge rounded-pill @statusClass">
+                                    @item.TextStatus
+                                </span>
+                            </td>
+
+                            <!-- Cột Thao tác -->
+                            <td class="text-end pe-4">
+                                <div class="btn-group btn-group-sm">
+                                    <a asp-action="UpdatePromotionItem" asp-controller="promotion" asp-route-promotionId="" asp-route-id="@item.Id" class="btn btn-outline-primary btn-edit" title="Sửa">
+                                        <i class="bi bi-pencil"></i> Sửa
+                                    </a>
+                                    <button class="btn btn-outline-danger btn-delete"
+                                            data-id="@item.Id"
+                                            data-name="">
+                                        <i class="bi bi-trash"></i> Xóa
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
                 {
                     <tr>
-                        <!-- Cột Sản phẩm: Tên + Description -->
-                        <td class="ps-3">
-                            <div class="fw-bold text-primary">@item.Name</div>
-                            <div class="mb-1">
-                                <span class="badge bg-light text-dark border">@item.Sku</span>
-                            </div>
-                        </td>
-
-                      
-                        <td>
-                          
-                            @if (!string.IsNullOrEmpty(item.Barcode))
-                            {
-                                <div class="small text-muted"><i class="bi bi-upc-scan"></i> @item.Barcode</div>
-                            }
-                        </td>
-
-                        <!-- Cột Phân loại -->
-                        <td>
-                            <div class="fw-medium">@item?.BrandName</div>
-                            <div class="badge bg-info text-dark fw-normal">@item?.CategoryName</div>
-                        </td>
-                            
-                        <!-- Cột Đơn vị & Giá: Quan trọng nhất -->
-                        <td>
-                            @if (item?.Units != null && item.Units.Any())
-                            {
-                                <div class="d-flex flex-column gap-1">
-                                    @foreach (var unit in item.Units.OrderByDescending(u => u.IsBaseUnit))
-                                    {
-                                        <div class="d-flex justify-content-between align-items-center bg-light rounded px-2 py-1" style="min-width: 150px;">
-                                            <span class="small fw-bold">
-                                                <a href="#">@unit.UnitName</a>
-                                                @if (unit.IsBaseUnit)
-                                                {
-                                                    <i class="bi bi-star-fill text-warning small" title="Đơn vị gốc"></i>
-                                                }
-                                            </span>
-                                            <span class="text-success fw-semibold">@unit.SellingPrice.ToString("N0")đ</span>
-                                        </div>
-                                    }
-                                </div>
-                            }
-                            else
-                            {
-                                <span class="text-danger small italic">Chưa thiết lập giá</span>
-                            }
-                        </td>
-
-                        <!-- Cột Trạng thái -->
-                        <td class="text-center">
-                            @{
-                                var statusClass = item!.Status switch
-                                {
-                                    (int)ProductStatus.Active => "bg-success",
-                                    (int)ProductStatus.Pending => "bg-warning text-dark",
-                                    (int)ProductStatus.Draft => "bg-secondary",
-                                    (int)ProductStatus.Inactive => "bg-dark",
-                                    (int)ProductStatus.OutOfStock => "bg-danger",
-                                    (int)ProductStatus.Discontinued => "bg-secondary",
-                                    _ => "bg-light text-dark"
-                                };
-                            }
-
-                            <span class="badge rounded-pill @statusClass">
-                                @item.TextStatus
-                            </span>
-                        </td>
-
-                        <!-- Cột Thao tác -->
-                        <td class="text-end">
-                            <div class="btn-group btn-group-sm">
-                                <a asp-action="UpdatePromotionItem" asp-controller="promotion" asp-route-promotionId="" asp-route-id="@item.Id" class="btn btn-outline-primary btn-edit" title="Sửa">
-                                    Sửa
-                                </a>
-                                <button class="btn btn-outline-danger btn-delete"
-                                        data-id="@item.Id"
-                                        data-name="">
-                                    Xóa
-                                </button>
-                            </div>
+                        <td colspan="7" class="text-center py-5 text-muted">
+                            <i class="bi bi-box-seam d-block mb-2 fs-1 text-secondary"></i>
+                            <span class="fs-5">Không tìm thấy sản phẩm nào</span>
                         </td>
                     </tr>
                 }
-            }
-            else
-            {
-                <tr>
-                    <td colspan="6" class="text-center py-5 text-muted">
-                        <i class="bi bi-box-seam d-block mb-2 fs-2"></i>
-                        Không tìm thấy sản phẩm nào
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </tbody>
+        </table>
+    </div>
 
-
-<div class="card-footer bg-white py-3">
-    <div class="d-flex justify-content-center">
-        @await Html.PartialAsync("_PartialPagination", Model)
+    <div class="card-footer bg-white py-3 border-top">
+        <div class="d-flex justify-content-center">
+            @await Html.PartialAsync("_PartialPagination", Model)
+        </div>
     </div>
 </div>
 

@@ -41,7 +41,6 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProduct(CreateProductRequest request)
         {
-
             var result = await _productService.CreateProductAsync(request);
 
             if (result.Success)

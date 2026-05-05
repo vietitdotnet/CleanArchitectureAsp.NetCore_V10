@@ -1,11 +1,13 @@
 ﻿using MyApp.Domain.Core.Models;
 using MyApp.Domain.Enums;
 using MyApp.Domain.Extentions;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace MyApp.Domain.Entities
 {
     public class Product : BaseEntity<int>
-    {      
+    {
         private Product() { }
         public Guid PublicId { get; private set; }
         public string Sku { get; private set; } = null!; // mã sản phẩm
@@ -16,9 +18,8 @@ namespace MyApp.Domain.Entities
         public decimal CostPrice { get; private set; }  // giá nhập (giá vốn) - giá mà nhà thuốc mua vào    
         public decimal BasePrice { get; private set; }  //giá gốc (giá niêm yết)       
         public ProductStatus Status { get; private set; } // trạng thái sản phẩm (Active, Inactive, Discontinued)
-
         public string PackingSize { get; private set; } = null!; // quy cách đóng gói
-        public string? BrandName { get; private set; } // tên thương hiệu;
+
         public string? ShortDescription { get; private set; }// mô tả ngắn gọn về sản phẩm, có thể dùng để hiển thị trong danh sách sản phẩm
         public string? Description { get; private set; }// mô tả chi tiết về sản phẩm
 
@@ -38,28 +39,32 @@ namespace MyApp.Domain.Entities
         public Manufacturer? Manufacturer { get; private set; }// thông tin chuyên biệt cho nhà sản xuất, nếu có
 
         public int? TaxId { get; private set; } // thuế VAT áp dụng cho sản phẩm, nếu có
-        public Tax Tax { get; private set; } = null!; // thông tin chuyên biệt cho thuế, nếu có
+        public Tax? Tax { get; private set; } // thông tin chuyên biệt cho thuế, nếu có
 
         public Medicine? Medicine { get; private set; } // thông tin chuyên biệt cho sản phẩm là thuốc, nếu có
 
+
+        public int? BrandId { get; private set; } // thương hiệu của sản phẩm, nếu có
+        public Brand? Brand { get; private set; }
 
         private readonly List<ProductUnit> _productUnits = new();
         public IReadOnlyCollection<ProductUnit> ProductUnits => _productUnits.AsReadOnly();
 
         private Product(
-            string sku,    
-            string slug, 
-            string name, 
-            decimal costPrice, 
+            string sku,
+            string slug,
+            string name,
+            string shortName,
+            decimal costPrice,
             decimal basePrice,
             string packingSize,
             string? benefit,
-            string? brandName,
-            string? barcode, 
-            string? shortDescription, 
+            int? brandId,
+            string? barcode,
+            string? shortDescription,
             string? description,
-            string? registrationNumber, 
-            string? dosageForm, 
+            string? registrationNumber,
+            string? dosageForm,
             string? ingredient,
             int? categoryId,
             int? manufacturerId,
@@ -71,13 +76,14 @@ namespace MyApp.Domain.Entities
             Barcode = barcode;
             Slug = slug;
             Name = name;
+            ShortName = shortName;
             CostPrice = costPrice;
             BasePrice = basePrice;
             PackingSize = packingSize;
-            BrandName = brandName;
+            BrandId = brandId;
             Status = ProductStatus.Pending;
             ShortDescription = shortDescription;
-            Description = description;        
+            Description = description;
             RegistrationNumber = registrationNumber;
             DosageForm = dosageForm;
             Ingredient = ingredient;
@@ -90,16 +96,17 @@ namespace MyApp.Domain.Entities
 
         public static Product Create(
             string slug,
-            string name,     
+            string name,
+            string shortName,
             decimal costPrice,
             decimal basePrice,
             string packingSize,
             string? benefit = null,
-            string? brandName = null,
+            int? brandId = null,
             string? sku = null,
             string? barcode = null,
             string? shortDescription = null,
-            string? description = null, 
+            string? description = null,
             string? registrationNumber = null,
             string? dosageForm = null,
             string? ingredient = null,
@@ -111,7 +118,9 @@ namespace MyApp.Domain.Entities
             // 1. Validation (Nên giữ lại như bạn đã viết)
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Name is required.");
-            if(string.IsNullOrWhiteSpace(packingSize))
+            if (string.IsNullOrWhiteSpace(shortName))
+                throw new ArgumentException("Short name is required.");
+            if (string.IsNullOrWhiteSpace(packingSize))
                 throw new ArgumentException("Packing size is required.");
             if (costPrice < 0)
                 throw new ArgumentException("Cost price cannot be negative.");
@@ -121,18 +130,23 @@ namespace MyApp.Domain.Entities
             // 2. Xử lý logic SKU trước khi gọi Constructor
             var finalSku = string.IsNullOrWhiteSpace(sku)
                 ? GenerateUnique.GenerateUniqueSku("PRD")
-                : sku.Trim().ToUpper();
+                : sku.Trim().ToUpperInvariant();
+
+            ValidateSlug(slug);
+            ValidateSku(finalSku);
+            ValidateBarcode(barcode);
 
             // 3. Khởi tạo đối tượng
             return new Product(
                 finalSku, // Truyền biến đã xử lý
-                slug.Trim().ToLowerInvariant(),
+                slug,
                 name.Trim(),
+                ToTitleCase(shortName),
                 costPrice,
                 basePrice,
                 packingSize.Trim(),
                 benefit?.Trim(),
-                brandName?.Trim(),
+                brandId,
                 barcode?.Trim(),
                 shortDescription?.Trim(),
                 description?.Trim(),
@@ -235,6 +249,40 @@ namespace MyApp.Domain.Entities
             Status = ProductStatus.Discontinued;
         }
 
+
+        private static string ToTitleCase(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                return string.Empty;
+
+            var textInfo = CultureInfo.GetCultureInfo("vi-VN").TextInfo;
+
+            return textInfo.ToTitleCase(input.Trim().ToLower());
+        }
+
+        private static void ValidateSlug(string slug)
+        {
+            // chỉ cho phép a-z, 0-9 và dấu -
+            if (!Regex.IsMatch(slug, @"^[a-z0-9]+(-[a-z0-9]+)*$"))
+                throw new ArgumentException("Slug format is invalid");
+        }
+
+        private static void ValidateSku(string sku)
+        {
+            // SKU chỉ cho phép chữ hoa, số và dấu gạch ngang
+            if (!Regex.IsMatch(sku, @"^[A-Z0-9_-]+$"))
+                throw new ArgumentException("SKU format is invalid");
+        }
+
+        private static void ValidateBarcode(string? barcode)
+        {
+            if (string.IsNullOrWhiteSpace(barcode))
+                return; // Barcode có thể để trống
+            // Mã vạch chỉ cho phép 8, 12 hoặc 13 chữ số
+            if (!Regex.IsMatch(barcode, @"^\d{8}$|^\d{12}$|^\d{13}$"))
+                throw new ArgumentException("Barcode format is invalid");
+
+        }
     }
 
 }

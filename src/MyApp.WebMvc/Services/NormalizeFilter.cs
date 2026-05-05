@@ -14,6 +14,7 @@ namespace MyApp.WebMvc.Services
                     normalizable.Normalize();
                 }
             }
+
             await next();
         }
     }

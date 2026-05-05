@@ -33,6 +33,7 @@ namespace MyApp.Infrastructure.Data
         public DbSet<ProductUnit> ProductUnits { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
+        public DbSet<Brand> Brands { get; set; }
         public DbSet<Tax> Taxes { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }
         public DbSet<Promotion> Promotions { get; set; } 

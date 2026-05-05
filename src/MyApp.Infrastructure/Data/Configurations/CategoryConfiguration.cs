@@ -16,6 +16,15 @@ namespace MyApp.Infrastructure.Data.Configurations
 
             builder.ToTable("Categorys");
 
+            builder.Property(p => p.Name)
+                       .IsRequired()
+                       .HasMaxLength(150)
+                       .UseCollation("Vietnamese_CI_AI");
+
+            builder.Property(x => x.NormalizedName)
+                .IsRequired()
+                .HasMaxLength(150);
+
             builder.HasKey(o => o.Id);
 
             builder.HasOne(c => c.ParentCategory) // Liên kết cha-con
@@ -26,13 +35,10 @@ namespace MyApp.Infrastructure.Data.Configurations
             builder.Property(o => o.Description)
                 .HasMaxLength(500);
 
-            builder.Property(p => p.Name)
-                            .IsRequired()
-                            .HasMaxLength(100)
-                            .UseCollation("Vietnamese_CI_AI");
+            // Thiết lập unique index cho NormalizedName
+            builder.HasIndex(x => x.NormalizedName);
+            
 
-
-            // Tạo index cho trường Name để tăng hiệu suất tìm kiếm
             builder.HasIndex(x => x.Name);
             builder.HasIndex(p => p.Slug).IsUnique();
 

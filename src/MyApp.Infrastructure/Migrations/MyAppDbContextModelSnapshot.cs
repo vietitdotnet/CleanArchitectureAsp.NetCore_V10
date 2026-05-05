@@ -202,6 +202,60 @@ namespace MyApp.Infrastructure.Migrations
                     b.ToTable("AutUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("MyApp.Domain.Entities.Brand", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Country")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(380)
+                        .HasColumnType("nvarchar(380)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LogoUrl")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .UseCollation("Vietnamese_CI_AI");
+
+                    b.Property<string>("NormalizedName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Website")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasFilter("[Code] IS NOT NULL");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique();
+
+                    b.ToTable("Brands", (string)null);
+                });
+
             modelBuilder.Entity("MyApp.Domain.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -219,9 +273,14 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
                         .UseCollation("Vietnamese_CI_AI");
+
+                    b.Property<string>("NormalizedName")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<int?>("ParentCategoryId")
                         .HasColumnType("int");
@@ -236,6 +295,8 @@ namespace MyApp.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("Name");
+
+                    b.HasIndex("NormalizedName");
 
                     b.HasIndex("ParentCategoryId");
 
@@ -265,8 +326,13 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("NormalizedName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
@@ -274,6 +340,8 @@ namespace MyApp.Infrastructure.Migrations
                         .IsUnique();
 
                     b.HasIndex("Name");
+
+                    b.HasIndex("NormalizedName");
 
                     b.HasIndex("Name", "Code")
                         .IsUnique();
@@ -574,12 +642,11 @@ namespace MyApp.Infrastructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Benefit")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
-                    b.Property<string>("BrandName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int?>("BrandId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
@@ -613,8 +680,8 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
                         .UseCollation("Vietnamese_CI_AI");
 
                     b.Property<string>("PackingSize")
@@ -648,8 +715,8 @@ namespace MyApp.Infrastructure.Migrations
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -663,13 +730,15 @@ namespace MyApp.Infrastructure.Migrations
                         .IsUnique()
                         .HasFilter("[Barcode] IS NOT NULL");
 
-                    b.HasIndex("BrandName");
+                    b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
 
                     b.HasIndex("ManufacturerId");
 
                     b.HasIndex("Name");
+
+                    b.HasIndex("ShortName");
 
                     b.HasIndex("Sku")
                         .IsUnique();
@@ -1234,6 +1303,11 @@ namespace MyApp.Infrastructure.Migrations
 
             modelBuilder.Entity("MyApp.Domain.Entities.Product", b =>
                 {
+                    b.HasOne("MyApp.Domain.Entities.Brand", "Brand")
+                        .WithMany("Products")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("MyApp.Domain.Entities.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
@@ -1248,6 +1322,8 @@ namespace MyApp.Infrastructure.Migrations
                         .WithMany("Products")
                         .HasForeignKey("TaxId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Brand");
 
                     b.Navigation("Category");
 
@@ -1284,6 +1360,11 @@ namespace MyApp.Infrastructure.Migrations
                     b.Navigation("ProductUnit");
 
                     b.Navigation("Promotion");
+                });
+
+            modelBuilder.Entity("MyApp.Domain.Entities.Brand", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("MyApp.Domain.Entities.Category", b =>

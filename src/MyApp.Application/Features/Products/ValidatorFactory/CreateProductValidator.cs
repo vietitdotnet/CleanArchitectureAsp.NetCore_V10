@@ -13,11 +13,23 @@ namespace MyApp.Application.Features.Products.ValidatorFactory
     {
         public CreateProductValidator()
         {
-            RuleFor(x => x.Sku)     
-             .MaximumLength(20).WithMessage("Mã hàng không vượt quá 20 ký tự.");
+            // Khi Sku không trống thì mới áp dụng các luật bên trong
+            When(x => !string.IsNullOrWhiteSpace(x.Sku), () =>
+            {
+                RuleFor(x => x.Sku)
+                    .MinimumLength(5).WithMessage("Mã hàng phải có ít nhất 5 ký tự.")
+                    .MaximumLength(20).WithMessage("Mã hàng không vượt quá 20 ký tự.")
+                    .MustBeValidSku();
+            });
 
-            RuleFor(x => x.Barcode)
-                .MaximumLength(20).WithMessage("Mã vạch không vượt quá 20 ký tự.");
+            When(x => !string.IsNullOrWhiteSpace(x.Barcode), () =>
+            {
+                RuleFor(x => x.Barcode)
+                    .MinimumLength(6).WithMessage("Mã vạch phải có ít nhất 6 ký tự.")
+                    .MaximumLength(30).WithMessage("Mã vạch không vượt quá 30 ký tự.")
+                    .MustBeValidBarcode();
+            });
+
             /*
               RuleFor(x => x.Slug)
              .Cascade(CascadeMode.Stop)
@@ -29,7 +41,7 @@ namespace MyApp.Application.Features.Products.ValidatorFactory
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Tên hiển thị không được để trống.")
                 .MinimumLength(3).WithMessage("Tên hiển thị phải có ít nhất 3 ký tự.")
-                .MaximumLength(150).WithMessage("Tên hiển thị không được vượt quá 150 ký tự.");
+                .MaximumLength(200).WithMessage("Tên hiển thị không được vượt quá 200 ký tự.");
 
             RuleFor(x => x.ShortName)
                .Cascade(CascadeMode.Stop)
@@ -40,13 +52,7 @@ namespace MyApp.Application.Features.Products.ValidatorFactory
             RuleFor(x => x.PackingSize)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Quy cách đóng gói không được để trống.")
-                .MinimumLength(3).WithMessage("Quy cách đóng gói phải có ít nhất 3 ký tự.")
-                .MaximumLength(50).WithMessage("Quy cách đóng gói không được vượt quá 50 ký tự.");
-
-            RuleFor(x => x.BrandName)
-                .Cascade(CascadeMode.Stop)
-                .NotEmpty().WithMessage("Tên thương hiệu không được để trống.")
-                .MaximumLength(50).WithMessage("Tên thương hiệu không vượt quá 50 ký tự.");
+                .MinimumLength(3).WithMessage("Quy cách đóng gói phải có ít nhất 3 ký tự.");
 
             RuleFor(x => x.ShortDescription)
                 .MaximumLength(38)
@@ -60,7 +66,7 @@ namespace MyApp.Application.Features.Products.ValidatorFactory
                 .MaximumLength(20).WithMessage("Số đăng ký không vượt quá 20 ký tự.");
 
             RuleFor(x => x.Benefit)
-                .MaximumLength(50).WithMessage("Công dụng không vượt quá 50 ký tự.");
+                .MaximumLength(150).WithMessage("Công dụng không vượt quá 150 ký tự.");
 
             RuleFor(x => x.DosageForm)
                 .MaximumLength(100).WithMessage("Dạng bào chế không vượt quá 100 ký tự.");
@@ -89,9 +95,7 @@ namespace MyApp.Application.Features.Products.ValidatorFactory
                       .NotEmpty().WithMessage("Tên đơn vị không được để trống.")
                       .MaximumLength(100).WithMessage("Tên đơn vị không vượt quá 100 ký tự.");
 
-            RuleFor(x => x.Barcode)
-                .MaximumLength(20).WithMessage("Mã vạch không vượt quá 20 ký tự.");
-
+       
             RuleFor(x => x.SellingPrice)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Giá bán không được để trống.")

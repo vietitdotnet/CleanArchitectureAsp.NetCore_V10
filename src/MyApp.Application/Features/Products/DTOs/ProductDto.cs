@@ -10,9 +10,12 @@ namespace MyApp.Application.Features.Products.DTOs
         public int Id { get; set; }
         public string Sku { get; set; } = null!;
 
+        public string? ShortName { get; set; }
         public string? CategoryName { get; set; }
         public string? Barcode { get; set; }
         public string Name { get; set; } = null!;
+
+        public string? PackingSize { get; set; }
         public decimal BasePrice { get; set; }
         public decimal CostPrice { get; set; }
         public string? BrandName { get; set; }

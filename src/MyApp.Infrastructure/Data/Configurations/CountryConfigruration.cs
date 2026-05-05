@@ -24,7 +24,11 @@ namespace MyApp.Infrastructure.Data.Configurations
 
             builder.Property(x => x.Name)
                 .IsRequired()
-                .HasMaxLength(200);
+                .HasMaxLength(100);
+
+            builder.Property(x => x.NormalizedName)
+            .IsRequired()
+            .HasMaxLength(100);
 
             builder.Property(x => x.FlagIcon)
                 .HasMaxLength(500)
@@ -39,6 +43,8 @@ namespace MyApp.Infrastructure.Data.Configurations
 
             builder.HasIndex(x => new { x.Name, x.Code })
                                     .IsUnique();
+
+            builder.HasIndex(x => x.NormalizedName);
 
             // ===== Relationship =====
 

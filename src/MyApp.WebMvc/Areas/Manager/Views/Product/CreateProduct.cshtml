@@ -1,4 +1,4 @@
-﻿
+
 @model CreateProductRequest
 @{
     ViewData["title"] = "Create Product";
@@ -30,92 +30,144 @@
     </style>
 }
 <div class="card shadow-sm border-0 max-w-4xl mx-auto">
-    <div class="card-header bg-white border-bottom py-3">
+    <div class="card-header bg-white border-bottom py-3 d-flex align-items-center justify-content-between">
         <h4 class="mb-0 text-primary fw-bold">Tạo sản phẩm</h4>
+        <a asp-action="Index" class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-left"></i> Quay lại</a>
     </div>
     <div class="card-body p-4">
         <div asp-validation-summary="All" class="text-danger mb-3"></div>
        
-        <form asp-action="CreateProduct" method="post" class="row g-3">
+        <form asp-action="CreateProduct" method="post">
+            <div class="row g-4">
+                
+                <!-- Group 1: Thông tin chung -->
+                <div class="col-12">
+                    <h5 class="fw-semibold text-secondary mb-3">Thông tin chung</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="ShortName" class="form-label fw-medium">Tên ngắn <span class="text-danger">*</span></label>
+                            <input asp-for="ShortName" class="form-control" placeholder="Nhập tên ngắn..." />
+                            <span asp-validation-for="ShortName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Name" class="form-label fw-medium">Tên đầy đủ <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input asp-for="Name" class="form-control" placeholder="Tên đầy đủ sản phẩm..." />
+                                <button type="button" id="regenName" class="btn btn-outline-primary" title="Gợi ý lại tên">X</button>
+                            </div>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
 
-            <div class="col-md-6">
-                <label asp-for="Name" class="form-label">Tên</label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
+                        <div class="col-md-4">
+                            <label asp-for="Sku" class="form-label fw-medium">Mã (SKU)</label>
+                            <input asp-for="Sku" class="form-control" placeholder="Để trống tự sinh" />
+                            <span asp-validation-for="Sku" class="text-danger"></span>
+                        </div>
 
-            <div class="col-md-3">
-                <label asp-for="Sku" class="form-label">Mã</label>
-                <input asp-for="Sku" class="form-control" />
-                <span asp-validation-for="Sku" class="text-danger"></span>
-            </div>
+                        <div class="col-md-4">
+                            <label asp-for="Barcode" class="form-label fw-medium">Mã vạch</label>
+                            <input asp-for="Barcode" class="form-control" placeholder="Nhập mã vạch nếu có" />
+                            <span asp-validation-for="Barcode" class="text-danger"></span>
+                        </div>
 
-            <div class="col-md-3">
-                <label asp-for="Barcode" class="form-label">Mã vạch</label>
-                <input asp-for="Barcode" class="form-control" />
-                <span asp-validation-for="Barcode" class="text-danger"></span>
-            </div>
+                        <div class="col-md-4">
+                            <label asp-for="PackingSize" class="form-label fw-medium">Quy cách đóng gói <span class="text-danger">*</span></label>
+                            <input asp-for="PackingSize" class="form-control" placeholder="VD: Hộp 10 vỉ x 10 viên" />
+                            <span asp-validation-for="PackingSize" class="text-danger"></span>
+                        </div>
 
-            <div class="col-md-6">
-                <label asp-for="BrandName" class="form-label">Thương hiệu</label>
-                <input asp-for="BrandName" class="form-control" />
-                <span asp-validation-for="BrandName" class="text-danger"></span>
-            </div>
+                        <div class="col-md-12">
+                            <label asp-for="Benefit" class="form-label fw-medium">Công dụng</label>
+                            <input asp-for="Benefit" class="form-control" placeholder="Nhập công dụng chính (không bắt buộc)" />
+                            <span asp-validation-for="Benefit" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="col-md-3">
-                <label asp-for="CostPrice" class="form-label">Giá nhập</label>
-                <input asp-for="CostPrice" class="form-control" />
-                <span asp-validation-for="CostPrice" class="text-danger"></span>
-            </div>
+              
 
-            <div class="col-md-3">
-                <label asp-for="BasePrice" class="form-label">Giá bán niêm yết</label>
-                <input asp-for="BasePrice" class="form-control" />
-                <span asp-validation-for="BasePrice" class="text-danger"></span>
-            </div>
+                <!-- Group 2: Phân loại -->
+                <div class="col-12">
+                    <h5 class="fw-semibold text-secondary">Phân loại</h5>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label fw-medium">Thương hiệu</label>
+                            <select id="brandSelect" name="BrandId" class="form-control"></select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label fw-medium">Danh mục</label>
+                            <select id="categorySelect" name="CategoryId" class="form-control"></select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label fw-medium">Nhà sản xuất</label>
+                            <select id="manufacturerSelect" name="ManufacturerId" class="form-control"></select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label fw-medium">Thuế</label>
+                            <select id="taxSelect" name="TaxId" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Category -->
-            <div class="col-md-4">
-                <label class="form-label">Danh mục</label>
-                <select id="categorySelect" name="CategoryId" class="form-control"></select>
-            </div>
+               
 
-            <!-- Manufacturer -->
-            <div class="col-md-4">
-                <label class="form-label">Nhà sản xuất</label>
-                <select id="manufacturerSelect" name="ManufacturerId" class="form-control"></select>
-            </div>
+                <!-- Group 3: Giá & Đơn vị -->
+                <div class="col-12">
+                    <h5 class="fw-semibold text-secondary mb-3">Đơn vị cơ bản & Giá trị</h5>
+                    <div class="row g-3 align-items-end">
+                        <div class="row col-12 mt-3">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="UnitName" class="form-label fw-medium">Tên đơn vị nhỏ nhất <span class="text-danger">*</span></label>
+                                <input asp-for="UnitName" class="form-control" placeholder="VD: Viên , Lon , Chai , Tuýp , Cái ...." />
+                                <span asp-validation-for="UnitName" class="text-danger"></span>
+                            </div>
+                        
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="UnitBarcode" class="form-label fw-medium">Mã vạch của đơn vị</label>
+                                <input asp-for="UnitBarcode" class="form-control" placeholder="Mã vạch riêng của đơn vị này" />
+                                <span asp-validation-for="UnitBarcode" class="text-danger"></span>
+                            </div>
+                        </div>
+                      
+                      
 
-            <!-- Tax -->
-            <div class="col-md-4">
-                <label class="form-label">Thuế</label>
-                <select id="taxSelect" name="TaxId" class="form-control"></select>
-            </div>
+                        <div class="row col-12">
+                            <div class="col-md-4 mb-3">
+                                <label asp-for="CostPrice" class="form-label fw-medium">Giá nhập <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input asp-for="CostPrice" class="form-control" />
+                                    <span class="input-group-text">đ</span>
+                                </div>
+                                <span asp-validation-for="CostPrice" class="text-danger"></span>
+                            </div>
 
-            <hr />
+                            <div class="col-md-4 mb-3">
+                                <label asp-for="BasePrice" class="form-label fw-medium">Giá bán niêm yết <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input asp-for="BasePrice" class="form-control" />
+                                    <span class="input-group-text">đ</span>
+                                </div>
+                                <span asp-validation-for="BasePrice" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label asp-for="SellingPrice" class="form-label fw-medium">Giá bán ra <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input asp-for="SellingPrice" class="form-control" />
+                                    <span class="input-group-text">đ</span>
+                                </div>
+                                <span asp-validation-for="SellingPrice" class="text-danger"></span>
+                            </div>
+                        </div>
+                      
 
-            <h5>Đơn vị cơ bản</h5>
+                    </div>
+                </div>
 
-            <div class="col-md-6">
-                <label asp-for="UnitName" class="form-label">Tên đơn vị</label>
-                <input asp-for="UnitName" class="form-control" />
-                <span asp-validation-for="UnitName" class="text-danger"></span>
-            </div>
-
-            <div class="col-md-6">
-                <label asp-for="UnitBarcode" class="form-label">Mã vạch của đơn vị</label>
-                <input asp-for="UnitBarcode" class="form-control" />
-                <span asp-validation-for="UnitBarcode" class="text-danger"></span>
-            </div>
-
-            <div class="col-md-6">
-                <label asp-for="SellingPrice" class="form-label">Giá bán ra</label>
-                <input asp-for="SellingPrice" class="form-control" />
-                <span asp-validation-for="SellingPrice" class="text-danger"></span>
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Tạo sản phẩm</button>
+                <div class="col-12 mt-4 text-end">
+                    <button type="submit" class="btn btn-primary px-4 py-2 fw-semibold">
+                         Tạo sản phẩm
+                    </button>
+                </div>
             </div>
         </form>
     </div>
@@ -126,6 +178,109 @@
 @section Scripts {
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+     <script>
+        (function () {
+
+            let isManualEdit = false;
+            let debounceTimer = null;
+
+            const selectors = {
+                shortName: 'input[name="ShortName"]',
+                benefit: 'input[name="Benefit"]',
+                packing: 'input[name="PackingSize"]',
+                name: 'input[name="Name"]',
+                category: '#categorySelect',
+                brand: '#brandSelect' // ✅ thêm brand select
+            };
+
+            function getValue(selector) {
+                return $(selector).val()?.trim();
+            }
+
+            function getSelect2Text(selector) {
+                const data = $(selector).select2('data');
+                return data && data.length > 0 ? data[0].text?.trim() : null;
+            }
+
+            function normalizeParts(parts) {
+                const result = [];
+                const seen = new Set();
+
+                for (let part of parts) {
+                    const lower = part.toLowerCase();
+                    if (!seen.has(lower)) {
+                        seen.add(lower);
+                        result.push(part);
+                    }
+                }
+
+                return result;
+            }
+
+            function buildProductName() {
+                const parts = normalizeParts([
+                    getSelect2Text(selectors.category), // category
+                    getValue(selectors.shortName),
+                    getSelect2Text(selectors.brand),    // ✅ brand từ select2
+                    getValue(selectors.benefit),
+                    getValue(selectors.packing)
+                ].filter(Boolean));
+
+                return parts.join(' ');
+            }
+
+            function generateName() {
+                if (isManualEdit) return;
+
+                const fullName = buildProductName();
+                $(selectors.name).val(fullName);
+            }
+
+            function debounceGenerate() {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(generateName, 250);
+            }
+
+            function bindEvents() {
+
+                // User tự sửa Name -> disable auto
+                $(selectors.name).on('input', function () {
+                    isManualEdit = true;
+                });
+
+                // Input change
+                $([
+                    selectors.shortName,
+                    selectors.benefit,
+                    selectors.packing
+                ].join(','))
+                .on('input', debounceGenerate);
+
+                // Select2 change (category + brand)
+                $(selectors.category).on('select2:select select2:clear', debounceGenerate);
+                $(selectors.brand).on('select2:select select2:clear', debounceGenerate); // ✅ thêm brand
+            }
+
+            function init() {
+                bindEvents();
+            }
+
+            // API control
+            window.ProductNameGenerator = {
+                generate: generateName,
+                resetAuto: () => isManualEdit = false
+            };
+
+            $(document).ready(init);
+
+        })();
+
+        // Button regenerate
+        $('#regenName').on('click', function () {
+            ProductNameGenerator.resetAuto();
+            ProductNameGenerator.generate();
+        });
+    </script>
     <script>
         function initSelect2(selector, url, placeholder) {
             $(selector).select2({
@@ -154,12 +309,14 @@
         }
 
         $(document).ready(function () {
-
+            initSelect2('#brandSelect', '/manager/brand/searchBrands', 'Chọn thương hiệu');
             initSelect2('#categorySelect', '/manager/category/searchCategorys', 'Chọn danh mục');
             initSelect2('#manufacturerSelect', '/manager/manufacturer/searchManufacturers', 'Chọn nhà sản xuất');
             initSelect2('#taxSelect', '/manager/tax/SearchTaxs', 'Chọn thuế');
 
         });
     </script>
+
+
     <partial name="_ValidationScriptsPartial" />
 }

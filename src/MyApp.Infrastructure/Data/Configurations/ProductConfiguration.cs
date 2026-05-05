@@ -19,7 +19,7 @@ namespace MyApp.Infrastructure.Data.Configurations
 
             builder.Property(p => p.Slug)
                 .IsRequired()
-                .HasMaxLength(150);
+                .HasMaxLength(200);
 
             builder.Property(p => p.Sku)
                 .IsRequired()            
@@ -30,7 +30,7 @@ namespace MyApp.Infrastructure.Data.Configurations
 
             builder.Property(p => p.Name)
                 .IsRequired()
-                .HasMaxLength(150)
+                .HasMaxLength(200)
                 .UseCollation("Vietnamese_CI_AI");
 
             builder.Property(p => p.ShortName)
@@ -44,7 +44,7 @@ namespace MyApp.Infrastructure.Data.Configurations
 
 
             builder.Property(p => p.Benefit)
-                .HasMaxLength(50);
+                .HasMaxLength(150);
 
             builder.Property(p => p.ShortDescription)
                    .HasMaxLength(38);
@@ -54,11 +54,6 @@ namespace MyApp.Infrastructure.Data.Configurations
 
             builder.Property(p => p.RegistrationNumber)
             .HasMaxLength(20);
-
-
-            builder.Property(p => p.BrandName)
-           .HasMaxLength(50);
-
 
 
             builder.Property(p => p.DosageForm)
@@ -96,6 +91,12 @@ namespace MyApp.Infrastructure.Data.Configurations
                 .IsRequired(false)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.HasOne(x => x.Brand)
+               .WithMany(x => x.Products)
+               .HasForeignKey(x => x.BrandId)
+               .IsRequired(false)
+               .OnDelete(DeleteBehavior.Restrict);
+
             builder.Property(p => p.BasePrice)
                 .HasPrecision(18, 2);
             builder.Property(p => p.CostPrice)
@@ -115,7 +116,7 @@ namespace MyApp.Infrastructure.Data.Configurations
 
             //index
             builder.HasIndex(x => x.Name);
-            builder.HasIndex(x => x.BrandName);
+            builder.HasIndex(x => x.ShortName);
             builder.HasIndex(p => p.Slug).IsUnique();
             builder.HasIndex(p => p.Barcode).IsUnique();
             builder.HasIndex(p => p.Sku).IsUnique();

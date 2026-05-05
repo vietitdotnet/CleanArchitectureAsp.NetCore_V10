@@ -77,16 +77,27 @@ namespace MyApp.Application.Features.Products
                 return OperationResult<ProductDto>.Fails(validationResult.Errors!, "Dữ liệu không hợp lệ");
             }
 
+            if (!string.IsNullOrWhiteSpace(request.Sku))
+            {
+                var skuExists = await _unitOfWork
+                    .Repository<Product, int>()
+                    .AnyAsync(new ProductBySkuSpec(request.Sku));
+
+                if (skuExists)
+                    return OperationResult<ProductDto>.Fail($"SKU '{request.Sku}' đã tồn tại");
+            }
 
             var slug = await GenerateUniqueSlugAsync(request.Name);
 
-            var product = Product.Create(slug, 
+            var product = Product.Create( 
+                slug, 
                 request.Name, 
+                request.ShortName,
                 request.CostPrice, 
                 request.BasePrice,
                 request.PackingSize,
                 request.Benefit,
-                request.BrandName,
+                request.BrandId,
                 request.Sku, 
                 request.Barcode, 
                 request.ShortDescription, 
@@ -170,6 +181,16 @@ namespace MyApp.Application.Features.Products
 
 
 
+        public async Task<IReadOnlyList<ProductLookupDto>> GetProductLookupsAsync(ProductParameters param, CancellationToken ct = default)
+        {
+            var spec = new ProductLookupSpec(param);
+
+            var products = await _unitOfWork.Repository<Product, int>()
+                 .GetPagedAsync<ProductLookupDto, ProductParameters>(spec, param, ct);
+
+            return products.Items;
+        }
+
         private async Task<string> GenerateUniqueSlugAsync(string name)
         {
             var baseSlug = _slugService.Generate(name);
@@ -185,16 +206,5 @@ namespace MyApp.Application.Features.Products
             return slug;
         }
 
-        public async Task<IReadOnlyList<ProductLookupDto>> GetProductLookupsAsync(ProductParameters param, CancellationToken ct = default)
-        {
-            var spec = new ProductLookupSpec(param);
-
-            var products = await _unitOfWork.Repository<Product, int>()
-                 .GetPagedAsync<ProductLookupDto, ProductParameters>(spec, param, ct);
-
-            return products.Items;
-        }
-
-        
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using MyApp.Application.Common.Service;
 using MyApp.Application.Features.Administrative;
+using MyApp.Application.Features.Brands;
 using MyApp.Application.Features.Categorys;
 using MyApp.Application.Features.Manufacturers;
 using MyApp.Application.Features.Orders;
@@ -48,6 +49,8 @@ namespace MyApp.Application.DependencyInjection
             services.AddScoped<ITaxService, TaxService>();
 
             services.AddScoped<IManufacturerService, ManufacturerService>();
+
+            services.AddScoped<IBrandService, BrandService>();
 
             return services;
         }
