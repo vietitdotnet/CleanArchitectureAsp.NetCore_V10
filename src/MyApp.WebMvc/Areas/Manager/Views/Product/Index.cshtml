@@ -36,6 +36,12 @@
         <a asp-action="CreateProduct" asp-controller="Product" class="btn btn-primary">
             <i class="bi bi-plus-lg me-1"></i> Tạo sản phẩm
         </a>
+        <a asp-action="UploadFileWebp" asp-controller="Product" class="btn btn-primary">
+            <i class="bi bi-plus-lg me-1"></i> Tạo ảnh
+        </a>
+        <form asp-controller="Product" asp-action="DeleteImage" method="post">
+              <button type="submit" class="btn btn-success">Xóa hình ảnh</button>
+        </form>
     </div>
     <div class="card-body bg-light border-bottom py-3">
         <div class="row">

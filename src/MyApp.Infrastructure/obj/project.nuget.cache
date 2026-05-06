@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Wor4njjgUKo=",
+  "dgSpecHash": "pJ/MBNptaB4=",
   "success": true,
   "projectFilePath": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -55,6 +55,7 @@
     "C:\\Users\\viet-key\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\mimekit\\4.16.0\\mimekit.4.16.0.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\nlog\\6.1.1\\nlog.6.1.1.nupkg.sha512",
+    "C:\\Users\\viet-key\\.nuget\\packages\\sixlabors.imagesharp\\3.1.12\\sixlabors.imagesharp.3.1.12.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\system.clientmodel\\1.5.1\\system.clientmodel.1.5.1.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.4\\system.configuration.configurationmanager.9.0.4.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.4\\system.diagnostics.eventlog.9.0.4.nupkg.sha512",

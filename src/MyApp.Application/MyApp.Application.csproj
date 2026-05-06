@@ -13,12 +13,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Abstractions\Extentions\" />
     <Folder Include="Abstractions\Models\" />
     <Folder Include="Common\Constants\" />
     <Folder Include="Common\Interfaces\" />
     <Folder Include="Extentions\" />
     <Folder Include="Features\Administrative\Requests\" />
     <Folder Include="Features\Categorys\Requests\" />
+    <Folder Include="Features\FileImages\" />
   </ItemGroup>
 
   <ItemGroup>

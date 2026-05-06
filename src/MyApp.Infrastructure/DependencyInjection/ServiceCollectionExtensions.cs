@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MyApp.Application.Interfaces.Auth;
 using MyApp.Application.Interfaces.Common;
 using MyApp.Application.Interfaces.External;
+using MyApp.Application.Interfaces.FIleImage;
 using MyApp.Application.Interfaces.Identity;
 using MyApp.Domain.Core.Repositories;
 using MyApp.Infrastructure.Data;
@@ -13,6 +14,7 @@ using MyApp.Infrastructure.Repositories;
 using MyApp.Infrastructure.Services.Auth;
 using MyApp.Infrastructure.Services.Common;
 using MyApp.Infrastructure.Services.External;
+using MyApp.Infrastructure.Services.FileManager;
 using MyApp.Infrastructure.Services.Identity;
 
 namespace MyApp.Infrastructure.DependencyInjection
@@ -73,8 +75,8 @@ namespace MyApp.Infrastructure.DependencyInjection
             services.AddScoped<IEmailService, EmailService>();
             services.AddSingleton<EmailSender>();
             services.AddHostedService<EmailBackgroundWorker>();
-
-
+            services.AddScoped<IFileImageService, FileImageService>();
+            services.AddScoped<IStorageProvider , LocalStorageProvider>();
 
             return services;
         }

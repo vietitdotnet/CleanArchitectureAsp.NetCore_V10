@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "smpDsrf/5QE=",
+  "dgSpecHash": "gp69YruISTE=",
   "success": true,
   "projectFilePath": "D:\\CleanArchitectureAsp.NetCore_V10\\src\\MyApp.WebApi\\MyApp.WebApi.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,7 @@
     "C:\\Users\\viet-key\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\nlog\\6.1.1\\nlog.6.1.1.nupkg.sha512",
+    "C:\\Users\\viet-key\\.nuget\\packages\\sixlabors.imagesharp\\3.1.12\\sixlabors.imagesharp.3.1.12.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\swashbuckle.aspnetcore\\10.1.2\\swashbuckle.aspnetcore.10.1.2.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.1.2\\swashbuckle.aspnetcore.swagger.10.1.2.nupkg.sha512",
     "C:\\Users\\viet-key\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.1.2\\swashbuckle.aspnetcore.swaggergen.10.1.2.nupkg.sha512",

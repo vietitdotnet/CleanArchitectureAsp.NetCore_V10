@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyApp.Application.Features.Products;
 using MyApp.Application.Features.Products.Requests;
+using MyApp.Application.Interfaces.FIleImage;
+using MyApp.Domain.FileImg;
 using MyApp.Domain.Paginations.Parameters;
+using MyApp.Infrastructure.Services.FileManager.Extention;
 using MyApp.WebMvc.Extentions;
 
 namespace MyApp.WebMvc.Areas.Manager.Controllers
@@ -13,9 +16,12 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
 
         private readonly IProductService _productService;
 
-        public ProductController(ILogger<BaseController> logger, IProductService productService) : base(logger)
+        private readonly IFileImageService _fileImageService;
+
+        public ProductController(ILogger<BaseController> logger, IProductService productService, IFileImageService fileImageService) : base(logger)
         {
             _productService = productService;
+            _fileImageService = fileImageService;
         }
 
         [HttpGet]
@@ -55,7 +61,7 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
             return View();
 
         }
-        
+
         [HttpGet]
         public async Task<IActionResult> DetailProduct(int id, CancellationToken ct)
         {
@@ -70,13 +76,58 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
 
             var result = await _productService.GetProductLookupsAsync(param, ct);
 
-            return Json(result.Select(x => new {
+            return Json(result.Select(x => new
+            {
                 id = x.Id,
                 text = x.Name,
                 sku = x.Sku,
                 barcode = x.Barcode,
             }));
         }
+
+
+        [HttpGet]
+        public ActionResult  UploadFileWebp()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> UploadFileWebp(IFormFile file)
+        {
+            var result = await _fileImageService.CreateFileOriginAsync(new ProductImg(), file.ToInputModel());
+
+            if (result.Success)
+            {
+                StatusMessage = "Tạo ảnh sản phẩm thành công";
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            ModelState.AddErrors(result);
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> DeleteImage(string imageName = "261216010_7f341d48.jpg")
+        {
+
+            var result = await _fileImageService.DeleteFileAsync(new ProductImg(), imageName);
+
+            if (result.Success)
+            {
+                StatusMessage = "Xóa ảnh thành công";
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            ModelState.AddErrors(result);
+
+            return View();
+        }
+
+
 
     }
 }
