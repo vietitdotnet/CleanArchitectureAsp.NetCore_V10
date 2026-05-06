@@ -25,6 +25,8 @@ namespace MyApp.Application.Mappings
 
             CreateMap<ProductUnit, ProductUnitDto>();
                
+            CreateMap<ProductUnit, ProductUnitDetailDto>()
+                .ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.IsActive));
 
             CreateMap<ProductUnit,PromotionItemPrefillDto>()
                 .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))

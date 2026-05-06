@@ -206,5 +206,16 @@ namespace MyApp.Application.Features.Products
             return slug;
         }
 
+        public async Task<ProductDetailDto> GetProductDetailByIdAsync(int id, CancellationToken ct = default)
+        {
+           var spec = new ProductByIdSpec(id);
+           var product = await _unitOfWork.Repository<Product, int>()
+                .FirstOrDefaultProjectedAsync<ProductDetailDto>(spec, ct);
+
+            if (product == null)
+                throw new NotFoundException($"Không tìm thấy ID");
+
+            return product;
+        }
     }
 }

@@ -55,8 +55,13 @@ namespace MyApp.WebMvc.Areas.Manager.Controllers
             return View();
 
         }
-
-
+        
+        [HttpGet]
+        public async Task<IActionResult> DetailProduct(int id, CancellationToken ct)
+        {
+            var result = await _productService.GetProductDetailByIdAsync(id, ct);
+            return View(result);
+        }
 
         [HttpGet]
         public async Task<ActionResult> SearchProducts(string term, CancellationToken ct)

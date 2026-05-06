@@ -1,0 +1,291 @@
+@model ProductDetailDto
+
+@{
+    ViewData["title"] = "Chi tiết sản phẩm";
+    ViewData["ActivePage"] = ManageNavPages.Product;
+}
+
+@section CSS {
+
+  
+    <style>
+        .product-detail-card {
+            border: none;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .product-detail-card .card-header {
+            background-color: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 1.25rem 1.5rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .product-detail-card .card-header .card-title {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #333;
+        }
+        .detail-label {
+            font-weight: 600;
+            color: #6c757d;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+        }
+        .detail-value {
+            font-size: 1rem;
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+        .badge-status {
+            font-size: 0.85rem;
+            padding: 0.4em 0.8em;
+        }
+        .price-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0d6efd;
+        }
+        .table-units th {
+            font-weight: 600;
+            color: #495057;
+            background-color: #f8f9fa;
+        }
+        .table-units td {
+            vertical-align: middle;
+        }
+    </style>
+}
+
+@section Breadcrumb {
+    <li class="breadcrumb-item"><a asp-area="manager" asp-controller="product" asp-action="index" class="text-decoration-none">Sản phẩm</a></li>
+    <li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+}
+
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+    <div>
+        <h2 class="h3 mb-0 text-gray-800">@Model.Name</h2>
+        <div class="text-muted mt-2">
+            <span class="fw-medium">SKU:</span> @Model.Sku 
+            @if(!string.IsNullOrEmpty(Model.Barcode))
+            {
+                <span class="mx-2">|</span> <span class="fw-medium">Barcode:</span> @Model.Barcode
+            }
+        </div>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+        @{
+            var statusClass = Model.Status == 1 ? "bg-success" : "bg-secondary"; 
+        }
+        <span class="badge rounded-pill @statusClass badge-status">@Model.TextStatus</span>
+        <a asp-area="manager" asp-controller="product" asp-action="update" asp-route-id="@Model.Id" class="btn btn-primary shadow-sm">
+            <i class="bi bi-pencil-square"></i> Cập nhật
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Cột bên trái: Thông tin cơ bản và Giá -->
+    <div class="col-lg-8">
+        <div class="card product-detail-card">
+            <div class="card-header">
+                <h5 class="card-title text-primary"><i class="bi bi-info-circle me-2"></i>Thông tin chung</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-label">Tên rút gọn</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.ShortName) ? "-" : Model.ShortName)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-label">Danh mục</div>
+                        <div class="detail-value">
+                            @if (!string.IsNullOrEmpty(Model.CategoryName))
+                            {
+                                <span class="badge bg-light text-dark border">@Model.CategoryName</span>
+                            }
+                            else
+                            {
+                                <span>-</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-label">Thương hiệu</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.BrandName) ? "-" : Model.BrandName)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-label">Nhà sản xuất</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.ManufacturerName) ? "-" : Model.ManufacturerName)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-label">Loại Thuế</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.TaxName) ? "-" : Model.TaxName)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-label">Số đăng ký</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.RegistrationNumber) ? "-" : Model.RegistrationNumber)</div>
+                    </div>
+                </div>
+
+                <hr class="my-3 text-muted">
+
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <div class="detail-label mb-0">Mô tả ngắn gọn</div>
+                            <a asp-area="manager" asp-controller="product" asp-action="update" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 0.75rem;" title="Cập nhật mô tả"><i class="bi bi-pencil-square"></i> Cập nhật</a>
+                        </div>
+                        <div class="detail-value mb-0 mt-1">@(string.IsNullOrEmpty(Model.ShortDescription) ? "-" : Model.ShortDescription)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card product-detail-card">
+            <div class="card-header">
+                <h5 class="card-title text-success"><i class="bi bi-file-medical me-2"></i>Đóng gói & Thành phần</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="detail-label">Quy cách đóng gói</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.PackingSize) ? "-" : Model.PackingSize)</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-label">Dạng bào chế</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.DosageForm) ? "-" : Model.DosageForm)</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <div class="detail-label">Thành phần chính</div>
+                        <div class="detail-value">@(string.IsNullOrEmpty(Model.Ingredient) ? "-" : Model.Ingredient)</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <div class="detail-label">Công dụng / Lợi ích</div>
+                        <div class="detail-value mb-0">@(string.IsNullOrEmpty(Model.Benefit) ? "-" : Model.Benefit)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card product-detail-card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title text-info mb-0"><i class="bi bi-card-text me-2"></i>Mô tả chi tiết</h5>
+                <a asp-area="manager" asp-controller="product" asp-action="update" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-primary" title="Cập nhật mô tả"><i class="bi bi-pencil-square"></i> Cập nhật</a>
+            </div>
+            <div class="card-body">
+                <div class="detail-value mb-0" style="white-space: pre-line;">
+                    @if (string.IsNullOrEmpty(Model.Description))
+                    {
+                        <span class="text-muted fst-italic">Không có mô tả chi tiết.</span>
+                    }
+                    else
+                    {
+                        @Html.Raw(Model.Description)
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cột bên phải: Giá, Đơn vị -->
+    <div class="col-lg-4">
+        <div class="card product-detail-card border-primary" style="border: 1px solid #cfe2ff !important;">
+            <div class="card-header bg-primary text-white" style="border-radius: 0.4rem 0.4rem 0 0;">
+                <h5 class="card-title text-white"><i class="bi bi-tag-fill me-2"></i>Thông tin Giá</h5>
+            </div>
+            <div class="card-body bg-light">
+                <div class="mb-3">
+                    <div class="detail-label text-primary">Giá bán cơ sở (Base Price)</div>
+                    <div class="price-value">@Model.BasePrice.ToString("N0") ₫</div>
+                </div>
+                <div>
+                    <div class="detail-label text-danger">Giá vốn (Cost Price)</div>
+                    <div class="detail-value fw-bold text-danger mb-0">@Model.CostPrice.ToString("N0") ₫</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card product-detail-card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title text-warning text-darken"><i class="bi bi-box-seam me-2"></i>Đơn vị tính</h5>
+                <span class="badge bg-secondary">@Model.Units.Count đơn vị</span>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover table-units mb-0 text-nowrap">
+                        <thead>
+                            <tr>
+                                <th class="ps-3">Đơn vị</th>
+                                <th class="text-center">Quy đổi</th>
+                                <th class="text-end">Giá bán</th>
+                                <th class="text-center pe-3">Trạng thái</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.Units.Any())
+                            {
+                                foreach (var unit in Model.Units)
+                                {
+                                    <tr>
+                                        <td class="ps-3">
+                                            <div class="fw-medium">@unit.UnitName</div>
+                                            @if (!string.IsNullOrEmpty(unit.Barcode))
+                                            {
+                                                <div class="text-muted" style="font-size: 0.8rem;">@unit.Barcode</div>
+                                            }
+                                        </td>
+                                        <td class="text-center">
+                                            @if (unit.IsBaseUnit)
+                                            {
+                                                <span class="badge bg-info">Cơ bản</span>
+                                            }
+                                            else
+                                            {
+                                                <span>@unit.ConversionRate</span>
+                                            }
+                                        </td>
+                                        <td class="text-end text-primary fw-medium">
+                                            @unit.SellingPrice.ToString("N0")
+                                            
+
+                                        </td>
+                                        <td class="text-center pe-3">
+                                            <div class="form-check form-switch d-flex justify-content-center">
+                                                <input class="form-check-input toggle-active"
+                                                       type="checkbox"
+                                                       data-id="@unit.Id"
+                                                @(unit.IsActive ? "checked" : "") />
+                                            </div>
+                                            <div class="status-text mt-1">
+                                                <span class="badge @(unit.IsActive ? "bg-success" : "bg-secondary")">
+                                                    @(unit.IsActive ? "Mở" : "Đóng")
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center py-4 text-muted">
+                                        <i class="bi bi-inbox fs-4 d-block mb-2"></i>
+                                        Chưa có đơn vị tính nào được thiết lập
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    
+}

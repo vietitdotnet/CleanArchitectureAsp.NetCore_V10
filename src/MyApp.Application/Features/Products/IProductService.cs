@@ -20,6 +20,8 @@ namespace MyApp.Application.Features.Products
 
         Task<ProductViewDto> GetProductBySlugAsync(string slug, CancellationToken ct = default);
 
+        Task<ProductDetailDto> GetProductDetailByIdAsync(int id, CancellationToken ct = default);
+
         Task<PagedResponse<ProductDto, ProductParameters>> GetProductsAsync(ProductParameters param ,CancellationToken ct = default);
         
         Task<OperationResult<ProductDto>> CreateProductAsync(CreateProductRequest request, 
@@ -35,5 +37,7 @@ namespace MyApp.Application.Features.Products
             ProductParameters param, CancellationToken ct = default);
 
         Task<IReadOnlyList<ProductLookupDto>> GetProductLookupsAsync(ProductParameters param ,CancellationToken ct = default);
+
+
     }
 }
